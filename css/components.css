@@ -1099,6 +1099,19 @@
     padding: var(--space-2xl) var(--space-md) var(--space-lg);
   }
 
+  /* Hero logo (Al-Qawsan) responsive */
+  .hero-logo {
+    max-width: 220px !important;
+  }
+
+  /* Grid stacking on mobile */
+  .grid--2 {
+    grid-template-columns: 1fr !important;
+  }
+  .grid--4 {
+    grid-template-columns: 1fr 1fr !important;
+  }
+
   .section-header {
     margin-bottom: var(--space-xl);
   }
