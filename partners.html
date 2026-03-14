@@ -91,6 +91,22 @@
       color: var(--text-muted) !important;
       font-size: 18px !important;
     }
+    /* Country name labels on map */
+    .country-label {
+      background: rgba(15, 15, 20, 0.85) !important;
+      border: 1px solid rgba(212, 168, 83, 0.3) !important;
+      color: var(--accent-gold) !important;
+      font-size: 0.7rem !important;
+      font-weight: 600 !important;
+      letter-spacing: 0.03em;
+      padding: 3px 8px !important;
+      border-radius: 4px !important;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3) !important;
+      white-space: nowrap;
+    }
+    .country-label::before {
+      border-right-color: rgba(212, 168, 83, 0.3) !important;
+    }
     /* Popup partner mini-cards */
     .popup-partners {
       display: flex;
@@ -579,45 +595,45 @@
        LEAFLET MAP — Real lat/lng coordinates
        ═══════════════════════════════════════════ */
     (function() {
-      // Init map (centered on Middle East, zoom 2)
+      // Init map — better initial zoom and center for global view
       const map = L.map('partnerMap', {
-        center: [25, 35],
-        zoom: 2,
+        center: [28, 30],
+        zoom: 3,
         minZoom: 2,
-        maxZoom: 5,
+        maxZoom: 6,
         zoomControl: false,
         scrollWheelZoom: false,
         dragging: true,
         doubleClickZoom: false
       });
 
-      // Dark tile layer (CartoDB Dark Matter)
-      L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}{r}.png', {
+      // Dark tile layer with labels for better readability
+      L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
         subdomains: 'abcd',
         maxZoom: 19
       }).addTo(map);
 
       // Partner locations — centered on geographic center of each country
       const locations = [
-        { lat: 33.3,  lng: 44.4,  label: '🇮🇶 Iraq — Hub', hub: true, region: 'iraq' },
-        { lat: 26.8,  lng: 30.8,  label: '🇪🇬 Egypt', region: 'egypt' },
-        { lat: 22.5,  lng: 78.9,  label: '🇮🇳 India', region: 'india' },
-        { lat: 40.4,  lng: -3.7,  label: '🇪🇸 Spain', region: 'spain' },
-        { lat: 39.8,  lng: -98.6, label: '🇺🇸 USA', region: 'usa' },
-        { lat: 56.1,  lng: -106.3,label: '🇨🇦 Canada', region: 'canada' },
-        { lat: 1.35,  lng: 103.8, label: '🇸🇬 Singapore', region: 'singapore' },
-        { lat: 34.0,  lng: 9.5,   label: '🇹🇳 Tunisia', region: 'tunisia' },
-        { lat: 36.8,  lng: 34.6,  label: '🇹🇷 Turkey', region: 'turkey' }
+        { lat: 33.3,  lng: 44.4,  label: '🇮🇶 Iraq — Hub', name: 'Iraq (Hub)', hub: true, region: 'iraq' },
+        { lat: 26.8,  lng: 30.8,  label: '🇪🇬 Egypt', name: 'Egypt', region: 'egypt' },
+        { lat: 22.5,  lng: 78.9,  label: '🇮🇳 India', name: 'India', region: 'india' },
+        { lat: 40.4,  lng: -3.7,  label: '🇪🇸 Spain', name: 'Spain', region: 'spain' },
+        { lat: 39.8,  lng: -98.6, label: '🇺🇸 USA', name: 'USA', region: 'usa' },
+        { lat: 56.1,  lng: -106.3,label: '🇨🇦 Canada', name: 'Canada', region: 'canada' },
+        { lat: 1.35,  lng: 103.8, label: '🇸🇬 Singapore', name: 'Singapore', region: 'singapore' },
+        { lat: 34.0,  lng: 9.5,   label: '🇹🇳 Tunisia', name: 'Tunisia', region: 'tunisia' },
+        { lat: 36.8,  lng: 34.6,  label: '🇹🇷 Turkey', name: 'Turkey', region: 'turkey' }
       ];
 
-      // Draw connection lines from Iraq hub
+      // Draw connection lines from Iraq hub — more visible gold lines
       const iraqCoords = [33.3, 44.4];
       locations.forEach(loc => {
         if (!loc.hub) {
           L.polyline([iraqCoords, [loc.lat, loc.lng]], {
-            color: 'rgba(212, 168, 83, 0.15)',
-            weight: 1,
-            dashArray: '5 4'
+            color: 'rgba(212, 168, 83, 0.3)',
+            weight: 1.5,
+            dashArray: '6 4'
           }).addTo(map);
         }
       });
@@ -638,21 +654,30 @@
         return html;
       }
 
-      // Add markers
+      // Add markers with permanent country name labels
       locations.forEach(loc => {
+        const size = loc.hub ? 18 : 12;
         const markerDiv = L.divIcon({
           className: '',
-          html: `<div class="map-marker${loc.hub ? ' map-marker--hub' : ''}"></div>`,
-          iconSize: [loc.hub ? 16 : 14, loc.hub ? 16 : 14],
-          iconAnchor: [loc.hub ? 8 : 7, loc.hub ? 8 : 7]
+          html: `<div class="map-marker${loc.hub ? ' map-marker--hub' : ''}" style="width:${size}px;height:${size}px;"></div>`,
+          iconSize: [size, size],
+          iconAnchor: [size/2, size/2]
         });
 
         const marker = L.marker([loc.lat, loc.lng], { icon: markerDiv }).addTo(map);
         marker.bindPopup(() => buildPopupContent(loc), {
           closeButton: true,
           offset: [0, -5],
-          maxWidth: 260,
+          maxWidth: 280,
           minWidth: 200
+        });
+
+        // Add permanent country label tooltip
+        marker.bindTooltip(loc.name, {
+          permanent: true,
+          direction: 'right',
+          offset: [12, 0],
+          className: 'country-label'
         });
       });
     })();
