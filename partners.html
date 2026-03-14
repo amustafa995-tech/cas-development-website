@@ -595,43 +595,41 @@
        LEAFLET MAP — Real lat/lng coordinates
        ═══════════════════════════════════════════ */
     (function() {
-      // Init map — global view showing all continents
+      // Static globe — no interaction, visual only
       const map = L.map('partnerMap', {
         center: [20, 20],
         zoom: 2,
         minZoom: 2,
-        maxZoom: 6,
-        zoomControl: true,
+        maxZoom: 2,
+        zoomControl: false,
         scrollWheelZoom: false,
-        dragging: true,
-        doubleClickZoom: true
+        dragging: false,
+        doubleClickZoom: false,
+        touchZoom: false,
+        boxZoom: false,
+        keyboard: false
       });
 
-      // Enable scroll zoom only when mouse is over the map
-      const mapEl = document.getElementById('partnerMap');
-      mapEl.addEventListener('mouseenter', () => map.scrollWheelZoom.enable());
-      mapEl.addEventListener('mouseleave', () => map.scrollWheelZoom.disable());
-
-      // Dark tile layer with labels for better readability
+      // Dark tile layer with labels
       L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
         subdomains: 'abcd',
         maxZoom: 19
       }).addTo(map);
 
-      // Partner locations — centered on geographic center of each country
+      // Partner country locations
       const locations = [
-        { lat: 33.3,  lng: 44.4,  label: '🇮🇶 Iraq — Hub', name: 'Iraq (Hub)', hub: true, region: 'iraq' },
-        { lat: 26.8,  lng: 30.8,  label: '🇪🇬 Egypt', name: 'Egypt', region: 'egypt' },
-        { lat: 22.5,  lng: 78.9,  label: '🇮🇳 India', name: 'India', region: 'india' },
-        { lat: 40.4,  lng: -3.7,  label: '🇪🇸 Spain', name: 'Spain', region: 'spain' },
-        { lat: 39.8,  lng: -98.6, label: '🇺🇸 USA', name: 'USA', region: 'usa' },
-        { lat: 56.1,  lng: -106.3,label: '🇨🇦 Canada', name: 'Canada', region: 'canada' },
-        { lat: 1.35,  lng: 103.8, label: '🇸🇬 Singapore', name: 'Singapore', region: 'singapore' },
-        { lat: 34.0,  lng: 9.5,   label: '🇹🇳 Tunisia', name: 'Tunisia', region: 'tunisia' },
-        { lat: 36.8,  lng: 34.6,  label: '🇹🇷 Turkey', name: 'Turkey', region: 'turkey' }
+        { lat: 33.3,  lng: 44.4,  name: 'Iraq (Hub)', hub: true },
+        { lat: 26.8,  lng: 30.8,  name: 'Egypt' },
+        { lat: 22.5,  lng: 78.9,  name: 'India' },
+        { lat: 40.4,  lng: -3.7,  name: 'Spain' },
+        { lat: 39.8,  lng: -98.6, name: 'USA' },
+        { lat: 56.1,  lng: -106.3,name: 'Canada' },
+        { lat: 1.35,  lng: 103.8, name: 'Singapore' },
+        { lat: 34.0,  lng: 9.5,   name: 'Tunisia' },
+        { lat: 36.8,  lng: 34.6,  name: 'Turkey' }
       ];
 
-      // Draw connection lines from Iraq hub — more visible gold lines
+      // Draw connection lines from Iraq hub
       const iraqCoords = [33.3, 44.4];
       locations.forEach(loc => {
         if (!loc.hub) {
@@ -643,23 +641,7 @@
         }
       });
 
-      // Build popup HTML by collecting partner data from cards
-      function buildPopupContent(loc) {
-        const cards = document.querySelectorAll(`.p-card[data-region="${loc.region}"]`);
-        let html = `<strong>${loc.label}</strong>`;
-        if (cards.length > 0) {
-          html += `<div class="popup-partners">`;
-          cards.forEach(card => {
-            const logo = card.querySelector('.p-card__logo img')?.src || '';
-            const name = card.querySelector('.p-card__name')?.textContent || '';
-            html += `<div class="popup-partner"><img loading="lazy" src="${logo}" alt=""><span>${name}</span></div>`;
-          });
-          html += `</div>`;
-        }
-        return html;
-      }
-
-      // Add markers with permanent country name labels
+      // Add markers with permanent country labels (no click)
       locations.forEach(loc => {
         const size = loc.hub ? 18 : 12;
         const markerDiv = L.divIcon({
@@ -669,15 +651,8 @@
           iconAnchor: [size/2, size/2]
         });
 
-        const marker = L.marker([loc.lat, loc.lng], { icon: markerDiv }).addTo(map);
-        marker.bindPopup(() => buildPopupContent(loc), {
-          closeButton: true,
-          offset: [0, -5],
-          maxWidth: 280,
-          minWidth: 200
-        });
+        const marker = L.marker([loc.lat, loc.lng], { icon: markerDiv, interactive: false }).addTo(map);
 
-        // Add permanent country label tooltip
         marker.bindTooltip(loc.name, {
           permanent: true,
           direction: 'right',
