@@ -652,13 +652,6 @@
         });
 
         const marker = L.marker([loc.lat, loc.lng], { icon: markerDiv, interactive: false }).addTo(map);
-
-        marker.bindTooltip(loc.name, {
-          permanent: true,
-          direction: 'right',
-          offset: [12, 0],
-          className: 'country-label'
-        });
       });
     })();
 
