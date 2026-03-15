@@ -1,5 +1,5 @@
 /* ============================================
-   DAMO Group — Main JavaScript
+   CAS Development — Main JavaScript
    ============================================ */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -11,13 +11,17 @@ document.addEventListener('DOMContentLoaded', () => {
   initPartnerModals();
   initPartnerFilters();
   initScrollToTop();
+  initParallax();
+  initPageTransitions();
 });
 
 /* ── Theme Toggle (Dark/Light) ── */
 function initThemeToggle() {
-  const saved = localStorage.getItem('damo-theme');
-  if (saved === 'light') {
+  const saved = localStorage.getItem('cas-theme');
+  if (!saved || saved === 'light') {
     document.documentElement.setAttribute('data-theme', 'light');
+  } else {
+    document.documentElement.removeAttribute('data-theme');
   }
   updateThemeIcon();
 }
@@ -26,10 +30,10 @@ function toggleTheme() {
   const current = document.documentElement.getAttribute('data-theme');
   if (current === 'light') {
     document.documentElement.removeAttribute('data-theme');
-    localStorage.setItem('damo-theme', 'dark');
+    localStorage.setItem('cas-theme', 'dark');
   } else {
     document.documentElement.setAttribute('data-theme', 'light');
-    localStorage.setItem('damo-theme', 'light');
+    localStorage.setItem('cas-theme', 'light');
   }
   updateThemeIcon();
 }
@@ -293,3 +297,60 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     }
   });
 });
+
+/* ── Parallax on Hero (A2) ── */
+function initParallax() {
+  const hero = document.querySelector('.hero');
+  if (!hero) return;
+
+  const particles = hero.querySelectorAll('.particle');
+  if (particles.length === 0) return;
+
+  // Subtle scroll parallax
+  window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY;
+    if (scrollY > window.innerHeight) return; // Stop processing past hero
+    particles.forEach((p, i) => {
+      const speed = 0.03 + (i * 0.015);
+      p.style.transform = `translateY(${scrollY * speed}px)`;
+    });
+  }, { passive: true });
+
+  // Mouse-following parallax (desktop only)
+  if (window.matchMedia('(hover: hover)').matches) {
+    hero.addEventListener('mousemove', (e) => {
+      const rect = hero.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+
+      particles.forEach((p, i) => {
+        const intensity = 15 + (i * 10);
+        p.style.transform = `translate(${x * intensity}px, ${y * intensity}px)`;
+      });
+    });
+  }
+}
+
+/* ── Page Transitions (A4) ── */
+function initPageTransitions() {
+  // Fade in on load
+  document.body.style.opacity = '1';
+
+  // Fade out on click to other pages
+  document.querySelectorAll('a').forEach(link => {
+    const href = link.getAttribute('href');
+    // Only intercept same-domain HTML page links
+    if (!href || href.startsWith('#') || href.startsWith('http') || href.startsWith('mailto:') || href.startsWith('tel:')) return;
+    if (!href.endsWith('.html')) return;
+
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      const destination = this.href;
+      document.body.style.transition = 'opacity 0.25s ease';
+      document.body.style.opacity = '0';
+      setTimeout(() => {
+        window.location.href = destination;
+      }, 250);
+    });
+  });
+}

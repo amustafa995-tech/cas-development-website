@@ -294,3 +294,33 @@ body {
   width: 22px;
   height: 22px;
 }
+
+/* ── Enhanced card hover glow (A3) ── */
+.glass-card {
+  transition: all var(--transition-base), box-shadow 0.4s ease;
+}
+.glass-card:hover {
+  box-shadow: 0 8px 32px rgba(0, 180, 216, 0.08), var(--shadow-card-hover);
+}
+
+/* ── Logo carousel hover scale (A6) ── */
+.logo-carousel__item {
+  transition: all var(--transition-base), transform var(--transition-fast);
+}
+.logo-carousel__item:hover {
+  transform: scale(1.12);
+}
+
+/* ── Entity card link arrow (A3) ── */
+.entity-card__link .arrow {
+  display: inline-block;
+  transition: transform var(--transition-fast);
+}
+.entity-card:hover .entity-card__link .arrow {
+  transform: translateX(4px);
+}
+
+/* ── Service card hover lift (A3) ── */
+.service-card:hover {
+  transform: translateY(-2px);
+}

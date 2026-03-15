@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Not Found — CAS Development</title>
+  <meta name="description" content="The page you are looking for could not be found.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="assets/images/logos/cas-logo.png">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <style>
+    .error-page {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--gradient-hero);
+      position: relative;
+      overflow: hidden;
+    }
+    .error-page__bg {
+      position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+      z-index: 1;
+    }
+    .error-page__content {
+      position: relative;
+      z-index: 3;
+      text-align: center;
+      max-width: 600px;
+      padding: var(--space-2xl);
+    }
+    .error-page__code {
+      font-family: var(--font-heading);
+      font-size: clamp(6rem, 15vw, 10rem);
+      font-weight: 700;
+      background: var(--gradient-gold);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1;
+      margin-bottom: var(--space-md);
+    }
+    .error-page__content h2 {
+      margin-bottom: var(--space-md);
+    }
+    .error-page__content p {
+      color: var(--text-secondary);
+      font-size: 1.0625rem;
+      line-height: 1.8;
+      margin-bottom: var(--space-xl);
+    }
+    .error-page__links {
+      display: flex;
+      gap: var(--space-md);
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo"><span class="logo-accent">CAS</span>&nbsp;Development</a>
+      <div class="nav__links" id="navLinks">
+        <a href="cas-development.html" data-i18n="nav.about">About Us</a>
+        <a href="alqawsan.html" data-i18n="nav.alqawsan">Al-Qawsan</a>
+        <a href="damo-manufacturing.html" data-i18n="nav.damo">DAMO</a>
+        <a href="partners.html" data-i18n="nav.partners">Partners</a>
+        <a href="government.html" data-i18n="nav.gov">Gov. Partnerships</a>
+        <a href="contact.html" data-i18n="nav.contact">Contact</a>
+        <a href="news.html" data-i18n="nav.news">News</a>
+      </div>
+      <button id="langToggle" class="nav__lang-toggle" onclick="toggleLanguage()">FR</button>
+      <button id="themeToggle" class="nav__theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme" title="Toggle light/dark mode"></button>
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+  <div class="nav__overlay" id="navOverlay"></div>
+
+  <!-- 404 Content -->
+  <section class="error-page">
+    <div class="error-page__bg">
+      <div class="particle particle--1"></div>
+      <div class="particle particle--2"></div>
+      <div class="particle particle--3"></div>
+    </div>
+    <div class="error-page__content">
+      <div class="error-page__code">404</div>
+      <h2>Page Not Found</h2>
+      <p>The page you are looking for doesn't exist or has been moved. Let us help you find your way back.</p>
+      <div class="error-page__links">
+        <a href="index.html" class="btn btn--primary">
+          <i data-lucide="home" style="width: 18px; height: 18px;"></i>
+          Back to Home
+        </a>
+        <a href="contact.html" class="btn btn--outline">
+          <i data-lucide="mail" style="width: 18px; height: 18px;"></i>
+          Contact Us
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <script src="js/translations.js"></script>
+  <script src="js/main.js"></script>
+  <script>lucide.createIcons();</script>
+</body>
+</html>

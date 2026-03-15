@@ -1,443 +1,382 @@
 /* ============================================
-   DAMO Group — Translations (EN / AR)
+   CAS Development — Translations (EN / FR)
    Complete text-matching translation system
    ============================================ */
 
 const translations = {
   // ── Navigation ──
-  "nav.home": { en: "Home", ar: "الرئيسية" },
-  "nav.alqawsan": { en: "Al-Qawsan", ar: "القوصان" },
-  "nav.cas": { en: "CAS Development", ar: "كاس للتطوير" },
-  "nav.damo": { en: "DAMO Manufacturing", ar: "دامو للتصنيع" },
-  "nav.partners": { en: "Partners", ar: "الشركاء" },
-  "nav.gov": { en: "Gov. Partnerships", ar: "الشراكات الحكومية" },
-  "nav.contact": { en: "Contact", ar: "اتصل بنا" },
-  "nav.news": { en: "News", ar: "الأخبار" },
+  "nav.about": { en: "About Us", fr: "À Propos" },
+  "nav.alqawsan": { en: "Al-Qawsan", fr: "Al-Qawsan" },
+  "nav.damo": { en: "DAMO", fr: "DAMO" },
+  "nav.partners": { en: "Partners", fr: "Partenaires" },
+  "nav.gov": { en: "Gov. Partnerships", fr: "Partenariats Gov." },
+  "nav.contact": { en: "Contact", fr: "Contact" },
+  "nav.news": { en: "News", fr: "Actualités" },
   // ── Footer ──
-  "footer.quicklinks": { en: "Quick Links", ar: "روابط سريعة" },
-  "footer.entities": { en: "Our Entities", ar: "كياناتنا" },
-  "footer.contact": { en: "Contact", ar: "اتصل بنا" },
+  "footer.quicklinks": { en: "Quick Links", fr: "Liens Rapides" },
+  "footer.entities": { en: "Our Entities", fr: "Nos Entités" },
+  "footer.contact": { en: "Contact", fr: "Contact" },
 };
 
-/* ── Body text mappings (English → Arabic) ── */
+/* ── Body text mappings (English → French) ── */
 const textMappings = {
   // ════════════════════════════════
   //  HOMEPAGE (index.html)
   // ════════════════════════════════
-  "DAMO Group": "مجموعة دامو",
-  "Empowering": "تمكين",
-  "Healthcare": "الرعاية الصحية",
-  "Bridging Continents": "عبور القارات",
-  "A global pharmaceutical group connecting Swiss quality standards with regional healthcare needs — through distribution, manufacturing, and regulatory excellence.": "مجموعة صيدلانية عالمية تربط معايير الجودة السويسرية بالاحتياجات الصحية الإقليمية — من خلال التوزيع والتصنيع والتميز التنظيمي.",
-  "Discover Our Group": "اكتشف مجموعتنا",
-  "Who We Are": "من نحن",
-  "About DAMO Group": "عن مجموعة دامو",
-  "Uniting expertise across continents to deliver world-class healthcare solutions.": "توحيد الخبرات عبر القارات لتقديم حلول صحية عالمية المستوى.",
-  "Swiss Quality Standards": "معايير الجودة السويسرية",
-  "Rigorous AMM verification and compliance": "التحقق الصارم من AMM والامتثال",
-  "Global Network": "شبكة عالمية",
-  "Partners across 10+ countries worldwide": "شركاء في أكثر من 10 دول حول العالم",
-  "Patient-First Mission": "مهمة المريض أولاً",
-  "Improving healthcare access across the Middle East": "تحسين الوصول للرعاية الصحية في الشرق الأوسط",
-  "Our Entities": "كياناتنا",
-  "Three Pillars of Excellence": "ثلاث ركائز للتميز",
-  "Each entity plays a vital role in our integrated pharmaceutical ecosystem.": "كل كيان يلعب دوراً حيوياً في منظومتنا الصيدلانية المتكاملة.",
-  "Al-Qawsan Group": "مجموعة القوصان",
-  "One of Iraq's top 5 pharmaceutical distributors. Handles drug registration, import logistics, pharmacy distribution, and direct collaboration with the Ministry of Health.": "أحد أفضل 5 موزعين صيدلانيين في العراق. يتولى تسجيل الأدوية ولوجستيات الاستيراد وتوزيع الصيدليات والتعاون المباشر مع وزارة الصحة.",
-  "DAMO Manufacturing": "دامو للتصنيع",
-  "A state-of-the-art pharmaceutical manufacturing facility. Designed to produce generics, steroids, and injectables to the highest international GMP standards.": "منشأة تصنيع صيدلانية حديثة. مصممة لإنتاج الأدوية الجنيسة والستيرويدات والحقن وفق أعلى معايير GMP الدولية.",
-  "CAS Development SA": "كاس للتطوير ش.م.",
-  "Marketing Authorization Holder (MAH) responsible for product selection, quality verification to Swiss standards, and AMM management for international trade.": "حامل رخصة التسويق (MAH) المسؤول عن اختيار المنتجات والتحقق من الجودة وفق المعايير السويسرية وإدارة AMM للتجارة الدولية.",
-  "Learn More": "اعرف المزيد",
-  "Years of Experience": "سنوات خبرة",
-  "Team Members": "أعضاء الفريق",
-  "Global Partners": "شركاء عالميون",
-  "Countries": "دول",
-  "What We Do": "ماذا نفعل",
-  "Our Core Services": "خدماتنا الأساسية",
-  "Comprehensive pharmaceutical solutions from source to patient.": "حلول صيدلانية شاملة من المصدر إلى المريض.",
-  "Pharmaceutical Distribution": "التوزيع الصيدلاني",
-  "Reliable supply chain ensuring essential medicines reach pharmacies and healthcare facilities across Iraq.": "سلسلة إمداد موثوقة تضمن وصول الأدوية الأساسية إلى الصيدليات والمرافق الصحية في أنحاء العراق.",
-  "Drug Registration & Regulatory": "تسجيل الأدوية والشؤون التنظيمية",
-  "Complete regulatory affairs management including product registration with the Iraqi Ministry of Health.": "إدارة شاملة للشؤون التنظيمية بما في ذلك تسجيل المنتجات لدى وزارة الصحة العراقية.",
-  "Import Logistics": "لوجستيات الاستيراد",
-  "End-to-end import coordination ensuring GMP-compliant cold chain management and customs clearance.": "تنسيق الاستيراد الشامل مع إدارة سلسلة التبريد المتوافقة مع GMP والتخليص الجمركي.",
-  "Quality Assurance": "ضمان الجودة",
-  "Swiss-standard quality verification through CAS Development SA, ensuring all products meet the highest international standards.": "التحقق من الجودة وفق المعايير السويسرية من خلال كاس للتطوير، مما يضمن أن جميع المنتجات تلبي أعلى المعايير الدولية.",
-  "Government Partnerships": "الشراكات الحكومية",
-  "Strategic collaboration with Iraq's Ministry of Health on pharmaceutical supply, health policy, and professional training.": "تعاون استراتيجي مع وزارة الصحة العراقية بشأن التوريد الصيدلاني والسياسة الصحية والتدريب المهني.",
-  "Manufacturing": "التصنيع",
-  "Upcoming GMP-certified production facility for generics, steroids, and injectables — bringing local manufacturing to Iraq.": "منشأة إنتاج قادمة معتمدة بـ GMP للأدوية الجنيسة والستيرويدات والحقن — جلب التصنيع المحلي للعراق.",
-  "Partner With Us": "كن شريكنا",
-  "Ready to Transform Healthcare Together?": "مستعد لتحويل الرعاية الصحية معاً؟",
-  "Whether you're a pharmaceutical manufacturer, healthcare institution, or government agency — let's collaborate for better health outcomes.": "سواء كنت شركة تصنيع أدوية أو مؤسسة صحية أو وكالة حكومية — لنتعاون من أجل نتائج صحية أفضل.",
-  "Get In Touch": "تواصل معنا",
+  "CAS Development": "CAS Development",
+  "Empowering": "Renforcer",
+  "Healthcare": "la Santé",
+  "Bridging Continents": "Relier les Continents",
+  "A global pharmaceutical group connecting Swiss quality standards with regional healthcare needs — through distribution, manufacturing, and regulatory excellence.": "Un groupe pharmaceutique mondial reliant les standards de qualité suisses aux besoins régionaux en santé — à travers la distribution, la fabrication et l'excellence réglementaire.",
+  "Discover Our Group": "Découvrir Notre Groupe",
+  "Who We Are": "Qui Sommes-Nous",
+  "About CAS Development": "À Propos de CAS Development",
+  "Uniting expertise across continents to deliver world-class healthcare solutions.": "Unir les expertises à travers les continents pour offrir des solutions de santé de classe mondiale.",
+  "Swiss Quality Standards": "Standards de Qualité Suisses",
+  "Rigorous AMM verification and compliance": "Vérification rigoureuse des AMM et conformité",
+  "Global Network": "Réseau Mondial",
+  "Partners across 10+ countries worldwide": "Partenaires dans plus de 10 pays à travers le monde",
+  "Patient-First Mission": "Mission Patient d'Abord",
+  "Improving healthcare access across the Middle East": "Améliorer l'accès aux soins de santé au Moyen-Orient",
+  "Our Entities": "Nos Entités",
+  "Three Pillars of Excellence": "Trois Piliers d'Excellence",
+  "Each entity plays a vital role in our integrated pharmaceutical ecosystem.": "Chaque entité joue un rôle vital dans notre écosystème pharmaceutique intégré.",
+  "Al-Qawsan Group": "Groupe Al-Qawsan",
+  "CAS Development's exclusive local distributor in Iraq. One of Iraq's top 5 pharmaceutical distributors, handling drug registration, import logistics, and nationwide pharmacy distribution across all 18 governorates.": "Distributeur local exclusif de CAS Development en Irak. L'un des 5 premiers distributeurs pharmaceutiques du pays, gérant l'enregistrement des médicaments, la logistique d'importation et la distribution nationale dans les 18 gouvernorats.",
+  "DAMO Manufacturing": "DAMO Manufacturing",
+  "CAS Development's future local pharmaceutical manufacturer. A state-of-the-art GMP facility currently under construction, designed to produce generics, steroids, and injectables for the Iraqi and regional markets.": "Futur producteur pharmaceutique local de CAS Development. Une usine GMP à la pointe de la technologie actuellement en construction, conçue pour produire des génériques, des stéroïdes et des injectables pour les marchés irakien et régional.",
+  "CAS Development SA": "CAS Development SA",
+  "The group's holding company and Marketing Authorization Holder (MAH). Responsible for product sourcing, Swiss-standard quality verification, and regulatory compliance for international pharmaceutical trade.": "Société holding du groupe et Titulaire d'Autorisation de Mise sur le Marché (AMM). Responsable de l'approvisionnement en produits, de la vérification qualité aux standards suisses et de la conformité réglementaire pour le commerce pharmaceutique international.",
+  "The group's holding company and Marketing Authorization Holder. Ensures Swiss-quality pharmaceutical standards for all products traded through the CAS ecosystem.": "Société holding du groupe et Titulaire d'AMM. Garantit les standards pharmaceutiques de qualité suisse pour tous les produits échangés via l'écosystème CAS.",
+  "CAS Development's exclusive local distributor in Iraq — handling drug registration, import logistics, and nationwide pharmacy distribution across all 18 governorates.": "Distributeur local exclusif de CAS Development en Irak — gérant l'enregistrement des médicaments, la logistique d'importation et la distribution nationale dans les 18 gouvernorats.",
+  "CAS Development's future local pharmaceutical manufacturer. A state-of-the-art GMP facility currently under construction for generics, steroids, and injectables.": "Futur producteur pharmaceutique local de CAS Development. Une usine GMP à la pointe de la technologie actuellement en construction pour les génériques, stéroïdes et injectables.",
+  "Learn More": "En Savoir Plus",
+  "Years of Experience": "Années d'Expérience",
+  "Since 2009": "Depuis 2009",
+  "Across 3 entities": "À travers 3 entités",
+  "Team Members": "Membres de l'Équipe",
+  "Global Partners": "Partenaires Mondiaux",
+  "Pharmaceutical companies": "Entreprises pharmaceutiques",
+  "Countries": "Pays",
+  "From Europe to Middle East": "De l'Europe au Moyen-Orient",
+  "Pharmaceutical Products": "Produits Pharmaceutiques",
+  "Under Construction": "En Construction",
+  "What We Do": "Nos Activités",
+  "Our Core Services": "Nos Services Principaux",
+  "Comprehensive pharmaceutical solutions from source to patient.": "Des solutions pharmaceutiques complètes, de la source au patient.",
+  "Pharmaceutical Distribution": "Distribution Pharmaceutique",
+  "Reliable supply chain ensuring essential medicines reach pharmacies and healthcare facilities across Iraq.": "Une chaîne d'approvisionnement fiable garantissant que les médicaments essentiels atteignent les pharmacies et les établissements de santé à travers l'Irak.",
+  "Drug Registration & Regulatory": "Enregistrement des Médicaments et Réglementation",
+  "Complete regulatory affairs management including product registration with the Iraqi Ministry of Health.": "Gestion complète des affaires réglementaires, y compris l'enregistrement des produits auprès du Ministère de la Santé irakien.",
+  "Import Logistics": "Logistique d'Importation",
+  "End-to-end import coordination ensuring GMP-compliant cold chain management and customs clearance.": "Coordination d'importation de bout en bout assurant la gestion de la chaîne du froid conforme aux BPF et le dédouanement.",
+  "Quality Assurance": "Assurance Qualité",
+  "Swiss-standard quality verification through CAS Development SA, ensuring all products meet the highest international standards.": "Vérification de la qualité aux standards suisses par CAS Development SA, garantissant que tous les produits répondent aux plus hauts standards internationaux.",
+  "Government Partnerships": "Partenariats Gouvernementaux",
+  "Strategic collaboration with Iraq's Ministry of Health on pharmaceutical supply, health policy, and professional training.": "Collaboration stratégique avec le Ministère de la Santé irakien en matière d'approvisionnement pharmaceutique, de politique de santé et de formation professionnelle.",
+  "Manufacturing": "Fabrication",
+  "Upcoming GMP-certified production facility for generics, steroids, and injectables — bringing local manufacturing to Iraq.": "Future installation de production certifiée BPF pour les génériques, stéroïdes et injectables — apportant la fabrication locale en Irak.",
+  "Partner With Us": "Devenez Partenaire",
+  "Ready to Transform Healthcare Together?": "Prêt à Transformer la Santé Ensemble ?",
+  "Whether you're a pharmaceutical manufacturer, healthcare institution, or government agency — let's collaborate for better health outcomes.": "Que vous soyez un fabricant pharmaceutique, un établissement de santé ou une agence gouvernementale — collaborons pour de meilleurs résultats de santé.",
+  "Get In Touch": "Contactez-Nous",
 
   // ════════════════════════════════
   //  AL-QAWSAN PAGE (alqawsan.html)
   // ════════════════════════════════
-  "DAMO GROUP — DISTRIBUTION": "مجموعة دامو — التوزيع",
-  "Al-Qawsan Scientific Bureau": "المكتب العلمي القوصان",
-  "Iraq's trusted pharmaceutical partner — delivering world-class healthcare solutions since 2009.": "الشريك الصيدلاني الموثوق في العراق — تقديم حلول صحية عالمية المستوى منذ 2009.",
-  "About": "حولنا",
-  "ABOUT": "حولنا",
-  "Iraq's Top 5 Pharmaceutical Distributor": "أحد أفضل 5 موزعين صيدلانيين في العراق",
-  "Employees": "الموظفين",
-  "EMPLOYEES": "الموظفين",
-  "Private Distributor": "الموزع الخاص",
-  "PRIVATE DISTRIBUTOR": "الموزع الخاص",
-  "Governorates": "المحافظات",
-  "GOVERNORATES": "المحافظات",
-  "Founded": "التأسيس",
-  "FOUNDED": "التأسيس",
-  "Our Journey": "رحلتنا",
-  "Milestones": "المعالم البارزة",
-  "Founded in Baghdad as Al-Qawsan Scientific Bureau, focusing on pharmaceutical distribution.": "تأسس في بغداد باسم المكتب العلمي القوصان، متخصصاً في التوزيع الصيدلاني.",
-  "Expansion with Lara Scientific Office, specializing in nutritional supplements.": "التوسع مع مكتب لارا العلمي، المتخصص في المكملات الغذائية.",
-  "Sales doubled. Sanaya Scientific Office opened for medical supplies.": "تضاعفت المبيعات. افتتاح مكتب صناعة العلمي للمستلزمات الطبية.",
-  "COVID-19 response — exclusive distributor of Sinopharm's vaccine in Iraq. Partnered with Ministry of Health for national vaccination campaign.": "الاستجابة لكوفيد-19 — الموزع الحصري للقاح سينوفارم في العراق. شراكة مع وزارة الصحة لحملة التطعيم الوطنية.",
-  "Full recovery and another peak in sales, doubling growth from 2019.": "تعافٍ كامل وذروة جديدة في المبيعات، مضاعفة النمو من 2019.",
-  "DAMO Group formation. Expanded to 20+ global pharmaceutical partners with DAMU manufacturing under construction.": "تشكيل مجموعة دامو. التوسع إلى أكثر من 20 شريكاً صيدلانياً عالمياً مع مصنع دامو قيد الإنشاء.",
-
-  // Al-Qawsan Services
-  "Our Services": "خدماتنا",
-  "Comprehensive pharmaceutical solutions built on over 15 years of expertise in the Iraqi market.": "حلول صيدلانية شاملة مبنية على أكثر من 15 عاماً من الخبرة في السوق العراقي.",
-  "Drug Registration & Regulatory Affairs": "تسجيل الأدوية والشؤون التنظيمية",
-  "Core Expertise": "الخبرة الأساسية",
-  "Our dedicated regulatory affairs team brings deep expertise in navigating Iraq's pharmaceutical registration framework. We manage the complete registration lifecycle — from pharmaceutical factory accreditation to individual product dossier submission and approval — with the Iraqi Ministry of Health. This includes preparing technical documentation, coordinating inspections, and ensuring full compliance with local regulations, enabling international manufacturers to legally distribute their products in Iraq.": "يمتلك فريق الشؤون التنظيمية لدينا خبرة عميقة في التعامل مع إطار التسجيل الصيدلاني في العراق. نحن ندير دورة التسجيل الكاملة — من اعتماد المصانع الصيدلانية إلى تقديم ملفات المنتجات الفردية والموافقة عليها — لدى وزارة الصحة العراقية. يشمل ذلك إعداد الوثائق التقنية وتنسيق عمليات التفتيش وضمان الامتثال الكامل للوائح المحلية.",
-  "Government Tenders & Public Sector Supply": "المناقصات الحكومية وتوريد القطاع العام",
-  "Ministry of Health": "وزارة الصحة",
-  "Al-Qawsan works directly with Iraq's Ministry of Health to participate in public pharmaceutical tenders, supplying essential medicines and healthcare products to government hospitals and public health facilities. Our long-standing institutional relationships and proven track record position us as a trusted partner for large-scale public sector procurement across all Iraqi governorates.": "تعمل القوصان مباشرة مع وزارة الصحة العراقية للمشاركة في المناقصات الصيدلانية العامة، وتوريد الأدوية الأساسية والمنتجات الصحية للمستشفيات الحكومية ومرافق الصحة العامة. علاقاتنا المؤسسية الطويلة الأمد وسجلنا المثبت يضعنا كشريك موثوق للمشتريات العامة على مستوى جميع المحافظات العراقية.",
-  "Nationwide Distribution Network": "شبكة توزيع وطنية",
-  "20+ Distribution Sites": "أكثر من 20 موقع توزيع",
-  "Built over more than 15 years, our distribution infrastructure spans the entire country with over 20 strategically located distribution sites across Iraq. Each major city is served by one or more wholesale distribution hubs, ensuring reliable and timely delivery of pharmaceutical products to pharmacies, clinics, and hospitals in both urban centres and remote areas. This nationwide reach makes Al-Qawsan one of the most comprehensive pharmaceutical supply networks operating in Iraq today.": "بُنيت على مدى أكثر من 15 عاماً، تمتد بنيتنا التحتية للتوزيع عبر البلاد بأكملها مع أكثر من 20 موقع توزيع موضوعة استراتيجياً. تخدم كل مدينة رئيسية بمركز توزيع واحد أو أكثر، مما يضمن التسليم الموثوق والسريع للمنتجات الصيدلانية.",
-  "Import Logistics & Supply Chain": "لوجستيات الاستيراد وسلسلة التوريد",
-  "End-to-End Coordination": "تنسيق شامل",
-  "We manage the entire import chain from international pharmaceutical manufacturers to local distribution points. Our logistics team handles customs clearance, GMP-compliant cold chain management, warehousing, and last-mile delivery — ensuring that product integrity and regulatory compliance are maintained at every stage of the supply chain.": "ندير سلسلة الاستيراد بأكملها من المصنعين الصيدلانيين الدوليين إلى نقاط التوزيع المحلية. يتولى فريقنا اللوجستي التخليص الجمركي وإدارة سلسلة التبريد المتوافقة مع GMP والتخزين والتسليم.",
-  "Pharmacovigilance & Quality Assurance": "اليقظة الدوائية وضمان الجودة",
-  "Safety First": "السلامة أولاً",
-  "We maintain rigorous quality assurance protocols throughout our operations, from product sourcing through final delivery. Our pharmacovigilance team monitors product safety, handles adverse event reporting, and ensures that all distributed pharmaceuticals meet the highest standards required by Iraqi health authorities and international best practices.": "نحافظ على بروتوكولات ضمان جودة صارمة طوال عملياتنا. يراقب فريق اليقظة الدوائية لدينا سلامة المنتجات ويتعامل مع تقارير الأحداث الضائرة ويضمن أن جميع الأدوية الموزعة تلبي أعلى المعايير.",
-  "Healthcare Professional Training": "تدريب المتخصصين في الرعاية الصحية",
-  "Knowledge Transfer": "نقل المعرفة",
-  "In partnership with the Ministry of Health and international pharmaceutical manufacturers, we organise specialised workshops, seminars, and continuing education programmes for healthcare professionals. These initiatives cover the latest treatment protocols, pharmacological advances, and product knowledge — contributing to improved patient care standards across Iraq.": "بالشراكة مع وزارة الصحة والمصنعين الصيدلانيين الدوليين، ننظم ورش عمل متخصصة وندوات وبرامج تعليم مستمر للمتخصصين في الرعاية الصحية.",
-  "Work With Us": "اعمل معنا",
-  "Interested in the Iraqi Market?": "مهتم بالسوق العراقي؟",
-  "Whether you're a manufacturer seeking distribution or a healthcare organization looking for reliable supply, let's connect.": "سواء كنت مصنعاً يبحث عن التوزيع أو منظمة صحية تبحث عن توريد موثوق، لنتواصل.",
+  "CAS Development — Distribution": "CAS Development — Distribution",
+  "Al-Qawsan Scientific Bureau": "Bureau Scientifique Al-Qawsan",
+  "Iraq's leading pharmaceutical distributor — delivering world-class healthcare solutions since 2009.": "Le principal distributeur pharmaceutique d'Irak — offrant des solutions de santé de classe mondiale depuis 2009.",
+  "About": "À Propos",
+  "Iraq's Top 5 Pharmaceutical Distributor": "Top 5 des Distributeurs Pharmaceutiques en Irak",
+  "Employees": "Employés",
+  "Private Distributor": "Distributeur Privé",
+  "Governorates": "Gouvernorats",
+  "Founded": "Fondée",
+  "Our Services": "Nos Services",
+  "Comprehensive pharmaceutical solutions built on over 15 years of expertise in the Iraqi market.": "Des solutions pharmaceutiques complètes fondées sur plus de 15 ans d'expertise dans le marché irakien.",
+  "Drug Registration & Regulatory Affairs": "Enregistrement des Médicaments et Affaires Réglementaires",
+  "Core Expertise": "Expertise Principale",
+  "Our dedicated regulatory affairs team brings deep expertise in navigating Iraq's pharmaceutical registration framework. We manage the complete registration lifecycle — from pharmaceutical factory accreditation to individual product dossier submission and approval — with the Iraqi Ministry of Health. This includes preparing technical documentation, coordinating inspections, and ensuring full compliance with local regulations, enabling international manufacturers to legally distribute their products in Iraq.": "Notre équipe dédiée aux affaires réglementaires apporte une expertise approfondie dans le cadre d'enregistrement pharmaceutique irakien. Nous gérons le cycle complet d'enregistrement — de l'accréditation des usines pharmaceutiques à la soumission et l'approbation des dossiers de produits individuels — auprès du Ministère de la Santé irakien.",
+  "Government Tenders & Public Sector Supply": "Appels d'Offres Gouvernementaux et Approvisionnement du Secteur Public",
+  "Ministry of Health": "Ministère de la Santé",
+  "Al-Qawsan works directly with Iraq's Ministry of Health to participate in public pharmaceutical tenders, supplying essential medicines and healthcare products to government hospitals and public health facilities. Our long-standing institutional relationships and proven track record position us as a trusted partner for large-scale public sector procurement across all Iraqi governorates.": "Al-Qawsan travaille directement avec le Ministère de la Santé irakien pour participer aux appels d'offres pharmaceutiques publics, fournissant des médicaments essentiels et des produits de santé aux hôpitaux gouvernementaux et aux établissements de santé publique.",
+  "Nationwide Distribution Network": "Réseau de Distribution National",
+  "20+ Distribution Sites": "Plus de 20 Sites de Distribution",
+  "Built over more than 15 years, our distribution infrastructure spans the entire country with over 20 strategically located distribution sites across Iraq. Each major city is served by one or more wholesale distribution hubs, ensuring reliable and timely delivery of pharmaceutical products to pharmacies, clinics, and hospitals in both urban centres and remote areas. This nationwide reach makes Al-Qawsan one of the most comprehensive pharmaceutical supply networks operating in Iraq today.": "Construite sur plus de 15 ans, notre infrastructure de distribution couvre l'ensemble du pays avec plus de 20 sites de distribution stratégiquement situés à travers l'Irak.",
+  "Import Logistics & Supply Chain": "Logistique d'Importation et Chaîne d'Approvisionnement",
+  "End-to-End Coordination": "Coordination de Bout en Bout",
+  "We manage the entire import chain from international pharmaceutical manufacturers to local distribution points. Our logistics team handles customs clearance, GMP-compliant cold chain management, warehousing, and last-mile delivery — ensuring that product integrity and regulatory compliance are maintained at every stage of the supply chain.": "Nous gérons l'ensemble de la chaîne d'importation, des fabricants pharmaceutiques internationaux aux points de distribution locaux. Notre équipe logistique gère le dédouanement, la chaîne du froid conforme aux BPF, l'entreposage et la livraison du dernier kilomètre.",
+  "Pharmacovigilance & Quality Assurance": "Pharmacovigilance et Assurance Qualité",
+  "Safety First": "La Sécurité d'Abord",
+  "We maintain rigorous quality assurance protocols throughout our operations, from product sourcing through final delivery. Our pharmacovigilance team monitors product safety, handles adverse event reporting, and ensures that all distributed pharmaceuticals meet the highest standards required by Iraqi health authorities and international best practices.": "Nous maintenons des protocoles rigoureux d'assurance qualité tout au long de nos opérations. Notre équipe de pharmacovigilance surveille la sécurité des produits et gère les signalements d'événements indésirables.",
+  "Healthcare Professional Training": "Formation des Professionnels de Santé",
+  "Knowledge Transfer": "Transfert de Connaissances",
+  "In partnership with the Ministry of Health and international pharmaceutical manufacturers, we organise specialised workshops, seminars, and continuing education programmes for healthcare professionals. These initiatives cover the latest treatment protocols, pharmacological advances, and product knowledge — contributing to improved patient care standards across Iraq.": "En partenariat avec le Ministère de la Santé et les fabricants pharmaceutiques internationaux, nous organisons des ateliers spécialisés, des séminaires et des programmes de formation continue pour les professionnels de santé.",
+  "Work With Us": "Travaillez Avec Nous",
+  "Interested in the Iraqi Market?": "Intéressé par le Marché Irakien ?",
+  "Whether you're a manufacturer seeking distribution or a healthcare organization looking for reliable supply, let's connect.": "Que vous soyez un fabricant recherchant la distribution ou un organisme de santé à la recherche d'un approvisionnement fiable, connectons-nous.",
 
   // ════════════════════════════════
   //  CAS DEVELOPMENT (cas-development.html)
   // ════════════════════════════════
-  "STRATEGIC HOLDING": "شركة قابضة استراتيجية",
-  "Swiss-registered holding company orchestrating DAMO Group's international strategy and regulatory coordination.": "شركة قابضة مسجلة في سويسرا تنسق الاستراتيجية الدولية لمجموعة دامو والتنسيق التنظيمي.",
-  "Our Role": "دورنا",
-  "Marketing Authorization Holder": "حامل رخصة التسويق",
-  "Product Scouting": "البحث عن المنتجات",
-  "Identification and evaluation of innovative pharmaceutical products from global manufacturers for introduction into the Iraqi market.": "تحديد وتقييم المنتجات الصيدلانية المبتكرة من الشركات العالمية لإدخالها في السوق العراقي.",
-  "Rigorous verification of manufacturing processes, GMP compliance, and product quality against Swiss pharmaceutical standards.": "التحقق الصارم من عمليات التصنيع والامتثال لـ GMP وجودة المنتجات وفق المعايير الصيدلانية السويسرية.",
-  "Regulatory Affairs": "الشؤون التنظيمية",
-  "AMM acquisition and management, ensuring full regulatory compliance for international pharmaceutical trade.": "الحصول على AMM وإدارتها، وضمان الامتثال التنظيمي الكامل للتجارة الصيدلانية الدولية.",
-  "International Trade": "التجارة الدولية",
-  "Facilitating the import and export of medical devices, pharmaceutical preparations, cosmetics, and health supplements.": "تسهيل استيراد وتصدير الأجهزة الطبية والمستحضرات الصيدلانية ومستحضرات التجميل والمكملات الصحية.",
-  "Scope of Activity": "نطاق النشاط",
-  "What We Cover": "ما نغطيه",
-  "Pharmaceutical Products": "المنتجات الصيدلانية",
-  "Chemical, natural, and synthetic preparations meeting international pharmacopoeia standards.": "المستحضرات الكيميائية والطبيعية والتركيبية المطابقة لمعايير دستور الأدوية الدولي.",
-  "Medical Devices": "الأجهزة الطبية",
-  "Cosmetics & Supplements": "مستحضرات التجميل والمكملات",
+  "Our Role": "Notre Rôle",
+  "Marketing Authorization Holder": "Titulaire d'Autorisation de Mise sur le Marché",
+  "Product Scouting": "Recherche de Produits",
+  "Identification and evaluation of innovative pharmaceutical products from global manufacturers for introduction into the Iraqi market.": "Identification et évaluation de produits pharmaceutiques innovants de fabricants mondiaux pour introduction sur le marché irakien.",
+  "Rigorous verification of manufacturing processes, GMP compliance, and product quality against Swiss pharmaceutical standards.": "Vérification rigoureuse des processus de fabrication, de la conformité BPF et de la qualité des produits selon les standards pharmaceutiques suisses.",
+  "Regulatory Affairs": "Affaires Réglementaires",
+  "AMM acquisition and management, ensuring full regulatory compliance for international pharmaceutical trade.": "Acquisition et gestion des AMM, assurant la pleine conformité réglementaire pour le commerce pharmaceutique international.",
+  "International Trade": "Commerce International",
+  "Regulatory affairs, AMM management, and facilitation of import/export for pharmaceuticals, medical devices, and health supplements.": "Affaires réglementaires, gestion des AMM et facilitation de l'import/export de produits pharmaceutiques, dispositifs médicaux et compléments alimentaires.",
+  "Scope of Activity": "Champ d'Activité",
+  "What We Cover": "Ce Que Nous Couvrons",
+  "Pharmaceutical Products": "Produits Pharmaceutiques",
+  "Product scouting, quality assurance, and GMP-compliant sourcing of chemical, natural, and synthetic preparations from global manufacturers.": "Recherche de produits, assurance qualité et approvisionnement conforme aux BPF de préparations chimiques, naturelles et synthétiques auprès de fabricants mondiaux.",
+  "Medical Devices": "Dispositifs Médicaux",
+  "Apparatus, instruments, and medical supplies for healthcare facilities and professionals — fully compliant with international standards.": "Appareils, instruments et fournitures médicales pour les établissements de santé et les professionnels — pleinement conformes aux normes internationales.",
+  "Health & Wellness": "Santé et Bien-Être",
+  "Food supplements, cosmetics, and wellness products meeting Swiss quality and regulatory standards.": "Compléments alimentaires, cosmétiques et produits de bien-être conformes aux standards de qualité et réglementaires suisses.",
+  "Technology Transfer": "Transfert de Technologie",
+  "Bridging global pharmaceutical know-how with local markets — facilitating production techniques, formulation expertise, and quality protocols.": "Faire le pont entre le savoir-faire pharmaceutique mondial et les marchés locaux — faciliter les techniques de production, l'expertise en formulation et les protocoles qualité.",
+  "Marketing & Branding": "Marketing et Branding",
+  "Strategic brand positioning, market visibility improvement, and promotional support for pharmaceutical products across the Middle East.": "Positionnement stratégique de marque, amélioration de la visibilité sur le marché et support promotionnel pour les produits pharmaceutiques au Moyen-Orient.",
+  "Administrative Optimization": "Optimisation Administrative",
+  "Streamlining workflows from drug registration to production planning to distribution logistics — maximizing operational efficiency at every stage.": "Rationalisation des flux de travail, de l'enregistrement des médicaments à la planification de la production jusqu'à la logistique de distribution — maximisant l'efficacité opérationnelle à chaque étape.",
 
   // ════════════════════════════════
   //  DAMO MANUFACTURING (damo-manufacturing.html)
   // ════════════════════════════════
-  "DAMO Group Entity": "كيان مجموعة دامو",
-  "A state-of-the-art pharmaceutical production facility in the heart of Baghdad, Iraq — pioneering local manufacturing for the region.": "منشأة إنتاج صيدلانية حديثة في قلب بغداد، العراق — رائدة في التصنيع المحلي للمنطقة.",
-  "About the Facility": "عن المنشأة",
-  "Inside the Facility": "داخل المنشأة",
-  "See Our Factory in Action": "شاهد مصنعنا أثناء العمل",
-  "Take a virtual tour of our pharmaceutical production facility.": "قم بجولة افتراضية في منشأة الإنتاج الصيدلانية.",
-  "Key Figures": "أرقام رئيسية",
-  "Production Lines": "خطوط الإنتاج",
-  "Sq. Meters": "متر مربع",
-  "Total Investment": "إجمالي الاستثمار",
-  "Production Capabilities": "قدرات الإنتاج",
-  "Our Capabilities": "قدراتنا",
-  "Designed to produce a wide range of pharmaceutical forms for the Iraqi and regional markets.": "مصممة لإنتاج مجموعة واسعة من الأشكال الصيدلانية للأسواق العراقية والإقليمية.",
-  "Solid Dosage Forms": "أشكال الجرعات الصلبة",
-  "Tablets, capsules, and coated formulations produced in controlled environments.": "أقراص وكبسولات وتركيبات مغلفة تُنتج في بيئات محكمة.",
-  "Sterile Injectables": "الحقن المعقمة",
-  "Ampoules and vials manufactured under stringent aseptic conditions.": "أمبولات وقوارير تُصنع تحت ظروف معقمة صارمة.",
-  "Liquid Forms": "الأشكال السائلة",
-  "Oral solutions, suspensions, and syrups for paediatric and adult use.": "محاليل فموية ومعلقات وشراب للأطفال والبالغين.",
-  "Semi-Solid Forms": "الأشكال شبه الصلبة",
-  "Creams, ointments, and gels for topical application.": "كريمات ومراهم وجل للاستخدام الموضعي.",
-  "GMP Compliance": "الامتثال لـ GMP",
-  "International Standards": "المعايير الدولية",
+  "CAS Development Entity": "Entité CAS Development",
+  "CAS Development Entity — Under Construction": "Entité CAS Development — En Construction",
+  "CAS Development's future local pharmaceutical manufacturer — a state-of-the-art production facility currently under construction in Baghdad, Iraq.": "Futur producteur pharmaceutique local de CAS Development — une installation de production à la pointe de la technologie actuellement en construction à Bagdad, Irak.",
+  "About the Facility": "À Propos de l'Installation",
+  "Inside the Facility": "À l'Intérieur de l'Installation",
+  "See Our Factory in Action": "Découvrez Notre Usine en Action",
+  "Take a virtual tour of our pharmaceutical production facility.": "Faites une visite virtuelle de notre installation de production pharmaceutique.",
+  "Our Capabilities": "Nos Capacités",
+  "What We Produce": "Ce Que Nous Produisons",
+  "A comprehensive range of pharmaceutical products manufactured to the highest quality standards.": "Une gamme complète de produits pharmaceutiques fabriqués selon les plus hauts standards de qualité.",
+  "Solid Dosage Forms": "Formes Galéniques Solides",
+  "Tablets, capsules, and coated pills across multiple therapeutic categories including cardiovascular, CNS, and metabolic disorders.": "Comprimés, gélules et pilules enrobées dans plusieurs catégories thérapeutiques, notamment cardiovasculaire, SNC et troubles métaboliques.",
+  "Injectable Solutions": "Solutions Injectables",
+  "Sterile ampoules and vials produced in ISO Class 5 clean rooms with automated filling and sealing systems.": "Ampoules et flacons stériles produits en salles blanches ISO Classe 5 avec des systèmes de remplissage et de scellage automatisés.",
+  "Liquid Formulations": "Formulations Liquides",
+  "Syrups, suspensions, and oral solutions with precision mixing and automated bottling lines.": "Sirops, suspensions et solutions orales avec mélange de précision et lignes d'embouteillage automatisées.",
+  "Quality Control Lab": "Laboratoire de Contrôle Qualité",
+  "Full analytical laboratory with HPLC, dissolution testing, and stability chambers for rigorous batch validation.": "Laboratoire analytique complet avec HPLC, tests de dissolution et chambres de stabilité pour une validation rigoureuse des lots.",
+  "Cold Chain Products": "Produits de Chaîne du Froid",
+  "Temperature-controlled manufacturing and storage facilities for sensitive biologics and vaccines.": "Installations de fabrication et de stockage à température contrôlée pour les produits biologiques sensibles et les vaccins.",
+  "Packaging & Labeling": "Conditionnement et Étiquetage",
+  "Automated blister packaging, carton labeling, and serialization for full traceability compliance.": "Conditionnement blister automatisé, étiquetage des cartons et sérialisation pour une conformité totale de traçabilité.",
+  "Interested in Local Manufacturing?": "Intéressé par la Fabrication Locale ?",
+
+  // Kimadia & SDI icon card translations
+  "Public Tenders": "Appels d'Offres Publics",
+  "Bid submission & full regulatory compliance": "Soumission d'offres et conformité réglementaire complète",
+  "Market Intelligence": "Veille de Marché",
+  "Identify high-demand pharmaceutical products": "Identifier les produits pharmaceutiques à forte demande",
+  "Competitive Pricing": "Prix Concurrentiels",
+  "Best-value offers for pharmaceutical tenders": "Offres au meilleur prix pour les appels d'offres pharmaceutiques",
+  "Reliable Supply Chain": "Chaîne d'Approvisionnement Fiable",
+  "Guaranteed nationwide delivery & logistics": "Livraison nationale garantie et logistique",
+  "Private Sector Distribution": "Distribution Secteur Privé",
+  "Exclusive distributor of SDI products": "Distributeur exclusif des produits SDI",
+  "300+ Products": "300+ Produits",
+  "Full pharmaceutical portfolio coverage": "Couverture complète du portefeuille pharmaceutique",
+  "Nationwide Reach": "Couverture Nationale",
+  "Distribution across all 18 governorates": "Distribution dans les 18 gouvernorats",
+  "Strategic Partnership": "Partenariat Stratégique",
+  "Long-term exclusive collaboration": "Collaboration exclusive à long terme",
+  "Drug Registration": "Enregistrement des Médicaments",
+  "Factory & product accreditation": "Accréditation d'usines et de produits",
+  "Compliance": "Conformité",
+  "Regulatory monitoring & dossiers": "Suivi réglementaire et dossiers",
+  "Vaccination": "Vaccination",
+  "National campaign logistics": "Logistique de campagne nationale",
+  "Training": "Formation",
+  "Healthcare professional education": "Formation des professionnels de santé",
+  "Whether you're a pharmaceutical company seeking regional production or a healthcare institution in need of locally manufactured medicines, we'd love to discuss collaboration opportunities.": "Que vous soyez une entreprise pharmaceutique recherchant une production régionale ou un établissement de santé ayant besoin de médicaments fabriqués localement, nous serions ravis de discuter des opportunités de collaboration.",
+  "Contact Our Team": "Contactez Notre Équipe",
+  "Partnerships & Inquiries": "Partenariats et Demandes",
 
   // ════════════════════════════════
   //  GOVERNMENT (government.html)
   // ════════════════════════════════
-  "PUBLIC SECTOR COLLABORATION": "التعاون مع القطاع العام",
-  "Strengthening healthcare through strategic collaboration with government institutions.": "تعزيز الرعاية الصحية من خلال التعاون الاستراتيجي مع المؤسسات الحكومية.",
-  "Strategic Partner": "شريك استراتيجي",
-  "Ministry of Health — Republic of Iraq": "وزارة الصحة — جمهورية العراق",
-  "Iraqi Ministry of Health": "وزارة الصحة العراقية",
-  "National healthcare authority": "السلطة الصحية الوطنية",
-  "Drug & factory registration": "تسجيل الأدوية والمصانع",
-  "Regulatory compliance": "الامتثال التنظيمي",
-  "COVID-19 vaccination program": "برنامج التطعيم ضد كوفيد-19",
-  "Training & capacity building": "التدريب وبناء القدرات",
-  "Public Sector Procurement": "مشتريات القطاع العام",
-  "Kimadia — Public Pharmaceutical Tenders": "كيماديا — المناقصات الصيدلانية العامة",
-  "Kimadia": "كيماديا",
-  "State Company for Marketing Drugs": "الشركة العامة لتسويق الأدوية",
-  "& Medical Appliances": "والمستلزمات الطبية",
-  "Visit Official Website": "زيارة الموقع الرسمي",
-  "State Manufacturing Partner": "شريك التصنيع الحكومي",
-  "SDI — State Company for Drug Industries": "SDI — الشركة العامة لصناعة الأدوية",
-  "SDI": "الشركة العامة لصناعة الأدوية",
-  "Government & institutional partner": "شريك حكومي ومؤسسي",
-
-  // --- Gov: MoH paragraphs ---
-  "Al-Qawsan Scientific Bureau maintains a long-standing and strategic relationship with Iraq's Ministry of Health, the national authority responsible for pharmaceutical regulation, public health policy, and the oversight of all healthcare activities across the country.": "يحتفظ المكتب العلمي القوصان بعلاقة استراتيجية طويلة الأمد مع وزارة الصحة العراقية، السلطة الوطنية المسؤولة عن تنظيم الأدوية وسياسة الصحة العامة والإشراف على جميع الأنشطة الصحية في البلاد.",
-  "Our collaboration with the Ministry encompasses several critical areas. We work closely with the regulatory division on the registration and accreditation of pharmaceutical factories and products, ensuring that all medications entering the Iraqi market meet the required safety and efficacy standards. This includes the preparation and submission of technical dossiers, facility inspection coordination, and ongoing compliance monitoring.": "يشمل تعاوننا مع الوزارة عدة مجالات حيوية. نعمل بشكل وثيق مع قسم التنظيم على تسجيل واعتماد المصانع والمنتجات الصيدلانية، وضمان أن جميع الأدوية الداخلة إلى السوق العراقي تلبي معايير السلامة والفعالية المطلوبة. يشمل ذلك إعداد وتقديم الملفات التقنية وتنسيق عمليات التفتيش ومراقبة الامتثال المستمرة.",
-  "Beyond regulatory affairs, Al-Qawsan has played a central role in national health initiatives — most notably as the exclusive distributor of the Sinopharm COVID-19 vaccine during the pandemic, supporting the Ministry's nationwide vaccination campaign across all 18 governorates.": "بعيداً عن الشؤون التنظيمية، لعبت القوصان دوراً محورياً في المبادرات الصحية الوطنية — أبرزها كموزع حصري للقاح سينوفارم ضد كوفيد-19 خلال الجائحة، دعماً لحملة التطعيم الوطنية للوزارة عبر جميع المحافظات الـ18.",
-  "We also contribute to healthcare professional training programmes organised in partnership with the Ministry, providing workshops and seminars on the latest treatment protocols, pharmacological advances, and product knowledge.": "نساهم أيضاً في برامج تدريب المتخصصين في الرعاية الصحية المنظمة بالشراكة مع الوزارة، من خلال تقديم ورش عمل وندوات حول أحدث بروتوكولات العلاج والتطورات الدوائية والمعرفة بالمنتجات.",
-
-  // --- Gov: Kimadia paragraphs ---
-  "Kimadia (The State Company for Marketing Drugs and Medical Appliances) is the Iraqi government entity responsible for the centralised procurement, importation, and distribution of pharmaceutical products and medical supplies to all public healthcare facilities nationwide.": "كيماديا (الشركة العامة لتسويق الأدوية والمستلزمات الطبية) هي الجهة الحكومية العراقية المسؤولة عن الشراء المركزي واستيراد وتوزيع المنتجات الصيدلانية والمستلزمات الطبية على جميع المرافق الصحية العامة في كل أنحاء البلاد.",
-  "Operating under the Iraqi Ministry of Health, Kimadia manages large-scale public tenders for the supply of essential medicines, medical devices, laboratory equipment, and hospital supplies to government hospitals, health centres, and clinics across all Iraqi governorates.": "تعمل كيماديا تحت إشراف وزارة الصحة العراقية، وتدير مناقصات عامة واسعة النطاق لتوريد الأدوية الأساسية والأجهزة الطبية ومعدات المختبرات ومستلزمات المستشفيات إلى المستشفيات الحكومية والمراكز الصحية والعيادات في جميع المحافظات العراقية.",
-  "Al-Qawsan participates actively in Kimadia's procurement processes, submitting competitive bids for pharmaceutical supply contracts and providing high-quality, competitively priced medications from our network of international manufacturers. Our deep understanding of Kimadia's bidding requirements, documentation standards, and delivery protocols positions us as a reliable partner in serving Iraq's public health sector.": "تشارك القوصان بنشاط في عمليات الشراء لدى كيماديا، حيث تقدم عروضاً تنافسية لعقود التوريد الصيدلاني وتوفر أدوية عالية الجودة بأسعار تنافسية من شبكتنا من الشركات المصنعة الدولية. فهمنا العميق لمتطلبات المناقصات ومعايير التوثيق وبروتوكولات التسليم لدى كيماديا يضعنا كشريك موثوق في خدمة القطاع الصحي العام العراقي.",
-  "Through this collaboration, we contribute directly to ensuring that essential medicines remain accessible and affordable in Iraq's public healthcare system, supporting the government's mission of universal health coverage.": "من خلال هذا التعاون، نساهم مباشرة في ضمان بقاء الأدوية الأساسية متاحة وبأسعار معقولة في نظام الرعاية الصحية العامة العراقي، دعماً لمهمة الحكومة في تحقيق التغطية الصحية الشاملة.",
-
-  // --- Gov: SDI paragraphs ---
-  "The State Company for Drug Industries (SDI), headquartered in Samarra, is Iraq's pioneering public pharmaceutical manufacturer. Established in 1965, SDI was the first pharmaceutical manufacturing facility in Iraq and remains a cornerstone of the country's domestic drug production capacity.": "الشركة العامة لصناعة الأدوية (SDI)، ومقرها سامراء، هي الشركة الرائدة في تصنيع الأدوية العامة في العراق. تأسست عام 1965، وكانت أول منشأة لتصنيع الأدوية في العراق وتبقى ركيزة أساسية في قدرة البلاد على الإنتاج الدوائي المحلي.",
-  "SDI operates under the Iraqi Ministry of Industry and Minerals and produces a broad range of essential generic medicines, medical supplies, and healthcare products for distribution through public sector channels. The company's facilities include production lines for tablets, capsules, syrups, injectable solutions, and ointments.": "تعمل الشركة تحت إشراف وزارة الصناعة والمعادن العراقية وتنتج مجموعة واسعة من الأدوية الجنيسة الأساسية والمستلزمات الطبية ومنتجات الرعاية الصحية للتوزيع عبر قنوات القطاع العام. تشمل مرافق الشركة خطوط إنتاج للأقراص والكبسولات والشراب ومحاليل الحقن والمراهم.",
-  "Al-Qawsan's collaboration with SDI focuses on bridging the gap between public manufacturing and market distribution, ensuring that locally produced pharmaceuticals reach pharmacies, hospitals, and clinics efficiently across all governorates. This partnership supports Iraq's strategic objective of reducing dependence on pharmaceutical imports and strengthening domestic production capabilities.": "يركز تعاون القوصان مع الشركة العامة لصناعة الأدوية على سد الفجوة بين التصنيع العام والتوزيع في السوق، وضمان وصول الأدوية المنتجة محلياً إلى الصيدليات والمستشفيات والعيادات بكفاءة عبر جميع المحافظات. تدعم هذه الشراكة الهدف الاستراتيجي للعراق في تقليل الاعتماد على واردات الأدوية وتعزيز قدرات الإنتاج المحلي.",
-  "SDI — Samarra": "الشركة العامة لصناعة الأدوية — سامراء",
-  "State Company for Drug Industries": "الشركة العامة لصناعة الأدوية",
-  "Ministry of Industry & Minerals": "وزارة الصناعة والمعادن",
-  "Samarra, Iraq": "سامراء، العراق",
-
-  // --- Gov: Key Achievements ---
-  "Key Achievements": "الإنجازات الرئيسية",
-  "Our Impact in Government Collaboration": "أثرنا في التعاون الحكومي",
-  "COVID-19 National Response": "الاستجابة الوطنية لكوفيد-19",
-  "2020 — Landmark Achievement": "2020 — إنجاز بارز",
-  "During the global COVID-19 crisis, Al-Qawsan stood at the forefront of Iraq's response. As the exclusive distributor of Sinopharm's vaccine, we facilitated the safe and timely delivery of doses across the country in coordination with the Ministry of Health.": "خلال أزمة كوفيد-19 العالمية، وقفت القوصان في طليعة استجابة العراق. بصفتنا الموزع الحصري للقاح سينوفارم، سهّلنا التسليم الآمن والسريع للجرعات في جميع أنحاء البلاد بالتنسيق مع وزارة الصحة.",
-  "Ongoing — Kimadia Tenders": "مستمر — مناقصات كيماديا",
-  "Active and consistent participation in Kimadia's national pharmaceutical tenders, supplying essential medicines and medical devices to government hospitals and public health facilities across all Iraqi governorates.": "مشاركة فعّالة ومستمرة في مناقصات كيماديا الصيدلانية الوطنية، لتوريد الأدوية الأساسية والأجهزة الطبية للمستشفيات الحكومية ومرافق الصحة العامة في جميع المحافظات العراقية.",
-  "Regulatory Registration": "التسجيل التنظيمي",
-  "Core Government Function": "وظيفة حكومية أساسية",
-  "Comprehensive management of pharmaceutical factory and product registration with the Ministry of Health, including technical dossier preparation, inspection coordination, and ongoing compliance management.": "إدارة شاملة لتسجيل المصانع والمنتجات الصيدلانية لدى وزارة الصحة، بما في ذلك إعداد الملفات التقنية وتنسيق عمليات التفتيش وإدارة الامتثال المستمرة.",
-  "Professional Training Programmes": "برامج التدريب المهني",
-  "Healthcare Education": "التعليم الصحي",
-  "Organisation of specialised workshops and seminars for healthcare professionals in partnership with the Ministry of Health, covering treatment protocols, pharmacological advances, and continuing medical education.": "تنظيم ورش عمل وندوات متخصصة للمتخصصين في الرعاية الصحية بالشراكة مع وزارة الصحة، تغطي بروتوكولات العلاج والتطورات الدوائية والتعليم الطبي المستمر.",
-
-  // --- Gov: CTA ---
-  "Government Collaboration": "التعاون الحكومي",
-  "Looking for Healthcare Solutions?": "تبحث عن حلول صحية؟",
-  "If you represent a government health institution and are interested in pharmaceutical supply partnerships, we'd love to connect.": "إذا كنت تمثل مؤسسة صحية حكومية ومهتماً بشراكات التوريد الصيدلاني، يسعدنا التواصل معك.",
+  "Public Sector Collaboration": "Collaboration avec le Secteur Public",
+  "Strengthening healthcare through strategic collaboration with government institutions.": "Renforcer la santé par une collaboration stratégique avec les institutions gouvernementales.",
+  "Strategic Partner": "Partenaire Stratégique",
+  "Ministry of Health — Republic of Iraq": "Ministère de la Santé — République d'Irak",
+  "Iraqi Ministry of Health": "Ministère de la Santé Irakien",
+  "National healthcare authority": "Autorité nationale de santé",
+  "Drug & factory registration": "Enregistrement des médicaments et usines",
+  "Regulatory compliance": "Conformité réglementaire",
+  "COVID-19 vaccination program": "Programme de vaccination COVID-19",
+  "Training & capacity building": "Formation et renforcement des capacités",
+  "Public Sector Procurement": "Marchés Publics",
+  "Kimadia — Public Pharmaceutical Tenders": "Kimadia — Appels d'Offres Pharmaceutiques Publics",
+  "Kimadia": "Kimadia",
+  "State Company for Marketing Drugs": "Société d'État pour la Commercialisation des Médicaments",
+  "& Medical Appliances": "et Appareils Médicaux",
+  "Visit Official Website": "Visiter le Site Officiel",
+  "State Manufacturing Partner": "Partenaire de Fabrication d'État",
+  "SDI — State Company for Drug Industries": "SDI — Société d'État pour les Industries Pharmaceutiques",
+  "Key Achievements": "Réalisations Clés",
+  "Our Impact in Government Collaboration": "Notre Impact dans la Collaboration Gouvernementale",
+  "COVID-19 National Response": "Réponse Nationale au COVID-19",
+  "2020 — Landmark Achievement": "2020 — Réalisation Majeure",
+  "Ongoing — Kimadia Tenders": "En Cours — Appels d'Offres Kimadia",
+  "Regulatory Registration": "Enregistrement Réglementaire",
+  "Core Government Function": "Fonction Gouvernementale Essentielle",
+  "Professional Training Programmes": "Programmes de Formation Professionnelle",
+  "Healthcare Education": "Éducation en Santé",
+  "Government Collaboration": "Collaboration Gouvernementale",
+  "Looking for Healthcare Solutions?": "À la Recherche de Solutions de Santé ?",
+  "If you represent a government health institution and are interested in pharmaceutical supply partnerships, we'd love to connect.": "Si vous représentez une institution de santé gouvernementale et êtes intéressé par des partenariats d'approvisionnement pharmaceutique, contactez-nous.",
 
   // ════════════════════════════════
   //  PARTNERS (partners.html)
   // ════════════════════════════════
-  "GLOBAL NETWORK": "الشبكة العالمية",
-  "Our Global Partners": "شركاؤنا العالميون",
-  "Connecting world-class pharmaceutical laboratories with Iraq and the Middle East through strategic distribution and regulatory partnerships.": "ربط المختبرات الصيدلانية العالمية بالعراق والشرق الأوسط من خلال شراكات التوزيع والتنظيم الاستراتيجية.",
-  "WORLDWIDE PRESENCE": "تواجد عالمي",
-  "Our Global Footprint": "بصمتنا العالمية",
-  "Filter by Region": "تصفية حسب المنطقة",
-  "All Partners": "جميع الشركاء",
-  "Explore Our Network": "استكشف شبكتنا",
-  "BECOME A PARTNER": "كن شريكاً",
-  "Join Our Global Network": "انضم لشبكتنا العالمية",
-  "We're always looking for new pharmaceutical partners. If you're a manufacturer with quality products, let's explore opportunities together.": "نبحث دائماً عن شركاء صيدلانيين جدد. إذا كنت مصنعاً بمنتجات عالية الجودة، لنستكشف الفرص معاً.",
+  "Our Network": "Notre Réseau",
+  "Partners": "Partenaires",
+  "Connecting Iraq to the world through trusted pharmaceutical partnerships across 8 countries.": "Connecter l'Irak au monde à travers des partenariats pharmaceutiques de confiance dans 8 pays.",
+  "Worldwide Presence": "Présence Mondiale",
+  "Our Global Footprint": "Notre Empreinte Mondiale",
+  "Click on the map markers to discover our partners in each country.": "Cliquez sur les marqueurs de la carte pour découvrir nos partenaires dans chaque pays.",
+  "All Partners": "Tous les Partenaires",
+  "Become a Partner": "Devenez Partenaire",
+  "Join Our Global Network": "Rejoignez Notre Réseau Mondial",
+  "We're always looking for new pharmaceutical partners. If you're a manufacturer with quality products, let's explore opportunities together.": "Nous recherchons toujours de nouveaux partenaires pharmaceutiques. Si vous êtes un fabricant avec des produits de qualité, explorons les opportunités ensemble.",
+  "Visit Website": "Visiter le Site Web",
   // Country names
-  "Iraq": "العراق",
-  "Egypt": "مصر",
-  "India": "الهند",
-  "Spain": "إسبانيا",
-  "USA": "الولايات المتحدة",
-  "Canada": "كندا",
-  "Singapore": "سنغافورة",
-  "Tunisia": "تونس",
+  "Iraq": "Irak",
+  "Egypt": "Égypte",
+  "India": "Inde",
+  "Spain": "Espagne",
+  "USA": "États-Unis",
+  "Canada": "Canada",
+  "Singapore": "Singapour",
+  "Tunisia": "Tunisie",
+  "Turkey": "Turquie",
   // Filter buttons with flags
-  "🇮🇶 Iraq": "🇮🇶 العراق",
-  "🇪🇬 Egypt": "🇪🇬 مصر",
-  "🇺🇸 USA": "🇺🇸 الولايات المتحدة",
-  "🇮🇳 India": "🇮🇳 الهند",
-  "🇪🇸 Spain": "🇪🇸 إسبانيا",
-  "🇨🇦 Canada": "🇨🇦 كندا",
-  "🇸🇬 Singapore": "🇸🇬 سنغافورة",
-  "🇹🇳 Tunisia": "🇹🇳 تونس",
-  "🇹🇷 Turkey": "🇹🇷 تركيا",
-  "Turkey": "تركيا",
+  "🇮🇶 Iraq": "🇮🇶 Irak",
+  "🇪🇬 Egypt": "🇪🇬 Égypte",
+  "🇺🇸 USA": "🇺🇸 États-Unis",
+  "🇮🇳 India": "🇮🇳 Inde",
+  "🇪🇸 Spain": "🇪🇸 Espagne",
+  "🇨🇦 Canada": "🇨🇦 Canada",
+  "🇸🇬 Singapore": "🇸🇬 Singapour",
+  "🇹🇳 Tunisia": "🇹🇳 Tunisie",
+  "🇹🇷 Turkey": "🇹🇷 Turquie",
+
+  // ════════════════════════════════
+  //  ABOUT US — Vision & Entities sections
+  // ════════════════════════════════
+  "Our Values": "Nos Valeurs",
+  "Vision & Mission": "Vision et Mission",
+  "The principles that drive our commitment to healthcare excellence.": "Les principes qui guident notre engagement envers l'excellence en santé.",
+  "Our Vision": "Notre Vision",
+  "To be the leading bridge between global pharmaceutical innovation and regional healthcare needs in the Middle East, setting the standard for quality and reliability.": "Être le pont de référence entre l'innovation pharmaceutique mondiale et les besoins régionaux en santé au Moyen-Orient, en définissant les standards de qualité et de fiabilité.",
+  "Our Mission": "Notre Mission",
+  "To ensure safe, effective, and accessible medications reach patients through Swiss-standard quality assurance, rigorous regulatory compliance, and a network of trusted global partnerships.": "Garantir que des médicaments sûrs, efficaces et accessibles parviennent aux patients grâce à une assurance qualité aux standards suisses, une conformité réglementaire rigoureuse et un réseau de partenariats mondiaux de confiance.",
+  "Integrity, excellence, and patient safety at every step — from product sourcing and quality verification to regulatory approval and end-to-end distribution.": "Intégrité, excellence et sécurité des patients à chaque étape — de l'approvisionnement en produits et la vérification qualité à l'approbation réglementaire et la distribution de bout en bout.",
+  "Our Ecosystem": "Notre Écosystème",
+  "Each entity plays a vital role in our integrated pharmaceutical group.": "Chaque entité joue un rôle vital dans notre groupe pharmaceutique intégré.",
 
   // ════════════════════════════════
   //  CONTACT (contact.html)
   // ════════════════════════════════
-  "GET IN TOUCH": "تواصل معنا",
-  "Contact Our Entities": "التواصل مع كياناتنا",
-  "Reach out to any of our three entities directly.": "تواصل مع أي من كياناتنا الثلاثة مباشرة.",
-  "Phone": "الهاتف",
-  "Email": "البريد الإلكتروني",
-  "Address": "العنوان",
-  "Baghdad, Iraq": "بغداد، العراق",
+  "Contact Us": "Contactez-Nous",
+  "We'd love to hear from you. Whether you're a potential partner, client, or collaborator — let's start a conversation.": "Nous serions ravis de vous entendre. Que vous soyez un partenaire potentiel, un client ou un collaborateur — commençons une conversation.",
+  "Phone": "Téléphone",
+  "Email": "E-mail",
+  "Address": "Adresse",
+  "Baghdad, Iraq": "Bagdad, Irak",
 
   // ════════════════════════════════
   //  NEWS (news.html)
   // ════════════════════════════════
-  "LATEST UPDATES": "آخر التحديثات",
-  "News & Insights": "الأخبار والرؤى",
-  "Stay informed about DAMO Group's latest developments, partnerships, and industry milestones.": "ابقَ على اطلاع بأحدث تطورات مجموعة دامو وشراكاتها وإنجازات القطاع.",
-  "Read Full Article": "اقرأ المقال كاملاً",
-  "View on LinkedIn": "عرض على لينكدإن",
-  "Tunisia and Iraq Join Forces to Expand Pharmaceutical Exports and Health Sovereignty": "تونس والعراق يتحدان لتوسيع الصادرات الصيدلانية والسيادة الصحية",
-  "Official Press Release: Signing of an International Partnership Agreement": "بيان صحفي رسمي: توقيع اتفاقية شراكة دولية",
-  "February 2026": "فبراير 2026",
-  "July 18, 2025": "18 يوليو 2025",
-
-  // --- News page hero ---
-  "Stay Updated": "ابقَ على اطلاع",
-  "STAY UPDATED": "ابقَ على اطلاع",
-  "Latest News": "آخر الأخبار",
-  "Latest": "آخر",
-  "Industry developments, group milestones, and partnership announcements from DAMO Group.": "تطورات الصناعة والمعالم البارزة للمجموعة وإعلانات الشراكات من مجموعة دامو.",
-
-  // --- Gov page hero ---
-  "Public Sector Collaboration": "التعاون مع القطاع العام",
-  "Government Partnerships": "الشراكات الحكومية",
-  "Partnerships": "الشراكات",
-
-  // --- Contact page hero ---
-  "Get In Touch": "تواصل معنا",
-  "Contact Us": "اتصل بنا",
-  "We'd love to hear from you. Whether you're a potential partner, client, or collaborator — let's start a conversation.": "يسعدنا أن نسمع منك. سواء كنت شريكاً محتملاً أو عميلاً أو متعاوناً — لنبدأ محادثة.",
-
-  // --- Homepage hero h1 parts ---
-  "Empowering Healthcare,Bridging Continents": "تمكين الرعاية الصحية،عبور القارات",
-  "Empowering": "تمكين",
-  "Healthcare": "الرعاية الصحية",
-  "Bridging Continents": "عبور القارات",
-
-  // --- Al-Qawsan page hero ---
-  "DAMO Group — Distribution": "مجموعة دامو — التوزيع",
-  "Al-Qawsan Scientific Bureau": "المكتب العلمي القوصان",
-  "Scientific Bureau": "المكتب العلمي",
-  "Iraq's leading pharmaceutical distributor — delivering world-class healthcare solutions since 2009.": "الموزع الصيدلاني الرائد في العراق — تقديم حلول صحية عالمية المستوى منذ 2009.",
-
-  // --- CAS Development page hero ---
-  "DAMO Group — Quality & Regulatory": "مجموعة دامو — الجودة والتنظيم",
-  "CAS Development SA": "كاس للتطوير ش.م.",
-  "SA": "ش.م.",
-  "Swiss Quality, Global Impact — Marketing Authorization Holder ensuring the highest pharmaceutical standards.": "جودة سويسرية، تأثير عالمي — حامل رخصة التسويق لضمان أعلى المعايير الصيدلانية.",
-
-  // --- CAS scope card ---
-  "Health & Wellness": "الصحة والعافية",
-  "Food supplements, cosmetics, and wellness products meeting Swiss quality standards.": "المكملات الغذائية ومستحضرات التجميل ومنتجات العافية المطابقة لمعايير الجودة السويسرية.",
-  "Apparatus, instruments, and medical supplies for healthcare facilities and professionals.": "الأجهزة والأدوات والمستلزمات الطبية للمرافق الصحية والمتخصصين.",
-
-  // --- DAMO Manufacturing page hero ---
-  "DAMO Group Entity": "كيان مجموعة دامو",
-  "DAMO Manufacturing": "دامو للتصنيع",
-
-  // --- Partners page hero ---
-  "Our Network": "شبكتنا",
-  "Global Partners": "الشركاء العالميون",
-  "Partners": "الشركاء",
-  "Connecting Iraq to the world through trusted pharmaceutical partnerships across 8 countries.": "ربط العراق بالعالم من خلال شراكات صيدلانية موثوقة عبر 8 دول.",
-  // Partners map section
-  "Worldwide Presence": "تواجد عالمي",
-  "Click on the map markers to discover our partners in each country.": "انقر على علامات الخريطة لاكتشاف شركائنا في كل دولة.",
+  "Stay Updated": "Restez Informé",
+  "Latest News": "Dernières Actualités",
+  "Industry developments, group milestones, and partnership announcements from CAS Development.": "Développements du secteur, jalons du groupe et annonces de partenariats de CAS Development.",
+  "Read Full Article": "Lire l'Article Complet",
+  "View on LinkedIn": "Voir sur LinkedIn",
+  "Tunisia and Iraq Join Forces to Expand Pharmaceutical Exports and Health Sovereignty": "La Tunisie et l'Irak Unissent leurs Forces pour Étendre les Exportations Pharmaceutiques et la Souveraineté Sanitaire",
+  "Official Press Release: Signing of an International Partnership Agreement": "Communiqué de Presse Officiel : Signature d'un Accord de Partenariat International",
+  "February 2026": "Février 2026",
+  "July 18, 2025": "18 Juillet 2025",
 
   // ════════════════════════════════
   //  FOOTER / COMMON
   // ════════════════════════════════
-  "Quick Links": "روابط سريعة",
-  "Contact": "اتصل بنا",
-  "Home": "الرئيسية",
-  "News": "الأخبار",
-  "Contact Us": "اتصل بنا",
-  "© 2026 DAMO Group. All rights reserved.": "© 2026 مجموعة دامو. جميع الحقوق محفوظة.",
-  "A global pharmaceutical group connecting Swiss quality standards with regional healthcare needs across the Middle East.": "مجموعة صيدلانية عالمية تربط معايير الجودة السويسرية باحتياجات الرعاية الصحية الإقليمية في الشرق الأوسط.",
-  "Read More": "اقرأ المزيد",
-  "View All Partners": "عرض جميع الشركاء",
-  "Contact CAS Development": "تواصل مع كاس للتطوير",
+  "Quick Links": "Liens Rapides",
+  "Contact": "Contact",
+  "Home": "Accueil",
+  "News": "Actualités",
+  "© 2026 CAS Development. All rights reserved.": "© 2026 CAS Development. Tous droits réservés.",
+  "A global pharmaceutical group connecting Swiss quality standards with regional healthcare needs across the Middle East.": "Un groupe pharmaceutique mondial reliant les standards de qualité suisses aux besoins régionaux en santé au Moyen-Orient.",
+  "Read More": "En Savoir Plus",
+  "Contact CAS Development": "Contacter CAS Development",
 
   // ════════════════════════════════
-  //  LONG PARAGRAPHS (textContent keys — no HTML tags)
+  //  LONG PARAGRAPHS
   // ════════════════════════════════
+  "CAS Development is an integrated pharmaceutical group operating across Switzerland, Iraq, and the Middle East. Our ecosystem bridges the gap between global pharmaceutical innovation and regional healthcare needs.": "CAS Development est un groupe pharmaceutique intégré opérant en Suisse, en Irak et au Moyen-Orient. Notre écosystème fait le pont entre l'innovation pharmaceutique mondiale et les besoins régionaux en matière de santé.",
+  "Through our three core entities — Al-Qawsan Group for distribution and regulatory affairs, DAMO Manufacturing for pharmaceutical production, and CAS Development SA for Swiss-standard quality assurance and market authorization — we ensure that safe, effective medications reach the healthcare professionals and patients who need them most.": "À travers nos trois entités principales — le Groupe Al-Qawsan pour la distribution et les affaires réglementaires, DAMO Manufacturing pour la production pharmaceutique, et CAS Development SA pour l'assurance qualité aux standards suisses et les autorisations de mise sur le marché — nous veillons à ce que des médicaments sûrs et efficaces atteignent les professionnels de santé et les patients qui en ont le plus besoin.",
+  "With partnerships spanning over 10 countries and a team of 1,500+ professionals, CAS Development is committed to empowering healthcare excellence at every level.": "Avec des partenariats couvrant plus de 10 pays et une équipe de plus de 1 500 professionnels, CAS Development s'engage à promouvoir l'excellence en matière de santé à tous les niveaux.",
 
-  // --- Homepage About ---
-  "DAMO Group is an integrated pharmaceutical group operating across Switzerland, Iraq, and the Middle East. Our ecosystem bridges the gap between global pharmaceutical innovation and regional healthcare needs.": "مجموعة دامو هي مجموعة صيدلانية متكاملة تعمل في سويسرا والعراق والشرق الأوسط. تسد منظومتنا الفجوة بين الابتكار الصيدلاني العالمي واحتياجات الرعاية الصحية الإقليمية.",
-  "Through our three core entities — Al-Qawsan Group for distribution and regulatory affairs, DAMU Manufacturing for pharmaceutical production, and CAS Development SA for Swiss-standard quality assurance and market authorization — we ensure that safe, effective medications reach the healthcare professionals and patients who need them most.": "من خلال كياناتنا الأساسية الثلاثة — مجموعة القوصان للتوزيع والشؤون التنظيمية، ودامو للتصنيع الدوائي، وكاس للتطوير لضمان الجودة السويسرية ورخص التسويق — نضمن وصول الأدوية الآمنة والفعالة إلى المتخصصين في الرعاية الصحية والمرضى الأكثر حاجة.",
-  "With partnerships spanning over 10 countries and a team of 1,500+ professionals, DAMO Group is committed to empowering healthcare excellence at every level.": "مع شراكات تمتد عبر أكثر من 10 دول وفريق يضم أكثر من 1,500 متخصص، تلتزم مجموعة دامو بتمكين التميز في الرعاية الصحية على كل المستويات.",
+  // Al-Qawsan About
+  "Established in 2009 in Baghdad, Al-Qawsan Scientific Bureau has grown into one of Iraq's top five pharmaceutical distributors in the private sector.": "Fondé en 2009 à Bagdad, le Bureau Scientifique Al-Qawsan est devenu l'un des cinq premiers distributeurs pharmaceutiques du secteur privé en Irak.",
+  "We provide a wide range of medical products and services, targeting healthcare professionals, pharmacies, and the public sector. Our dedication to quality and innovation drives our partnerships with global leaders, ensuring the availability of safe and effective medications across Iraq.": "Nous fournissons une large gamme de produits et services médicaux, ciblant les professionnels de santé, les pharmacies et le secteur public. Notre engagement envers la qualité et l'innovation guide nos partenariats avec des leaders mondiaux.",
+  "With over 1,500 employees spanning all Iraqi governorates, Al-Qawsan maintains a close collaboration with the Iraqi Ministry of Health to address public health challenges and improve access to care.": "Avec plus de 1 500 employés couvrant tous les gouvernorats irakiens, Al-Qawsan maintient une collaboration étroite avec le Ministère de la Santé irakien pour relever les défis de santé publique et améliorer l'accès aux soins.",
 
-  // --- Al-Qawsan About ---
-  "Established in 2009 in Baghdad, Al-Qawsan Scientific Bureau has grown into one of Iraq's top five pharmaceutical distributors in the private sector.": "تأسس المكتب العلمي القوصان عام 2009 في بغداد، ونما ليصبح أحد أفضل خمسة موزعين صيدلانيين في القطاع الخاص في العراق.",
-  "We provide a wide range of medical products and services, targeting healthcare professionals, pharmacies, and the public sector. Our dedication to quality and innovation drives our partnerships with global leaders, ensuring the availability of safe and effective medications across Iraq.": "نقدم مجموعة واسعة من المنتجات والخدمات الطبية، مستهدفين المتخصصين في الرعاية الصحية والصيدليات والقطاع العام. تدفع التزامنا بالجودة والابتكار شراكاتنا مع القادة العالميين، مما يضمن توفر أدوية آمنة وفعالة في أنحاء العراق.",
-  "With over 1,500 employees spanning all Iraqi governorates, Al-Qawsan maintains a close collaboration with the Iraqi Ministry of Health to address public health challenges and improve access to care.": "مع أكثر من 1,500 موظف في جميع المحافظات العراقية، تحافظ القوصان على تعاون وثيق مع وزارة الصحة العراقية لمواجهة تحديات الصحة العامة وتحسين الوصول للرعاية.",
+  // CAS Development Role
+  "CAS Development SA, based in Geneva, Switzerland, serves as the Marketing Authorization Holder (MAH) within the CAS Development ecosystem.": "CAS Development SA, basée à Genève, en Suisse, est le Titulaire d'Autorisation de Mise sur le Marché (AMM) au sein de l'écosystème CAS Development.",
+  "Our primary mission is to ensure that every pharmaceutical product distributed through our network meets the highest Swiss quality standards. We are responsible for the acquisition, management, and exploitation of Market Authorizations (AMM) for the commercial trading, distribution, and import/export of pharmaceutical products.": "Notre mission principale est de garantir que chaque produit pharmaceutique distribué via notre réseau répond aux plus hauts standards de qualité suisses. Nous sommes responsables de l'acquisition, de la gestion et de l'exploitation des Autorisations de Mise sur le Marché (AMM).",
+  "By bridging the regulatory gap between international manufacturers and the Iraqi market, CAS Development SA acts as the quality gateway — ensuring patient safety through rigorous product evaluation and compliance verification.": "En comblant l'écart réglementaire entre les fabricants internationaux et le marché irakien, CAS Development SA agit comme la porte d'entrée de la qualité — assurant la sécurité des patients grâce à une évaluation rigoureuse des produits et une vérification de la conformité.",
+  "Looking for a Swiss Quality Partner?": "À la Recherche d'un Partenaire Qualité Suisse ?",
+  "If you're a pharmaceutical manufacturer seeking a reliable Marketing Authorization Holder in Switzerland, let's discuss how we can work together.": "Si vous êtes un fabricant pharmaceutique à la recherche d'un titulaire d'AMM fiable en Suisse, discutons de la manière dont nous pouvons travailler ensemble.",
 
-  // --- CAS Development Role ---
-  "CAS Development SA, based in Geneva, Switzerland, serves as the Marketing Authorization Holder (MAH) within the DAMO Group ecosystem.": "تعمل كاس للتطوير ش.م.، ومقرها جنيف، سويسرا، بصفتها حامل رخصة التسويق (MAH) ضمن منظومة مجموعة دامو.",
-  "Our primary mission is to ensure that every pharmaceutical product distributed through our network meets the highest Swiss quality standards. We are responsible for the acquisition, management, and exploitation of Market Authorizations (AMM) for the commercial trading, distribution, and import/export of pharmaceutical products.": "مهمتنا الأساسية هي ضمان أن كل منتج صيدلاني يوزع عبر شبكتنا يلبي أعلى معايير الجودة السويسرية. نحن مسؤولون عن الحصول على رخص التسويق (AMM) وإدارتها واستثمارها للتجارة والتوزيع واستيراد/تصدير المنتجات الصيدلانية.",
-  "By bridging the regulatory gap between international manufacturers and the Iraqi market, CAS Development SA acts as the quality gateway — ensuring patient safety through rigorous product evaluation and compliance verification.": "من خلال سد الفجوة التنظيمية بين الشركات المصنعة الدولية والسوق العراقي، تعمل كاس للتطوير كبوابة الجودة — ضمان سلامة المرضى من خلال التقييم الصارم للمنتجات والتحقق من الامتثال.",
-  "Looking for a Swiss Quality Partner?": "تبحث عن شريك جودة سويسري؟",
-  "If you're a pharmaceutical manufacturer seeking a reliable Marketing Authorization Holder in Switzerland, let's discuss how we can work together.": "إذا كنت شركة تصنيع أدوية تبحث عن حامل رخصة تسويق موثوق في سويسرا، لنناقش كيف يمكننا العمل معاً.",
+  // DAMO Manufacturing
+  "Pioneering Pharmaceutical Production in Iraq": "Pionnier de la Production Pharmaceutique en Irak",
+  "DAMO Manufacturing is CAS Development's future local pharmaceutical manufacturer and a landmark investment in Iraq's healthcare infrastructure. Currently under construction in the heart of Baghdad, the facility is designed to meet the highest international standards of pharmaceutical production.": "DAMO Manufacturing est le futur producteur pharmaceutique local de CAS Development et un investissement majeur dans l'infrastructure sanitaire de l'Irak. Actuellement en construction au cœur de Bagdad, l'installation est conçue pour répondre aux plus hauts standards internationaux de production pharmaceutique.",
+  "Engineered with cutting-edge technology and built to comply with Good Manufacturing Practice (GMP) guidelines, DAMO represents a new era of self-reliant pharmaceutical production in Iraq. From solid dosage forms to sterile injectables, the production lines will serve the diverse healthcare needs of the Iraqi population and the broader Middle Eastern market.": "Conçue avec une technologie de pointe et construite pour se conformer aux directives de Bonnes Pratiques de Fabrication (BPF), DAMO représente une nouvelle ère de production pharmaceutique autonome en Irak. Des formes galéniques solides aux injectables stériles, les lignes de production serviront les divers besoins en santé de la population irakienne et du marché moyen-oriental.",
+  "Once operational, DAMO will produce safe, effective, and affordable medicines under CAS Development's Swiss quality standards — reducing Iraq's dependence on pharmaceutical imports and strengthening the country's domestic production capacity.": "Une fois opérationnelle, DAMO produira des médicaments sûrs, efficaces et abordables selon les standards de qualité suisses de CAS Development — réduisant la dépendance de l'Irak aux importations pharmaceutiques et renforçant la capacité de production nationale du pays.",
 
-  // --- DAMO Manufacturing ---
-  "Pioneering Pharmaceutical Production in Iraq": "ريادة الإنتاج الصيدلاني في العراق",
-  "DAMO Manufacturing stands as a landmark investment in Iraq's pharmaceutical future. Located in the heart of Baghdad, our facility is designed to meet the highest international standards of pharmaceutical production — bringing world-class manufacturing capabilities to the region for the first time.": "يمثل مصنع دامو استثماراً بارزاً في مستقبل الصناعة الدوائية العراقية. يقع في قلب بغداد، وقد صُمّمت منشأتنا لتلبية أعلى المعايير الدولية للإنتاج الصيدلاني — جلب قدرات التصنيع العالمية إلى المنطقة لأول مرة.",
-  "Engineered with cutting-edge technology and built to comply with Good Manufacturing Practice (GMP) guidelines, the plant represents a new era of self-reliant pharmaceutical production in Iraq. From solid dosage forms to sterile injectables, our production lines are built to serve the diverse healthcare needs of the Iraqi population and the broader Middle Eastern market.": "صُمّم بأحدث التقنيات وبُني للامتثال لإرشادات ممارسات التصنيع الجيد (GMP)، يمثل المصنع حقبة جديدة من الإنتاج الصيدلاني المكتفي ذاتياً في العراق. من أشكال الجرعات الصلبة إلى الحقن المعقمة، بُنيت خطوط إنتاجنا لخدمة احتياجات الرعاية الصحية المتنوعة للسكان العراقيين وسوق الشرق الأوسط الأوسع.",
-  "With a dedicated team of pharmacists, engineers, and quality assurance specialists, DAMO Manufacturing is committed to producing safe, effective, and affordable medicines — reducing dependence on imports and strengthening Iraq's healthcare infrastructure from within.": "مع فريق متخصص من الصيادلة والمهندسين ومتخصصي ضمان الجودة، تلتزم دامو للتصنيع بإنتاج أدوية آمنة وفعالة وبأسعار معقولة — تقليل الاعتماد على الواردات وتعزيز البنية التحتية للرعاية الصحية في العراق من الداخل.",
-  "Injectable Solutions": "محاليل الحقن",
-  "Sterile ampoules and vials produced in ISO Class 5 clean rooms with automated filling and sealing systems.": "أمبولات وقوارير معقمة تُنتج في غرف نظيفة ISO فئة 5 مع أنظمة تعبئة وإغلاق آلية.",
-  "Liquid Formulations": "التركيبات السائلة",
-  "Syrups, suspensions, and oral solutions with precision mixing and automated bottling lines.": "شراب ومعلقات ومحاليل فموية مع خلط دقيق وخطوط تعبئة آلية.",
-  "Quality Control Lab": "مختبر مراقبة الجودة",
-  "Full analytical laboratory with HPLC, dissolution testing, and stability chambers for rigorous batch validation.": "مختبر تحليلي كامل مع HPLC واختبار الذوبان وغرف الاستقرار للتحقق الصارم من الدفعات.",
-  "Cold Chain Products": "منتجات سلسلة التبريد",
-  "Temperature-controlled manufacturing and storage facilities for sensitive biologics and vaccines.": "مرافق تصنيع وتخزين بدرجة حرارة محكمة للمنتجات البيولوجية الحساسة واللقاحات.",
-  "Packaging & Labeling": "التعبئة والتغليف",
-  "Automated blister packaging, carton labeling, and serialization for full traceability compliance.": "تعبئة بثور آلية ووسم الكراتين والتسلسل الرقمي للامتثال الكامل لتتبع المنتجات.",
-  "Interested in Local Manufacturing?": "مهتم بالتصنيع المحلي؟",
-  "Whether you're a pharmaceutical company seeking regional production or a healthcare institution in need of locally manufactured medicines, we'd love to discuss collaboration opportunities.": "سواء كنت شركة أدوية تبحث عن إنتاج إقليمي أو مؤسسة صحية بحاجة إلى أدوية مصنعة محلياً، يسعدنا مناقشة فرص التعاون.",
+  // Gov paragraphs
+  "Al-Qawsan Scientific Bureau maintains a long-standing and strategic relationship with Iraq's Ministry of Health, the national authority responsible for pharmaceutical regulation, public health policy, and the oversight of all healthcare activities across the country.": "Le Bureau Scientifique Al-Qawsan entretient une relation stratégique de longue date avec le Ministère de la Santé irakien, l'autorité nationale responsable de la réglementation pharmaceutique, de la politique de santé publique et de la supervision de toutes les activités sanitaires à travers le pays.",
+  "During the global COVID-19 crisis, Al-Qawsan stood at the forefront of Iraq's response. As the exclusive distributor of Sinopharm's vaccine, we facilitated the safe and timely delivery of doses across the country in coordination with the Ministry of Health.": "Pendant la crise mondiale du COVID-19, Al-Qawsan s'est retrouvé en première ligne de la réponse de l'Irak. En tant que distributeur exclusif du vaccin Sinopharm, nous avons facilité la livraison sûre et rapide des doses à travers le pays.",
+  "Active and consistent participation in Kimadia's national pharmaceutical tenders, supplying essential medicines and medical devices to government hospitals and public health facilities across all Iraqi governorates.": "Participation active et constante aux appels d'offres pharmaceutiques nationaux de Kimadia, fournissant des médicaments essentiels et des dispositifs médicaux aux hôpitaux gouvernementaux et aux établissements de santé publique.",
 
-  // --- News Articles ---
-  "Tunisia's Minister of Health, Dr. Mustapha Ferjani, oversaw the signing of a landmark partnership agreement between the Tunisian pharmaceutical company SIPHAT and Al-Qawsan Scientific Bureau, in the presence of Tunisian oncology drug expert Moez Ben Ali. The agreement aims to export Tunisian-made medicines to the Iraqi market, transfer pharmaceutical manufacturing technology, and establish new production lines for drugs destined for Iraq.": "أشرف وزير الصحة التونسي الدكتور مصطفى الفرجاني على توقيع اتفاقية شراكة تاريخية بين شركة الأدوية التونسية سيفات والمكتب العلمي القوصان، بحضور خبير أدوية الأورام التونسي معز بن علي. تهدف الاتفاقية إلى تصدير الأدوية المصنعة في تونس إلى السوق العراقي، ونقل تكنولوجيا التصنيع الصيدلاني، وإنشاء خطوط إنتاج جديدة للأدوية الموجهة للعراق.",
-  "Al-Qawsan Scientific Bureau proudly announces the signing of a major international partnership agreement, marking a significant milestone in expanding pharmaceutical collaboration across borders. This strategic agreement reinforces our commitment to advancing healthcare access and building bridges between global pharmaceutical innovation and the Iraqi market.": "يعلن المكتب العلمي القوصان بفخر عن توقيع اتفاقية شراكة دولية كبرى، مما يمثل علامة فارقة في توسيع التعاون الصيدلاني عبر الحدود. تعزز هذه الاتفاقية الاستراتيجية التزامنا بتعزيز الوصول للرعاية الصحية وبناء جسور بين الابتكار الصيدلاني العالمي والسوق العراقي.",
+  // News articles
+  "Tunisia's Minister of Health, Dr. Mustapha Ferjani, oversaw the signing of a landmark partnership agreement between the Tunisian pharmaceutical company SIPHAT and Al-Qawsan Scientific Bureau, in the presence of Tunisian oncology drug expert Moez Ben Ali. The agreement aims to export Tunisian-made medicines to the Iraqi market, transfer pharmaceutical manufacturing technology, and establish new production lines for drugs destined for Iraq.": "Le Ministre de la Santé tunisien, Dr. Mustapha Ferjani, a supervisé la signature d'un accord de partenariat historique entre la société pharmaceutique tunisienne SIPHAT et le Bureau Scientifique Al-Qawsan, en présence de l'expert tunisien en médicaments oncologiques Moez Ben Ali. L'accord vise à exporter des médicaments fabriqués en Tunisie vers le marché irakien.",
+  "Al-Qawsan Scientific Bureau proudly announces the signing of a major international partnership agreement, marking a significant milestone in expanding pharmaceutical collaboration across borders. This strategic agreement reinforces our commitment to advancing healthcare access and building bridges between global pharmaceutical innovation and the Iraqi market.": "Le Bureau Scientifique Al-Qawsan annonce fièrement la signature d'un important accord de partenariat international, marquant une étape significative dans l'expansion de la collaboration pharmaceutique au-delà des frontières.",
 };
 
-/* ── Build reverse map (AR → EN) ── */
+/* ── Build reverse map (FR → EN) ── */
 const reverseTextMappings = {};
-for (const [en, ar] of Object.entries(textMappings)) {
-  reverseTextMappings[ar] = en;
+for (const [en, fr] of Object.entries(textMappings)) {
+  reverseTextMappings[fr] = en;
 }
 
 /* ── Language System ── */
 function initLanguage() {
-  const saved = localStorage.getItem('damo-lang') || 'en';
+  const saved = localStorage.getItem('cas-lang') || 'en';
   setLanguage(saved);
 }
 
 function toggleLanguage() {
-  const current = localStorage.getItem('damo-lang') || 'en';
-  const newLang = current === 'en' ? 'ar' : 'en';
+  const current = localStorage.getItem('cas-lang') || 'en';
+  const newLang = current === 'en' ? 'fr' : 'en';
   setLanguage(newLang);
 }
 
 function setLanguage(lang) {
-  localStorage.setItem('damo-lang', lang);
+  localStorage.setItem('cas-lang', lang);
 
   const html = document.documentElement;
-  if (lang === 'ar') {
-    html.setAttribute('dir', 'rtl');
-    html.setAttribute('lang', 'ar');
-    document.body.classList.add('rtl');
-  } else {
-    html.setAttribute('dir', 'ltr');
-    html.setAttribute('lang', 'en');
-    document.body.classList.remove('rtl');
-  }
+  html.setAttribute('dir', 'ltr');
+  html.setAttribute('lang', lang);
 
   // 1. Translate data-i18n elements
   document.querySelectorAll('[data-i18n]').forEach(el => {
@@ -453,13 +392,13 @@ function setLanguage(lang) {
   // 3. Update toggle button
   const langBtn = document.getElementById('langToggle');
   if (langBtn) {
-    langBtn.textContent = lang === 'en' ? 'عربي' : 'EN';
+    langBtn.textContent = lang === 'en' ? 'FR' : 'EN';
   }
 }
 
 /* ── Scan and translate text nodes ── */
 function translateTextNodes(lang) {
-  const mappings = lang === 'ar' ? textMappings : reverseTextMappings;
+  const mappings = lang === 'fr' ? textMappings : reverseTextMappings;
 
   // Wide selector list covering ALL translatable elements across all pages
   const selectors = [
@@ -482,7 +421,6 @@ function translateTextNodes(lang) {
     '.filter-bar__btn',
     '.mfg-intro__text h2', '.mfg-intro__text p', '.mfg-intro__text .overline',
     '.timeline__text',
-    // Generic paragraph/text selectors for sections with inline formatting
     'section p', 'section h2', 'section h3',
     '[data-i18n]'
   ];
@@ -491,41 +429,31 @@ function translateTextNodes(lang) {
   const processed = new Set();
 
   elements.forEach(el => {
-    // Skip duplicates
     if (processed.has(el)) return;
     processed.add(el);
 
-    // Skip navigation links (already handled by data-i18n)
     if (el.closest('.nav__links') && el.hasAttribute('data-i18n')) return;
-    // Skip the language toggle itself
     if (el.id === 'langToggle') return;
 
-    // Strategy 1: Use el.textContent.trim() to match (captures ALL descendant text)
     const fullText = el.textContent.trim();
     if (fullText && mappings[fullText]) {
-      // Save original HTML for reverting
       if (!el.dataset.origHtml) {
         el.dataset.origHtml = el.innerHTML;
       }
       const arrow = el.querySelector('.arrow');
 
       if (arrow) {
-        // Button with arrow — just replace text nodes, keep arrow
         el.childNodes.forEach(node => {
           if (node.nodeType === Node.TEXT_NODE && node.textContent.trim()) {
             node.textContent = mappings[fullText] + ' ';
           }
         });
       } else {
-        // For ALL other elements (including those with highlight spans,
-        // strong tags, br tags, etc.) — replace the full text content.
-        // This ensures correct Arabic word order and complete translation.
         el.textContent = mappings[fullText];
       }
       return;
     }
 
-    // Strategy 2: Try matching individual text nodes
     el.childNodes.forEach(node => {
       if (node.nodeType === Node.TEXT_NODE) {
         const nodeText = node.textContent.trim();

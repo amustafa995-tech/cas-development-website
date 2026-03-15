@@ -92,49 +92,50 @@
 }
 
 /* ============================================
-   Light Theme Override
+   Light Theme Override — Medical Blue
    ============================================ */
 [data-theme="light"] {
   --bg-primary: #F5F7FA;
-  --bg-secondary: #EBEEF3;
+  --bg-secondary: #EBF0F7;
   --bg-tertiary: #FFFFFF;
-  --bg-card: rgba(0, 0, 0, 0.03);
-  --bg-card-hover: rgba(0, 0, 0, 0.06);
+  --bg-card: rgba(30, 136, 229, 0.04);
+  --bg-card-hover: rgba(30, 136, 229, 0.08);
 
-  --accent-gold: #B8892E;
-  --accent-gold-light: #D4A853;
-  --accent-gold-dark: #8C6A1E;
+  --accent-gold: #1E88E5;
+  --accent-gold-light: #42A5F5;
+  --accent-gold-dark: #1565C0;
   --accent-turquoise: #0077B6;
   --accent-turquoise-dim: #005A87;
   --accent-turquoise-glow: rgba(0, 119, 182, 0.15);
 
-  --text-primary: #1A1D23;
+  --text-primary: #1A2332;
   --text-secondary: #4A5568;
   --text-muted: #8A94A6;
 
-  --border-glass: rgba(0, 0, 0, 0.08);
-  --border-gold: rgba(184, 137, 46, 0.25);
+  --border-glass: rgba(30, 136, 229, 0.10);
+  --border-gold: rgba(30, 136, 229, 0.20);
 
-  --gradient-hero: linear-gradient(135deg, #F5F7FA 0%, #E8ECF2 50%, #FFFFFF 100%);
-  --gradient-card: linear-gradient(135deg, rgba(0,0,0,0.03), rgba(0,0,0,0.01));
+  --gradient-hero: linear-gradient(135deg, #F5F7FA 0%, #E3EDF7 50%, #FFFFFF 100%);
+  --gradient-gold: linear-gradient(135deg, #1E88E5, #42A5F5);
+  --gradient-card: linear-gradient(135deg, rgba(30, 136, 229, 0.04), rgba(30, 136, 229, 0.01));
   --gradient-overlay: linear-gradient(180deg, rgba(245,247,250,0.6) 0%, rgba(245,247,250,0.9) 100%);
 
-  --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.08);
-  --shadow-card-hover: 0 8px 40px rgba(0, 0, 0, 0.12);
-  --shadow-gold-glow: 0 0 30px rgba(184, 137, 46, 0.1);
-  --shadow-turquoise-glow: 0 0 30px rgba(0, 119, 182, 0.1);
+  --shadow-card: 0 4px 24px rgba(30, 136, 229, 0.08);
+  --shadow-card-hover: 0 8px 40px rgba(30, 136, 229, 0.14);
+  --shadow-gold-glow: 0 0 30px rgba(30, 136, 229, 0.10);
+  --shadow-turquoise-glow: 0 0 30px rgba(0, 119, 182, 0.10);
 }
 
 /* Light-mode specific overrides for elements with hardcoded colors */
 [data-theme="light"] .nav {
-  background: rgba(255, 255, 255, 0.9);
-  border-bottom-color: rgba(0, 0, 0, 0.06);
+  background: rgba(255, 255, 255, 0.92);
+  border-bottom-color: rgba(30, 136, 229, 0.08);
 }
 [data-theme="light"] .nav__links a {
   color: #4A5568;
 }
 [data-theme="light"] .nav__links a:hover {
-  color: #1A1D23;
+  color: #1E88E5;
 }
 [data-theme="light"] .nav__links a.active {
   color: var(--accent-gold);
@@ -143,20 +144,20 @@
   color: var(--accent-gold);
 }
 [data-theme="light"] .nav__logo {
-  color: #1A1D23;
+  color: #1A2332;
 }
 [data-theme="light"] .footer {
-  background: #E2E6EC;
+  background: #E2E8F0;
   color: #4A5568;
 }
 [data-theme="light"] .footer__title {
-  color: #1A1D23;
+  color: #1A2332;
 }
 [data-theme="light"] .footer__links a {
   color: #6B7A8D;
 }
 [data-theme="light"] .footer__bottom {
-  border-top-color: rgba(0, 0, 0, 0.08);
+  border-top-color: rgba(30, 136, 229, 0.10);
 }
 [data-theme="light"] .footer__bottom p {
   color: #8A94A6;
@@ -176,13 +177,33 @@
   opacity: 0.05;
 }
 [data-theme="light"] .cta-banner {
-  background: linear-gradient(135deg, #E8ECF2, #DFE4EB);
+  background: linear-gradient(135deg, #E3EDF7, #D6E4F0);
 }
 
-/* Light mode: scrolled nav */
+/* Light mode: scrolled nav — white glass (O6) */
 [data-theme="light"] .nav.scrolled {
-  background: rgba(255, 255, 255, 0.92);
-  border-bottom-color: rgba(0, 0, 0, 0.08);
+  background: rgba(255, 255, 255, 0.95);
+  border-bottom-color: rgba(30, 136, 229, 0.08);
+  box-shadow: 0 2px 20px rgba(30, 136, 229, 0.06);
+}
+
+/* Light mode: partner logos less desaturated (S6) */
+[data-theme="light"] .partner-card__logo {
+  filter: grayscale(40%) brightness(1);
+  opacity: 0.75;
+}
+[data-theme="light"] .partner-card:hover .partner-card__logo {
+  filter: grayscale(0%) brightness(1);
+  opacity: 1;
+}
+
+[data-theme="light"] .logo-carousel__item {
+  filter: grayscale(40%) brightness(1);
+  opacity: 0.65;
+}
+[data-theme="light"] .logo-carousel__item:hover {
+  filter: grayscale(0%) brightness(1);
+  opacity: 1;
 }
 
 /* Smooth theme transitions */

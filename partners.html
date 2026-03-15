@@ -3,17 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Global Partners — DAMO Group</title>
-  <meta name="description" content="DAMO Group's global pharmaceutical partners — 16 trusted agents across Iraq, Egypt, India, Spain, USA, Canada, Singapore, and Tunisia.">
+  <title>Global Partners — CAS Development</title>
+  <meta name="description" content="CAS Development's global pharmaceutical partners — 16 trusted agents across Iraq, Egypt, India, Spain, USA, Canada, Singapore, and Tunisia.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/png" href="assets/images/logos/damo-manufacturing-logo.png">
+  <link rel="icon" type="image/png" href="assets/images/logos/cas-logo.png">
   <link rel="stylesheet" href="css/variables.css">
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/animations.css">
-  <link rel="stylesheet" href="css/rtl.css">
+
   <!-- Leaflet.js CDN -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
@@ -29,10 +29,16 @@
       border: 1px solid var(--border-glass);
       background: #0d1b2a;
     }
+    [data-theme="light"] .map-container {
+      background: #e8ecf1;
+    }
     #partnerMap {
       width: 100%;
       height: 480px;
       background: #0d1b2a;
+    }
+    [data-theme="light"] #partnerMap {
+      background: #e8ecf1;
     }
     @media (max-width: 768px) {
       #partnerMap { height: 320px; }
@@ -103,6 +109,24 @@
       border-radius: 4px !important;
       box-shadow: 0 2px 8px rgba(0,0,0,0.3) !important;
       white-space: nowrap;
+    }
+    [data-theme="light"] .leaflet-popup-content-wrapper {
+      background: rgba(255, 255, 255, 0.96) !important;
+      color: #1A2332 !important;
+      border: 1px solid rgba(30, 136, 229, 0.15) !important;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.12) !important;
+    }
+    [data-theme="light"] .leaflet-popup-tip {
+      background: rgba(255, 255, 255, 0.96) !important;
+    }
+    [data-theme="light"] .leaflet-popup-content strong {
+      color: #1E88E5;
+    }
+    [data-theme="light"] .country-label {
+      background: rgba(255, 255, 255, 0.9) !important;
+      border: 1px solid rgba(30, 136, 229, 0.2) !important;
+      color: #1E88E5 !important;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08) !important;
     }
     .country-label::before {
       border-right-color: rgba(212, 168, 83, 0.3) !important;
@@ -204,18 +228,17 @@
   <!-- Navigation -->
   <nav class="nav" id="nav">
     <div class="nav__inner">
-      <a href="index.html" class="nav__logo"><span class="logo-accent">DAMO</span>&nbsp;Group</a>
+      <a href="index.html" class="nav__logo"><span class="logo-accent">CAS</span>&nbsp;Development</a>
       <div class="nav__links" id="navLinks">
-        <a href="index.html" data-i18n="nav.home">Home</a>
+        <a href="cas-development.html" data-i18n="nav.about">About Us</a>
         <a href="alqawsan.html" data-i18n="nav.alqawsan">Al-Qawsan</a>
-        <a href="cas-development.html" data-i18n="nav.cas">CAS Development</a>
-        <a href="damo-manufacturing.html" data-i18n="nav.damo">DAMO Manufacturing</a>
+        <a href="damo-manufacturing.html" data-i18n="nav.damo">DAMO</a>
         <a href="partners.html" data-i18n="nav.partners">Partners</a>
         <a href="government.html" data-i18n="nav.gov">Gov. Partnerships</a>
         <a href="contact.html" data-i18n="nav.contact">Contact</a>
         <a href="news.html" data-i18n="nav.news">News</a>
       </div>
-      <button id="langToggle" class="nav__lang-toggle" onclick="toggleLanguage()">عربي</button>
+      <button id="langToggle" class="nav__lang-toggle" onclick="toggleLanguage()">FR</button>
       <button id="themeToggle" class="nav__theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme" title="Toggle light/dark mode"></button>
       <button class="nav__toggle" id="navToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
     </div>
@@ -561,13 +584,13 @@
     <div class="container">
       <div class="footer__grid">
         <div class="footer__brand">
-          <a href="index.html" class="nav__logo" style="margin-bottom: var(--space-md);"><span class="logo-accent">DAMO</span>&nbsp;Group</a>
+          <a href="index.html" class="nav__logo" style="margin-bottom: var(--space-md);"><span class="logo-accent">CAS</span>&nbsp;Development</a>
           <p>A global pharmaceutical group connecting Swiss quality standards with regional healthcare needs across the Middle East.</p>
         </div>
         <div>
           <div class="footer__title" data-i18n="footer.quicklinks">Quick Links</div>
           <div class="footer__links">
-            <a href="index.html" data-i18n="nav.home">Home</a><a href="partners.html">Global Partners</a><a href="government.html" data-i18n="nav.gov">Gov. Partnerships</a><a href="news.html" data-i18n="nav.news">News</a><a href="contact.html">Contact Us</a>
+            <a href="cas-development.html" data-i18n="nav.about">About Us</a><a href="partners.html">Global Partners</a><a href="government.html" data-i18n="nav.gov">Gov. Partnerships</a><a href="news.html" data-i18n="nav.news">News</a><a href="contact.html">Contact Us</a>
           </div>
         </div>
         <div>
@@ -582,7 +605,7 @@
           <div class="footer__contact-item"><i data-lucide="mail" style="width: 18px; height: 18px;"></i><span>contact@casdev.ch</span></div>
         </div>
       </div>
-      <div class="footer__bottom"><p>&copy; 2026 DAMO Group. All rights reserved.</p></div>
+      <div class="footer__bottom"><p>&copy; 2026 CAS Development. All rights reserved.</p></div>
     </div>
   </footer>
 
@@ -610,11 +633,18 @@
         keyboard: false
       });
 
-      // Dark tile layer with labels
-      L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+      // Choose tile layer based on theme
+      const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+      const tileUrl = isLight
+        ? 'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png'
+        : 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png';
+      L.tileLayer(tileUrl, {
         subdomains: 'abcd',
         maxZoom: 19
       }).addTo(map);
+
+      // Line color based on theme
+      const lineColor = isLight ? 'rgba(30, 136, 229, 0.35)' : 'rgba(212, 168, 83, 0.3)';
 
       // Partner country locations
       const locations = [
@@ -634,7 +664,7 @@
       locations.forEach(loc => {
         if (!loc.hub) {
           L.polyline([iraqCoords, [loc.lat, loc.lng]], {
-            color: 'rgba(212, 168, 83, 0.3)',
+            color: lineColor,
             weight: 1.5,
             dashArray: '6 4'
           }).addTo(map);
