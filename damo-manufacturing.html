@@ -11,14 +11,14 @@
   <meta property="og:url" content="https://cas.swiss/damo-manufacturing.html">
   <meta property="og:title" content="DAMO Manufacturing — GMP Pharma Facility in Baghdad">
   <meta property="og:description" content="State-of-the-art GMP-certified pharmaceutical production — generics, injectables, and sterile products for Iraq and the region.">
-  <meta property="og:image" content="https://cas.swiss/assets/images/logos/damo-manufacturing-logo.png">
+  <meta property="og:image" content="https://cas.swiss/assets/images/logos/damo-manufacturing-logo.webp">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="DAMO Manufacturing">
-  <meta name="twitter:image" content="https://cas.swiss/assets/images/logos/damo-manufacturing-logo.png">
+  <meta name="twitter:image" content="https://cas.swiss/assets/images/logos/damo-manufacturing-logo.webp">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/png" href="assets/images/logos/cas-logo.png">
+  <link rel="icon" type="image/webp" href="assets/images/logos/cas-logo.webp">
   <link rel="stylesheet" href="css/variables.css">
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/components.css">
@@ -27,6 +27,7 @@
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
   </head>
 <body>
+  <a href="#main" class="skip-to-content">Skip to main content</a>
 
   <!-- Navigation -->
   <nav class="nav" id="nav">
@@ -49,7 +50,7 @@
   <div class="nav__overlay" id="navOverlay"></div>
 
   <!-- Page Hero -->
-  <section class="page-hero">
+  <section class="page-hero" id="main" tabindex="-1">
     <div class="hero__bg">
       <div class="particle particle--1"></div>
       <div class="particle particle--2"></div>
@@ -67,7 +68,7 @@
     <div class="container">
       <div class="mfg-intro reveal">
         <div class="mfg-intro__logo">
-          <img src="assets/images/logos/damo-manufacturing-logo.png" alt="DAMO Manufacturing Logo">
+          <img src="assets/images/logos/damo-manufacturing-logo.webp" alt="DAMO Manufacturing Logo">
         </div>
         <div class="mfg-intro__text">
           <span class="overline" class="overline--block">About the Facility</span>
@@ -223,7 +224,13 @@
           <div class="footer__contact-item"><i data-lucide="mail" class="icon-18"></i><span>contact@casdev.ch</span></div>
         </div>
       </div>
-      <div class="footer__bottom"><p>&copy; 2026 CAS Development. All rights reserved.</p></div>
+      <div class="footer__bottom">
+        <p>&copy; 2026 CAS Development. All rights reserved.</p>
+        <p class="caption-muted">
+          <a href="legal.html" class="link-muted">Legal Notice</a> ·
+          <a href="privacy-policy.html" class="link-muted">Privacy Policy</a>
+        </p>
+      </div>
     </div>
   </footer>
 

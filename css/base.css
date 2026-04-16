@@ -533,6 +533,29 @@ section {
 .reveal-delay-3 { transition-delay: 180ms; }
 .reveal-delay-4 { transition-delay: 240ms; }
 
+/* ── Skip-to-content link (WCAG keyboard navigation) ── */
+.skip-to-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  padding: 12px 20px;
+  background: var(--accent-gold);
+  color: var(--bg-primary);
+  font-weight: var(--fw-semibold);
+  font-size: var(--fs-small);
+  text-decoration: none;
+  border-radius: 0 0 var(--radius-sm) 0;
+  transform: translateY(-110%);
+  transition: transform 200ms var(--ease-out-premium);
+}
+.skip-to-content:focus,
+.skip-to-content:focus-visible {
+  transform: translateY(0);
+  outline: 2px solid var(--bg-primary);
+  outline-offset: -4px;
+}
+
 /* ── Inline icons (used in subtitles, source labels) ── */
 .icon-inline {
   display: inline-block;

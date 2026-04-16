@@ -18,7 +18,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/png" href="assets/images/logos/cas-logo.png">
+  <link rel="icon" type="image/webp" href="assets/images/logos/cas-logo.webp">
   <link rel="stylesheet" href="css/variables.css">
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/components.css">
@@ -27,6 +27,7 @@
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
 </head>
 <body>
+  <a href="#main" class="skip-to-content">Skip to main content</a>
 
   <!-- Navigation -->
   <nav class="nav" id="nav">
@@ -49,7 +50,7 @@
   <div class="nav__overlay" id="navOverlay"></div>
 
   <!-- Page Hero -->
-  <section class="page-hero">
+  <section class="page-hero" id="main" tabindex="-1">
     <div class="hero__bg">
       <div class="particle particle--1"></div>
       <div class="particle particle--2"></div>
@@ -83,7 +84,7 @@
 
         <!-- Article 2: International Agreement Signing -->
         <article class="news-article reveal">
-          <img loading="lazy" src="assets/images/news/signing-ceremony.jpg" alt="Al-Qawsan Scientific Bureau international agreement signing ceremony" class="news-article__image">
+          <img loading="lazy" src="assets/images/news/signing-ceremony.webp" alt="Al-Qawsan Scientific Bureau international agreement signing ceremony" class="news-article__image">
           <div class="news-article__body">
             <div class="news-article__date">February 2026</div>
             <div class="news-article__source"><i data-lucide="link-2" class="icon-inline"></i>LinkedIn — Al-Qawsan Scientific Bureau</div>
@@ -141,7 +142,13 @@
         <div><div class="footer__title" data-i18n="footer.entities">Our Entities</div><div class="footer__links"><a href="alqawsan.html">Al-Qawsan Group</a><a href="cas-development.html">CAS Development SA</a><a href="damo-manufacturing.html" data-i18n="nav.damo">DAMO Manufacturing</a></div></div>
         <div><div class="footer__title" data-i18n="footer.contact">Contact</div><div class="footer__contact-item"><i data-lucide="map-pin" class="icon-18"></i><span>Route de Saint-Georges 55,<br>1213 Petit-Lancy, Switzerland</span></div><div class="footer__contact-item"><i data-lucide="mail" class="icon-18"></i><span>contact@casdev.ch</span></div></div>
       </div>
-      <div class="footer__bottom"><p>&copy; 2026 CAS Development. All rights reserved.</p></div>
+      <div class="footer__bottom">
+        <p>&copy; 2026 CAS Development. All rights reserved.</p>
+        <p class="caption-muted">
+          <a href="legal.html" class="link-muted">Legal Notice</a> ·
+          <a href="privacy-policy.html" class="link-muted">Privacy Policy</a>
+        </p>
+      </div>
     </div>
   </footer>
 

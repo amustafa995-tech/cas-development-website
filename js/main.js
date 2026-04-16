@@ -368,3 +368,35 @@ function initPageTransitions() {
     });
   });
 }
+
+/* ── Cookie / Privacy notice (minimal, no tracking) ── */
+function initCookieNotice() {
+  if (localStorage.getItem('cas-cookie-acknowledged') === '1') return;
+
+  const notice = document.createElement('div');
+  notice.className = 'cookie-notice';
+  notice.setAttribute('role', 'region');
+  notice.setAttribute('aria-label', 'Privacy notice');
+  notice.innerHTML = `
+    <p class="cookie-notice__text">
+      This site uses only technical storage required for theme and language preferences.
+      No tracking cookies. <a href="privacy-policy.html">Learn more</a>.
+    </p>
+    <button type="button" class="cookie-notice__btn" aria-label="Acknowledge privacy notice">Got it</button>
+  `;
+  document.body.appendChild(notice);
+
+  // Animate in after layout
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => notice.classList.add('is-visible'));
+  });
+
+  notice.querySelector('.cookie-notice__btn').addEventListener('click', () => {
+    localStorage.setItem('cas-cookie-acknowledged', '1');
+    notice.classList.remove('is-visible');
+    setTimeout(() => notice.remove(), 400);
+  });
+}
+
+// Init cookie notice after main load
+document.addEventListener('DOMContentLoaded', initCookieNotice);

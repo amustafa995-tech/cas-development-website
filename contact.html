@@ -11,22 +11,47 @@
   <meta property="og:url" content="https://cas.swiss/contact.html">
   <meta property="og:title" content="Contact — CAS Development">
   <meta property="og:description" content="Offices in Geneva and Baghdad. Reach us for pharmaceutical partnerships, distribution inquiries, and business collaboration.">
-  <meta property="og:image" content="https://cas.swiss/assets/images/logos/cas-logo.png">
+  <meta property="og:image" content="https://cas.swiss/assets/images/logos/cas-logo.webp">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Contact — CAS Development">
-  <meta name="twitter:image" content="https://cas.swiss/assets/images/logos/cas-logo.png">
+  <meta name="twitter:image" content="https://cas.swiss/assets/images/logos/cas-logo.webp">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/png" href="assets/images/logos/cas-logo.png">
+  <link rel="icon" type="image/webp" href="assets/images/logos/cas-logo.webp">
   <link rel="stylesheet" href="css/variables.css">
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/animations.css">
 
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+  <!-- Structured data: ContactPage + Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Contact CAS Development",
+    "url": "https://cas.swiss/contact.html",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "CAS Development SA",
+      "url": "https://cas.swiss/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Route de Saint-Georges 55",
+        "postalCode": "1213",
+        "addressLocality": "Petit-Lancy",
+        "addressRegion": "Geneva",
+        "addressCountry": "CH"
+      },
+      "email": "contact@casdev.ch"
+    }
+  }
+  </script>
 </head>
 <body>
+  <a href="#main" class="skip-to-content">Skip to main content</a>
 
   <!-- Navigation -->
   <nav class="nav" id="nav">
@@ -49,7 +74,7 @@
   <div class="nav__overlay" id="navOverlay"></div>
 
   <!-- Page Hero -->
-  <section class="page-hero">
+  <section class="page-hero" id="main" tabindex="-1">
     <div class="hero__bg">
       <div class="particle particle--1"></div>
       <div class="particle particle--2"></div>
@@ -70,7 +95,7 @@
         <!-- CAS Development SA (first) -->
         <div class="contact-card contact-card--gold">
           <div class="contact-card__header">
-            <img loading="lazy" src="assets/images/logos/cas-logo.png" alt="CAS Development Logo" class="card-logo--52">
+            <img loading="lazy" src="assets/images/logos/cas-logo.webp" alt="CAS Development Logo" class="card-logo--52">
             <div>
               <h3 class="contact-card__title">CAS Development SA</h3>
               <span class="contact-card__location contact-card__location--gold">Geneva, Switzerland</span>
@@ -99,7 +124,7 @@
         <!-- Al-Qawsan Scientific Bureau (second) -->
         <div class="contact-card contact-card--turquoise">
           <div class="contact-card__header">
-            <img loading="lazy" src="assets/images/logos/alqawsan-logo.png" alt="Al-Qawsan Logo" class="card-logo--52">
+            <img loading="lazy" src="assets/images/logos/alqawsan-logo.webp" alt="Al-Qawsan Logo" class="card-logo--52">
             <div>
               <h3 class="contact-card__title">Al-Qawsan Scientific Bureau</h3>
               <span class="contact-card__location contact-card__location--turquoise">Baghdad, Iraq</span>
@@ -130,7 +155,7 @@
         <!-- DAMO Manufacturing (third) -->
         <div class="contact-card contact-card--turquoise-dim">
           <div class="contact-card__header">
-            <img loading="lazy" src="assets/images/logos/damo-manufacturing-logo.png" alt="DAMO Manufacturing Logo" class="card-logo--52">
+            <img loading="lazy" src="assets/images/logos/damo-manufacturing-logo.webp" alt="DAMO Manufacturing Logo" class="card-logo--52">
             <div>
               <h3 class="contact-card__title">DAMO Manufacturing</h3>
               <span class="contact-card__location contact-card__location--dim">Baghdad, Iraq</span>
@@ -267,7 +292,13 @@
         <div><div class="footer__title" data-i18n="footer.entities">Our Entities</div><div class="footer__links"><a href="alqawsan.html">Al-Qawsan Group</a><a href="cas-development.html">CAS Development SA</a><a href="damo-manufacturing.html" data-i18n="nav.damo">DAMO Manufacturing</a></div></div>
         <div><div class="footer__title" data-i18n="footer.contact">Contact</div><div class="footer__contact-item"><i data-lucide="map-pin" class="icon-18"></i><span>Route de Saint-Georges 55,<br>1213 Petit-Lancy, Switzerland</span></div><div class="footer__contact-item"><i data-lucide="mail" class="icon-18"></i><span>contact@casdev.ch</span></div></div>
       </div>
-      <div class="footer__bottom"><p>&copy; 2026 CAS Development. All rights reserved.</p></div>
+      <div class="footer__bottom">
+        <p>&copy; 2026 CAS Development. All rights reserved.</p>
+        <p class="caption-muted">
+          <a href="legal.html" class="link-muted">Legal Notice</a> ·
+          <a href="privacy-policy.html" class="link-muted">Privacy Policy</a>
+        </p>
+      </div>
     </div>
   </footer>
 
