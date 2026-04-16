@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Page Not Found — CAS Development</title>
   <meta name="description" content="The page you are looking for could not be found.">
+  <meta name="robots" content="noindex, follow">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700&display=swap" rel="stylesheet">
@@ -79,7 +80,7 @@
         <a href="contact.html" data-i18n="nav.contact">Contact</a>
         <a href="news.html" data-i18n="nav.news">News</a>
       </div>
-      <button id="langToggle" class="nav__lang-toggle" onclick="toggleLanguage()">FR</button>
+      <button id="langToggle" class="nav__lang-toggle" onclick="toggleLanguage()" aria-label="Toggle language" title="Switch language">FR</button>
       <button id="themeToggle" class="nav__theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme" title="Toggle light/dark mode"></button>
       <button class="nav__toggle" id="navToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
     </div>
