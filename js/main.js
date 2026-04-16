@@ -345,12 +345,14 @@ function initParallax() {
   }
 }
 
-/* ── Page Transitions (A4) ── */
+/* ── Page Transitions (View Transitions API + fade fallback) ── */
 function initPageTransitions() {
   // Fade in on load
   document.body.style.opacity = '1';
 
-  // Fade out on click to other pages
+  // Honour reduced motion: no transition
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
   document.querySelectorAll('a').forEach(link => {
     const href = link.getAttribute('href');
     // Only intercept same-domain HTML page links
@@ -358,13 +360,22 @@ function initPageTransitions() {
     if (!href.endsWith('.html')) return;
 
     link.addEventListener('click', function(e) {
+      if (reducedMotion) return; // let the browser navigate normally
       e.preventDefault();
       const destination = this.href;
+
+      // Use View Transitions API when supported (Chrome/Edge 111+, Safari 18+)
+      if (document.startViewTransition) {
+        document.startViewTransition(() => {
+          window.location.href = destination;
+        });
+        return;
+      }
+
+      // Fallback: smooth opacity fade
       document.body.style.transition = 'opacity 0.25s ease';
       document.body.style.opacity = '0';
-      setTimeout(() => {
-        window.location.href = destination;
-      }, 250);
+      setTimeout(() => { window.location.href = destination; }, 250);
     });
   });
 }

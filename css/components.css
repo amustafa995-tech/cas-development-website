@@ -1817,3 +1817,49 @@
   padding: var(--space-lg);
   margin-top: var(--space-xl);
 }
+
+/* ============================================
+   Editorial 12-column grid (asymmetric layouts)
+   ============================================ */
+.editorial-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--space-lg);
+  align-items: start;
+}
+
+.editorial-grid__text {
+  grid-column: 1 / span 7;
+}
+.editorial-grid__visual {
+  grid-column: 9 / -1;
+  align-self: center;
+}
+.editorial-grid__visual--overlap {
+  grid-column: 9 / -1;
+  margin-top: calc(-1 * var(--space-2xl));
+}
+.editorial-grid__text--narrow {
+  grid-column: 2 / span 6;
+}
+
+/* Asymmetric reveal: image overshoots section padding */
+.editorial-grid__visual img,
+.editorial-grid__visual > * {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 900px) {
+  .editorial-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+  }
+  .editorial-grid__text,
+  .editorial-grid__visual,
+  .editorial-grid__visual--right,
+  .editorial-grid__text--narrow {
+    grid-column: 1 / -1;
+    margin-top: 0;
+  }
+}
