@@ -1,0 +1,65 @@
+# Decap CMS configuration — CAS Development
+# Docs: https://decapcms.org/docs/configuration-options/
+
+backend:
+  name: github
+  repo: amustafa995-tech/cas-development-website
+  branch: main
+  # OAuth provider — see admin/README.md for setup
+  base_url: https://api.netlify.com
+  auth_endpoint: auth
+
+# Where uploaded media lives
+media_folder: assets/images/news
+public_folder: /assets/images/news
+
+# Site URL (for previews)
+site_url: https://cas.swiss
+display_url: https://cas.swiss
+logo_url: https://cas.swiss/assets/images/logos/cas-logo.webp
+
+# Editorial workflow: drafts → in-review → published
+publish_mode: editorial_workflow
+
+# Localization (3 languages)
+locale: en
+
+# Collections
+collections:
+  - name: news
+    label: News Articles
+    folder: content/news
+    create: true
+    slug: '{{year}}-{{month}}-{{slug}}'
+    extension: md
+    format: yaml-frontmatter
+    summary: '{{date}} — {{title}}'
+    fields:
+      - { name: title,        label: Title (EN),        widget: string }
+      - { name: title_fr,     label: Titre (FR),        widget: string, required: false }
+      - { name: title_ar,     label: العنوان (AR),       widget: string, required: false }
+      - { name: date,         label: Publication date,  widget: datetime }
+      - { name: source,       label: Source,            widget: string,  hint: 'e.g. LinkedIn, Tunisie Numérique' }
+      - { name: source_url,   label: Source URL,        widget: string,  required: false }
+      - { name: source_icon,  label: Source icon,       widget: select,  default: newspaper, options: [newspaper, link-2, external-link, megaphone] }
+      - { name: image,        label: Featured image,    widget: image,   media_library: { config: { multiple: false } } }
+      - { name: image_alt,    label: Image alt text,    widget: string }
+      - { name: excerpt,      label: Short excerpt (EN), widget: text, hint: '1-2 sentences shown in card' }
+      - { name: excerpt_fr,   label: Extrait (FR),      widget: text, required: false }
+      - { name: excerpt_ar,   label: المقتطف (AR),       widget: text, required: false }
+      - { name: body,         label: Full content (EN), widget: markdown }
+      - { name: body_fr,      label: Contenu complet (FR), widget: markdown, required: false }
+      - { name: body_ar,      label: المحتوى الكامل (AR), widget: markdown, required: false }
+      - { name: featured,     label: Featured (show on homepage),  widget: boolean, default: false }
+
+  - name: settings
+    label: Site Settings
+    files:
+      - file: content/settings/general.yml
+        name: general
+        label: General
+        fields:
+          - { name: site_title,      label: Site title,           widget: string }
+          - { name: site_tagline,    label: Tagline,              widget: string }
+          - { name: contact_email,   label: Main contact email,   widget: string }
+          - { name: linkedin_url,    label: LinkedIn URL,         widget: string, required: false }
