@@ -1496,15 +1496,57 @@
   color: #9CA8BC;
 }
 
-/* Faint continent silhouettes */
-.world-map__land {
-  fill: rgba(255, 255, 255, 0.035);
-  stroke: rgba(255, 255, 255, 0.08);
-  stroke-width: 0.5;
+/* Country shapes (real world geometry from simple-world-map by Al MacDonald, CC BY-SA 3.0) */
+.world-map__countries path,
+.world-map__countries g path {
+  fill: rgba(255, 255, 255, 0.04);
+  stroke: rgba(255, 255, 255, 0.12);
+  stroke-width: 0.4;
+  vector-effect: non-scaling-stroke;
+  transition: fill 300ms var(--ease-out-premium);
 }
-[data-theme="light"] .world-map__land {
+.world-map__countries path:hover {
+  fill: rgba(255, 255, 255, 0.10);
+}
+/* Highlight active partner countries (subtle gold tint) */
+.world-map__countries #iq,
+.world-map__countries #eg,
+.world-map__countries #in,
+.world-map__countries #tn,
+.world-map__countries #tr,
+.world-map__countries #sg,
+.world-map__countries #us > path,
+.world-map__countries #ca > path,
+.world-map__countries #es > path {
+  fill: rgba(212, 168, 83, 0.10);
+  stroke: rgba(212, 168, 83, 0.35);
+  stroke-width: 0.6;
+}
+.world-map__countries #iq {
+  fill: rgba(0, 180, 216, 0.18);
+  stroke: rgba(0, 180, 216, 0.55);
+  stroke-width: 0.8;
+}
+[data-theme="light"] .world-map__countries path,
+[data-theme="light"] .world-map__countries g path {
   fill: rgba(30, 136, 229, 0.05);
-  stroke: rgba(30, 136, 229, 0.12);
+  stroke: rgba(30, 136, 229, 0.18);
+}
+[data-theme="light"] .world-map__countries #iq,
+[data-theme="light"] .world-map__countries #eg,
+[data-theme="light"] .world-map__countries #in,
+[data-theme="light"] .world-map__countries #tn,
+[data-theme="light"] .world-map__countries #tr,
+[data-theme="light"] .world-map__countries #sg,
+[data-theme="light"] .world-map__countries #us > path,
+[data-theme="light"] .world-map__countries #ca > path,
+[data-theme="light"] .world-map__countries #es > path {
+  fill: rgba(212, 168, 83, 0.20);
+  stroke: rgba(212, 168, 83, 0.55);
+}
+[data-theme="light"] .world-map__countries #iq {
+  fill: rgba(0, 119, 182, 0.25);
+  stroke: rgba(0, 119, 182, 0.60);
 }
 
 /* Connection lines (Iraq → partners) */
