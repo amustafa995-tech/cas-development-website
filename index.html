@@ -71,12 +71,16 @@
        HERO
        ═══════════════════════════════════════════ -->
   <section class="hero" id="hero">
-    <!-- Floating particles -->
+    <!-- Ambient video + floating particles -->
     <div class="hero__bg">
+      <video class="hero__video" autoplay muted loop playsinline preload="metadata" aria-hidden="true">
+        <source src="assets/videos/VIDEO-2025-07-12-13-48-22.mp4" type="video/mp4">
+      </video>
       <div class="particle particle--1"></div>
       <div class="particle particle--2"></div>
       <div class="particle particle--3"></div>
     </div>
+    <div class="hero__overlay"></div>
 
     <div class="hero__content">
       <span class="overline">CAS Development</span>
@@ -91,7 +95,7 @@
   <!-- ═══════════════════════════════════════════
        ABOUT / WHO WE ARE
        ═══════════════════════════════════════════ -->
-  <section id="about" style="background: var(--bg-secondary);">
+  <section id="about" class="section--alt">
     <div class="container">
       <div class="section-header reveal">
         <span class="overline">Who We Are</span>
@@ -101,42 +105,42 @@
 
       <div class="grid grid--2 reveal" style="gap: var(--space-2xl); align-items: center;">
         <div>
-          <p style="font-size: 1.0625rem; line-height: 1.9;">
-            CAS Development is an integrated pharmaceutical group operating across <strong style="color: var(--text-primary);">Switzerland, Iraq, and the Middle East</strong>. Our ecosystem bridges the gap between global pharmaceutical innovation and regional healthcare needs.
+          <p class="p-lead">
+            CAS Development is an integrated pharmaceutical group operating across <strong>Switzerland, Iraq, and the Middle East</strong>. Our ecosystem bridges the gap between global pharmaceutical innovation and regional healthcare needs.
           </p>
-          <p style="font-size: 1.0625rem; line-height: 1.9;">
-            Through our three core entities — <strong style="color: var(--accent-turquoise);">Al-Qawsan Group</strong> for distribution and regulatory affairs, <strong style="color: var(--accent-turquoise);">DAMO Manufacturing</strong> for pharmaceutical production, and <strong style="color: var(--accent-turquoise);">CAS Development SA</strong> for Swiss-standard quality assurance and market authorization — we ensure that safe, effective medications reach the healthcare professionals and patients who need them most.
+          <p class="p-lead">
+            Through our three core entities — <strong class="text-turquoise">Al-Qawsan Group</strong> for distribution and regulatory affairs, <strong class="text-turquoise">DAMO Manufacturing</strong> for pharmaceutical production, and <strong class="text-turquoise">CAS Development SA</strong> for Swiss-standard quality assurance and market authorization — we ensure that safe, effective medications reach the healthcare professionals and patients who need them most.
           </p>
-          <p style="font-size: 1.0625rem; line-height: 1.9;">
-            With partnerships spanning over <strong style="color: var(--text-primary);">10 countries</strong> and a team of <strong style="color: var(--text-primary);">1,500+ professionals</strong>, CAS Development is committed to empowering healthcare excellence at every level.
+          <p class="p-lead">
+            With partnerships spanning over <strong>10 countries</strong> and a team of <strong>1,500+ professionals</strong>, CAS Development is committed to empowering healthcare excellence at every level.
           </p>
         </div>
-        <div style="display: flex; flex-direction: column; gap: var(--space-md);">
-          <div class="glass-card" style="padding: var(--space-lg); display: flex; align-items: center; gap: var(--space-md);">
-            <div style="width: 48px; height: 48px; border-radius: var(--radius-md); background: rgba(0,180,216,0.1); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-              <i data-lucide="shield-check" style="width: 24px; height: 24px; color: var(--accent-turquoise);"></i>
+        <div class="stack-md">
+          <div class="glass-card" class="glass-card--pad-lg glass-card--inline">
+            <div class="icon-badge icon-badge--48 icon-badge--turquoise">
+              <i data-lucide="shield-check" class="icon-24 icon--turquoise"></i>
             </div>
             <div>
-              <strong style="color: var(--text-primary); display: block; margin-bottom: 2px;">Swiss Quality Standards</strong>
-              <span style="color: var(--text-muted); font-size: var(--fs-small);">Rigorous AMM verification and compliance</span>
+              <strong class="strong-label--tight">Swiss Quality Standards</strong>
+              <span class="caption-muted">Rigorous AMM verification and compliance</span>
             </div>
           </div>
-          <div class="glass-card" style="padding: var(--space-lg); display: flex; align-items: center; gap: var(--space-md);">
-            <div style="width: 48px; height: 48px; border-radius: var(--radius-md); background: rgba(212,168,83,0.1); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-              <i data-lucide="globe" style="width: 24px; height: 24px; color: var(--accent-gold);"></i>
+          <div class="glass-card" class="glass-card--pad-lg glass-card--inline">
+            <div class="icon-badge icon-badge--48 icon-badge--gold">
+              <i data-lucide="globe" class="icon-24 icon--gold"></i>
             </div>
             <div>
-              <strong style="color: var(--text-primary); display: block; margin-bottom: 2px;">Global Network</strong>
-              <span style="color: var(--text-muted); font-size: var(--fs-small);">Partners across 10+ countries worldwide</span>
+              <strong class="strong-label--tight">Global Network</strong>
+              <span class="caption-muted">Partners across 10+ countries worldwide</span>
             </div>
           </div>
-          <div class="glass-card" style="padding: var(--space-lg); display: flex; align-items: center; gap: var(--space-md);">
-            <div style="width: 48px; height: 48px; border-radius: var(--radius-md); background: rgba(0,180,216,0.1); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-              <i data-lucide="heart-pulse" style="width: 24px; height: 24px; color: var(--accent-turquoise);"></i>
+          <div class="glass-card" class="glass-card--pad-lg glass-card--inline">
+            <div class="icon-badge icon-badge--48 icon-badge--turquoise">
+              <i data-lucide="heart-pulse" class="icon-24 icon--turquoise"></i>
             </div>
             <div>
-              <strong style="color: var(--text-primary); display: block; margin-bottom: 2px;">Patient-First Mission</strong>
-              <span style="color: var(--text-muted); font-size: var(--fs-small);">Improving healthcare access across the Middle East</span>
+              <strong class="strong-label--tight">Patient-First Mission</strong>
+              <span class="caption-muted">Improving healthcare access across the Middle East</span>
             </div>
           </div>
         </div>
@@ -158,11 +162,11 @@
       <div class="grid grid--3 stagger-reveal">
         <!-- CAS Development -->
         <div class="glass-card entity-card">
-          <div class="entity-card__icon" style="background: transparent; border: none;">
-            <img src="assets/images/logos/cas-logo.png" alt="CAS Development Logo" style="width: 70px; height: 70px; object-fit: contain; border-radius: var(--radius-md);">
+          <div class="entity-card__icon" class="bg-none">
+            <img src="assets/images/logos/cas-logo.png" alt="CAS Development Logo" class="card-logo--70">
           </div>
           <h3>CAS Development SA</h3>
-          <span class="entity-card__subtitle">🇨🇭 Geneva, Switzerland</span>
+          <span class="entity-card__subtitle"><i data-lucide="map-pin" class="icon-inline"></i>Geneva, Switzerland</span>
           <p>The group's holding company and Marketing Authorization Holder (MAH). Responsible for product sourcing, Swiss-standard quality verification, and regulatory compliance for international pharmaceutical trade.</p>
           <a href="cas-development.html" class="entity-card__link">
             Learn More <span class="arrow">→</span>
@@ -171,11 +175,11 @@
 
         <!-- Al-Qawsan -->
         <div class="glass-card entity-card">
-          <div class="entity-card__icon" style="background: transparent; border: none;">
-            <img src="assets/images/logos/alqawsan-logo.png" alt="Al-Qawsan Logo" style="width: 70px; height: 70px; object-fit: contain; border-radius: var(--radius-md);">
+          <div class="entity-card__icon" class="bg-none">
+            <img src="assets/images/logos/alqawsan-logo.png" alt="Al-Qawsan Logo" class="card-logo--70">
           </div>
           <h3>Al-Qawsan Group</h3>
-          <span class="entity-card__subtitle">🇮🇶 Baghdad, Iraq</span>
+          <span class="entity-card__subtitle"><i data-lucide="map-pin" class="icon-inline"></i>Baghdad, Iraq</span>
           <p>CAS Development's exclusive local distributor in Iraq. One of Iraq's top 5 pharmaceutical distributors, handling drug registration, import logistics, and nationwide pharmacy distribution across all 18 governorates.</p>
           <a href="alqawsan.html" class="entity-card__link">
             Learn More <span class="arrow">→</span>
@@ -184,11 +188,11 @@
 
         <!-- DAMO Manufacturing -->
         <div class="glass-card entity-card">
-          <div class="entity-card__icon" style="background: transparent; border: none;">
-            <img src="assets/images/logos/damo-manufacturing-logo.png" alt="DAMO Manufacturing Logo" style="width: 70px; height: 70px; object-fit: contain; border-radius: var(--radius-md);">
+          <div class="entity-card__icon" class="bg-none">
+            <img src="assets/images/logos/damo-manufacturing-logo.png" alt="DAMO Manufacturing Logo" class="card-logo--70">
           </div>
           <h3>DAMO Manufacturing</h3>
-          <span class="entity-card__subtitle">🇮🇶 Baghdad, Iraq — Under Construction</span>
+          <span class="entity-card__subtitle"><i data-lucide="map-pin" class="icon-inline"></i>Baghdad, Iraq — Under Construction</span>
           <p>CAS Development's future local pharmaceutical manufacturer. A state-of-the-art GMP facility currently under construction, designed to produce generics, steroids, and injectables for the Iraqi and regional markets.</p>
           <a href="damo-manufacturing.html" class="entity-card__link">
             Learn More <span class="arrow">→</span>
@@ -205,25 +209,25 @@
     <div class="container">
       <div class="grid grid--4 stagger-reveal">
         <div class="stat">
-          <i data-lucide="calendar" style="width: 28px; height: 28px; color: var(--accent-turquoise); margin: 0 auto var(--space-xs); display: block; text-align: center;"></i>
+          <i data-lucide="calendar" class="stat__icon"></i>
           <div class="stat__number" data-counter="15" data-suffix="+">0</div>
           <div class="stat__label">Years of Experience</div>
           <div style="color: var(--text-muted); font-size: 0.75rem; margin-top: 4px;">Since 2009</div>
         </div>
         <div class="stat">
-          <i data-lucide="users" style="width: 28px; height: 28px; color: var(--accent-turquoise); margin: 0 auto var(--space-xs); display: block; text-align: center;"></i>
+          <i data-lucide="users" class="stat__icon"></i>
           <div class="stat__number" data-counter="1500" data-suffix="+">0</div>
           <div class="stat__label">Team Members</div>
           <div style="color: var(--text-muted); font-size: 0.75rem; margin-top: 4px;">Across 3 entities</div>
         </div>
         <div class="stat">
-          <i data-lucide="handshake" style="width: 28px; height: 28px; color: var(--accent-turquoise); margin: 0 auto var(--space-xs); display: block; text-align: center;"></i>
+          <i data-lucide="handshake" class="stat__icon"></i>
           <div class="stat__number" data-counter="20" data-suffix="+">0</div>
           <div class="stat__label">Global Partners</div>
           <div style="color: var(--text-muted); font-size: 0.75rem; margin-top: 4px;">Pharmaceutical companies</div>
         </div>
         <div class="stat">
-          <i data-lucide="globe-2" style="width: 28px; height: 28px; color: var(--accent-turquoise); margin: 0 auto var(--space-xs); display: block; text-align: center;"></i>
+          <i data-lucide="globe-2" class="stat__icon"></i>
           <div class="stat__number" data-counter="10" data-suffix="+">0</div>
           <div class="stat__label">Countries</div>
           <div style="color: var(--text-muted); font-size: 0.75rem; margin-top: 4px;">From Europe to Middle East</div>
@@ -246,7 +250,7 @@
       <div class="grid grid--3 stagger-reveal">
         <div class="glass-card service-card">
           <div class="service-card__icon">
-            <i data-lucide="pill" style="width: 24px; height: 24px; color: var(--accent-gold);"></i>
+            <i data-lucide="pill" class="icon-24 icon--gold"></i>
           </div>
           <div>
             <h3>Pharmaceutical Distribution</h3>
@@ -256,7 +260,7 @@
 
         <div class="glass-card service-card">
           <div class="service-card__icon">
-            <i data-lucide="file-check" style="width: 24px; height: 24px; color: var(--accent-gold);"></i>
+            <i data-lucide="file-check" class="icon-24 icon--gold"></i>
           </div>
           <div>
             <h3>Drug Registration & Regulatory</h3>
@@ -266,7 +270,7 @@
 
         <div class="glass-card service-card">
           <div class="service-card__icon">
-            <i data-lucide="ship" style="width: 24px; height: 24px; color: var(--accent-gold);"></i>
+            <i data-lucide="ship" class="icon-24 icon--gold"></i>
           </div>
           <div>
             <h3>Import Logistics</h3>
@@ -276,7 +280,7 @@
 
         <div class="glass-card service-card">
           <div class="service-card__icon">
-            <i data-lucide="shield-check" style="width: 24px; height: 24px; color: var(--accent-gold);"></i>
+            <i data-lucide="shield-check" class="icon-24 icon--gold"></i>
           </div>
           <div>
             <h3>Quality Assurance</h3>
@@ -286,7 +290,7 @@
 
         <div class="glass-card service-card">
           <div class="service-card__icon">
-            <i data-lucide="landmark" style="width: 24px; height: 24px; color: var(--accent-gold);"></i>
+            <i data-lucide="landmark" class="icon-24 icon--gold"></i>
           </div>
           <div>
             <h3>Government Partnerships</h3>
@@ -296,7 +300,7 @@
 
         <div class="glass-card service-card">
           <div class="service-card__icon">
-            <i data-lucide="factory" style="width: 24px; height: 24px; color: var(--accent-gold);"></i>
+            <i data-lucide="factory" class="icon-24 icon--gold"></i>
           </div>
           <div>
             <h3>Manufacturing</h3>
@@ -312,7 +316,7 @@
        ═══════════════════════════════════════════ -->
   <section class="cta-banner">
     <div class="container reveal">
-      <span class="overline" style="display: block; margin-bottom: var(--space-sm);">Partner With Us</span>
+      <span class="overline" class="overline--block">Partner With Us</span>
       <h2>Ready to Transform Healthcare Together?</h2>
       <p>Whether you're a pharmaceutical manufacturer, healthcare institution, or government agency — let's collaborate for better health outcomes.</p>
       <a href="contact.html" class="btn btn--primary">
@@ -334,7 +338,7 @@
       <div class="footer__grid">
         <!-- Brand -->
         <div class="footer__brand">
-          <a href="index.html" class="nav__logo" style="margin-bottom: var(--space-md);">
+          <a href="index.html" class="nav__logo" class="mb-md">
             <span class="logo-accent">CAS</span>&nbsp;Development
           </a>
           <p>A global pharmaceutical group connecting Swiss quality standards with regional healthcare needs across the Middle East.</p>
@@ -366,11 +370,11 @@
         <div>
           <div class="footer__title" data-i18n="footer.contact">Contact</div>
           <div class="footer__contact-item">
-            <i data-lucide="map-pin" style="width: 18px; height: 18px;"></i>
+            <i data-lucide="map-pin" class="icon-18"></i>
             <span>Route de Saint-Georges 55,<br>1213 Petit-Lancy, Switzerland</span>
           </div>
           <div class="footer__contact-item">
-            <i data-lucide="mail" style="width: 18px; height: 18px;"></i>
+            <i data-lucide="mail" class="icon-18"></i>
             <span>contact@casdev.ch</span>
           </div>
         </div>
@@ -378,7 +382,7 @@
 
       <div class="footer__bottom">
         <p>&copy; 2026 CAS Development. All rights reserved.</p>
-        <p style="color: var(--text-muted); font-size: var(--fs-small);">
+        <p class="caption-muted">
           <a href="https://alqawsangroup.com" target="_blank" rel="noopener noreferrer" style="color: var(--text-muted);">Al-Qawsan Group</a>
         </p>
       </div>

@@ -225,6 +225,27 @@
   opacity: 0.3;
 }
 
+.hero__video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.35;
+  filter: saturate(0.85) contrast(1.05);
+  z-index: 1;
+  pointer-events: none;
+}
+
+[data-theme="light"] .hero__video {
+  opacity: 0.25;
+  filter: saturate(0.7) brightness(1.1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__video { display: none; }
+}
+
 .hero__overlay {
   position: absolute;
   top: 0;
@@ -250,7 +271,8 @@
 
 .hero__content h1 {
   margin-bottom: var(--space-lg);
-  line-height: 1.15;
+  line-height: var(--leading-hero);
+  letter-spacing: var(--tracking-tight);
 }
 
 .hero__content h1 .highlight {
@@ -1247,4 +1269,313 @@
     text-align: center;
     gap: var(--space-lg);
   }
+}
+
+/* ============================================
+   News Articles (news.html)
+   ============================================ */
+.news-articles { max-width: 900px; margin: 0 auto; }
+
+.news-article {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: var(--space-xl);
+  background: var(--bg-card);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  margin-bottom: var(--space-xl);
+  transition: all var(--transition-base);
+}
+.news-article:hover {
+  border-color: var(--border-gold);
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-2px);
+}
+@media (max-width: 768px) {
+  .news-article { grid-template-columns: 1fr; }
+}
+
+.news-article__image {
+  width: 100%;
+  height: 100%;
+  min-height: 250px;
+  object-fit: cover;
+}
+
+.news-article__body {
+  padding: var(--space-xl) var(--space-xl) var(--space-xl) 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media (max-width: 768px) {
+  .news-article__body { padding: var(--space-lg); }
+}
+
+.news-article__date {
+  font-size: 0.75rem;
+  color: var(--accent-gold);
+  font-weight: var(--fw-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: var(--space-xs);
+}
+.news-article__source {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  margin-bottom: var(--space-md);
+}
+.news-article h3 {
+  font-size: 1.25rem;
+  margin-bottom: var(--space-sm);
+  line-height: 1.4;
+}
+.news-article p {
+  color: var(--text-secondary);
+  font-size: var(--fs-small);
+  line-height: 1.7;
+  margin-bottom: var(--space-md);
+}
+.news-article__link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  color: var(--accent-gold);
+  font-weight: var(--fw-medium);
+  font-size: var(--fs-small);
+  transition: color var(--transition-fast);
+}
+.news-article__link:hover {
+  color: var(--accent-gold-light);
+}
+
+/* ============================================
+   DAMO Manufacturing page (damo-manufacturing.html)
+   ============================================ */
+.mfg-intro {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: var(--space-3xl);
+  align-items: start;
+}
+@media (max-width: 900px) {
+  .mfg-intro { grid-template-columns: 1fr; }
+}
+
+.mfg-intro__logo {
+  max-width: 320px;
+  margin: 0 auto;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  position: sticky;
+  top: 100px;
+}
+.mfg-intro__logo img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.mfg-intro__text h2 {
+  margin-bottom: var(--space-lg);
+  line-height: 1.3;
+}
+.mfg-intro__text p {
+  color: var(--text-secondary);
+  line-height: 1.9;
+  font-size: 1.0625rem;
+  margin-bottom: var(--space-lg);
+}
+.mfg-intro__text p:last-child {
+  margin-bottom: 0;
+}
+
+.video-section { padding-bottom: 0; }
+
+.video-wrapper {
+  width: 100%;
+  max-width: var(--container-wide);
+  margin: var(--space-xl) auto 0;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  background: #000;
+  line-height: 0;
+  box-shadow: var(--shadow-card-hover);
+}
+.video-wrapper video {
+  width: 100%;
+  display: block;
+}
+
+.cap-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-xl);
+}
+@media (max-width: 900px) { .cap-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .cap-grid { grid-template-columns: 1fr; } }
+
+.cap-card {
+  padding: var(--space-xl) var(--space-lg);
+  text-align: center;
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+.cap-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card-hover);
+}
+.cap-card__icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto var(--space-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-lg);
+  background: rgba(0, 180, 216, 0.1);
+  border: 1px solid rgba(0, 180, 216, 0.2);
+  transition: all var(--transition-base);
+}
+.cap-card:hover .cap-card__icon {
+  background: rgba(0, 180, 216, 0.2);
+  border-color: var(--accent-turquoise);
+  box-shadow: var(--shadow-turquoise-glow);
+  transform: scale(1.08);
+}
+.cap-card h3 { font-size: 1.05rem; margin-bottom: var(--space-xs); }
+.cap-card p { color: var(--text-muted); font-size: var(--fs-small); line-height: 1.7; }
+
+.key-figures {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-xl);
+}
+@media (max-width: 768px) {
+  .key-figures { grid-template-columns: repeat(2, 1fr); }
+}
+.key-figure {
+  text-align: center;
+  padding: var(--space-xl) var(--space-md);
+}
+.key-figure__number {
+  font-family: var(--font-heading);
+  font-size: 2.75rem;
+  font-weight: var(--fw-bold);
+  color: var(--accent-gold);
+  line-height: 1;
+  margin-bottom: var(--space-sm);
+}
+.key-figure__label {
+  color: var(--text-muted);
+  font-size: var(--fs-small);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* ============================================
+   World Map — Custom SVG (replaces Leaflet)
+   ============================================ */
+.world-map-wrap {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: var(--space-xl) 0;
+}
+
+.world-map-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  color: var(--text-muted); /* drives dot-grid currentColor */
+  overflow: visible;
+}
+
+[data-theme="light"] .world-map-svg {
+  color: #9CA8BC;
+}
+
+/* Faint continent silhouettes */
+.world-map__land {
+  fill: rgba(255, 255, 255, 0.035);
+  stroke: rgba(255, 255, 255, 0.08);
+  stroke-width: 0.5;
+}
+[data-theme="light"] .world-map__land {
+  fill: rgba(30, 136, 229, 0.05);
+  stroke: rgba(30, 136, 229, 0.12);
+}
+
+/* Connection lines (Iraq → partners) */
+.world-map__line {
+  stroke: var(--accent-gold);
+  stroke-opacity: 0.35;
+  stroke-width: 1;
+  stroke-dasharray: 5 4;
+  fill: none;
+  animation: dashDrift 12s linear infinite;
+}
+@keyframes dashDrift {
+  to { stroke-dashoffset: -36; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .world-map__line { animation: none; }
+}
+
+/* Partner markers */
+.world-map__marker .dot {
+  fill: var(--accent-gold);
+  stroke: rgba(212, 168, 83, 0.35);
+  stroke-width: 3;
+  paint-order: stroke;
+  transition: transform var(--duration-hover) var(--ease-out-premium);
+  transform-origin: center;
+  transform-box: fill-box;
+}
+.world-map__marker:hover .dot,
+.world-map__marker:focus .dot {
+  transform: scale(1.35);
+}
+
+/* Hub marker (Iraq) */
+.world-map__marker--hub .dot {
+  fill: var(--accent-turquoise);
+  stroke: rgba(0, 180, 216, 0.4);
+}
+.world-map__marker--hub .pulse {
+  fill: var(--accent-turquoise);
+  fill-opacity: 0.4;
+  transform-origin: center;
+  transform-box: fill-box;
+  animation: hubPulse 2.4s ease-out infinite;
+}
+@keyframes hubPulse {
+  0%   { transform: scale(0.6); fill-opacity: 0.5; }
+  100% { transform: scale(2.8); fill-opacity: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .world-map__marker--hub .pulse { animation: none; fill-opacity: 0; }
+}
+
+/* Country labels */
+.world-map__label {
+  fill: var(--text-secondary);
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  pointer-events: none;
+}
+.world-map__marker--hub .world-map__label {
+  fill: var(--accent-turquoise);
+  font-weight: 600;
+  font-size: 14px;
+}
+[data-theme="light"] .world-map__label {
+  fill: #475069;
+}
+
+/* Mobile: simpler map */
+@media (max-width: 640px) {
+  .world-map__label { font-size: 11px; }
 }

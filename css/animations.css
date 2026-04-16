@@ -166,29 +166,33 @@
   animation: shimmer 2s infinite;
 }
 
-/* ── Staggered reveal for grids ── */
+/* ── Staggered reveal for grids (60ms steps, unified easing) ── */
 .stagger-reveal > * {
   opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.5s ease, transform 0.5s ease;
+  transform: translateY(24px);
+  filter: blur(4px);
+  transition: opacity var(--duration-reveal) var(--ease-out-premium),
+              transform var(--duration-reveal) var(--ease-out-premium),
+              filter var(--duration-reveal) var(--ease-out-premium);
 }
 
-.stagger-reveal.revealed > *:nth-child(1) { transition-delay: 0s; }
-.stagger-reveal.revealed > *:nth-child(2) { transition-delay: 0.1s; }
-.stagger-reveal.revealed > *:nth-child(3) { transition-delay: 0.15s; }
-.stagger-reveal.revealed > *:nth-child(4) { transition-delay: 0.2s; }
-.stagger-reveal.revealed > *:nth-child(5) { transition-delay: 0.25s; }
-.stagger-reveal.revealed > *:nth-child(6) { transition-delay: 0.3s; }
-.stagger-reveal.revealed > *:nth-child(7) { transition-delay: 0.35s; }
-.stagger-reveal.revealed > *:nth-child(8) { transition-delay: 0.4s; }
-.stagger-reveal.revealed > *:nth-child(9) { transition-delay: 0.45s; }
-.stagger-reveal.revealed > *:nth-child(10) { transition-delay: 0.5s; }
-.stagger-reveal.revealed > *:nth-child(11) { transition-delay: 0.55s; }
-.stagger-reveal.revealed > *:nth-child(12) { transition-delay: 0.6s; }
+.stagger-reveal.revealed > *:nth-child(1)  { transition-delay: 0ms; }
+.stagger-reveal.revealed > *:nth-child(2)  { transition-delay: 60ms; }
+.stagger-reveal.revealed > *:nth-child(3)  { transition-delay: 120ms; }
+.stagger-reveal.revealed > *:nth-child(4)  { transition-delay: 180ms; }
+.stagger-reveal.revealed > *:nth-child(5)  { transition-delay: 240ms; }
+.stagger-reveal.revealed > *:nth-child(6)  { transition-delay: 300ms; }
+.stagger-reveal.revealed > *:nth-child(7)  { transition-delay: 360ms; }
+.stagger-reveal.revealed > *:nth-child(8)  { transition-delay: 420ms; }
+.stagger-reveal.revealed > *:nth-child(9)  { transition-delay: 480ms; }
+.stagger-reveal.revealed > *:nth-child(10) { transition-delay: 540ms; }
+.stagger-reveal.revealed > *:nth-child(11) { transition-delay: 600ms; }
+.stagger-reveal.revealed > *:nth-child(12) { transition-delay: 660ms; }
 
 .stagger-reveal.revealed > * {
   opacity: 1;
   transform: translateY(0);
+  filter: blur(0);
 }
 
 /* ── Reduced motion ── */
@@ -196,7 +200,23 @@
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
+    animation-delay: 0ms !important;
     transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  /* Hide decorative motion entirely */
+  .particle,
+  .hero__bg .particle {
+    display: none !important;
+  }
+
+  /* Lock hover transforms that rely on motion */
+  .glass-card:hover,
+  .entity-card:hover,
+  .service-card:hover,
+  .partner-card:hover {
+    transform: none !important;
   }
 }
 
@@ -209,39 +229,48 @@ body {
   animation: page-enter 0.6s ease forwards;
 }
 
-/* ── Directional Reveals ── */
+/* ── Directional Reveals (unified motion tokens) ── */
 .reveal-left {
   opacity: 0;
   transform: translateX(-40px);
-  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
-              transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  filter: blur(4px);
+  transition: opacity var(--duration-reveal) var(--ease-out-premium),
+              transform var(--duration-reveal) var(--ease-out-premium),
+              filter var(--duration-reveal) var(--ease-out-premium);
 }
 .reveal-left.revealed {
   opacity: 1;
   transform: translateX(0);
+  filter: blur(0);
 }
 
 .reveal-right {
   opacity: 0;
   transform: translateX(40px);
-  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
-              transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  filter: blur(4px);
+  transition: opacity var(--duration-reveal) var(--ease-out-premium),
+              transform var(--duration-reveal) var(--ease-out-premium),
+              filter var(--duration-reveal) var(--ease-out-premium);
 }
 .reveal-right.revealed {
   opacity: 1;
   transform: translateX(0);
+  filter: blur(0);
 }
 
 /* ── Scale reveal ── */
 .reveal-scale {
   opacity: 0;
   transform: scale(0.92);
-  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
-              transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  filter: blur(4px);
+  transition: opacity var(--duration-reveal) var(--ease-out-premium),
+              transform var(--duration-reveal) var(--ease-out-premium),
+              filter var(--duration-reveal) var(--ease-out-premium);
 }
 .reveal-scale.revealed {
   opacity: 1;
   transform: scale(1);
+  filter: blur(0);
 }
 
 /* ── Enhanced card hover glow ── */

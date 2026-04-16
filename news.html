@@ -62,74 +62,6 @@
     </div>
   </section>
 
-  <style>
-    .news-articles { max-width: 900px; margin: 0 auto; }
-    .news-article {
-      display: grid;
-      grid-template-columns: 380px 1fr;
-      gap: var(--space-xl);
-      background: var(--bg-card);
-      border: 1px solid var(--border-glass);
-      border-radius: var(--radius-lg);
-      overflow: hidden;
-      margin-bottom: var(--space-xl);
-      transition: all var(--transition-base);
-    }
-    .news-article:hover {
-      border-color: var(--border-gold);
-      box-shadow: var(--shadow-card-hover);
-      transform: translateY(-2px);
-    }
-    @media (max-width: 768px) { .news-article { grid-template-columns: 1fr; } }
-    .news-article__image {
-      width: 100%;
-      height: 100%;
-      min-height: 250px;
-      object-fit: cover;
-    }
-    .news-article__body {
-      padding: var(--space-xl) var(--space-xl) var(--space-xl) 0;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-    @media (max-width: 768px) { .news-article__body { padding: var(--space-lg); } }
-    .news-article__date {
-      font-size: 0.75rem;
-      color: var(--accent-gold);
-      font-weight: var(--fw-semibold);
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      margin-bottom: var(--space-xs);
-    }
-    .news-article__source {
-      font-size: 0.7rem;
-      color: var(--text-muted);
-      margin-bottom: var(--space-md);
-    }
-    .news-article h3 {
-      font-size: 1.25rem;
-      margin-bottom: var(--space-sm);
-      line-height: 1.4;
-    }
-    .news-article p {
-      color: var(--text-secondary);
-      font-size: var(--fs-small);
-      line-height: 1.7;
-      margin-bottom: var(--space-md);
-    }
-    .news-article__link {
-      display: inline-flex;
-      align-items: center;
-      gap: var(--space-xs);
-      color: var(--accent-gold);
-      font-weight: var(--fw-medium);
-      font-size: var(--fs-small);
-      transition: color var(--transition-fast);
-    }
-    .news-article__link:hover { color: var(--accent-gold-light); }
-  </style>
-
   <!-- News Articles -->
   <section>
     <div class="container">
@@ -140,7 +72,7 @@
           <img loading="lazy" src="assets/images/news/tunisia-iraq-pharma.jpg" alt="Tunisia and Iraq pharmaceutical partnership signing" class="news-article__image">
           <div class="news-article__body">
             <div class="news-article__date">July 18, 2025</div>
-            <div class="news-article__source">📰 News Tunisia — Tunisie Numérique</div>
+            <div class="news-article__source"><i data-lucide="newspaper" class="icon-inline"></i>News Tunisia — Tunisie Numérique</div>
             <h3>Tunisia and Iraq Join Forces to Expand Pharmaceutical Exports and Health Sovereignty</h3>
             <p>Tunisia's Minister of Health, Dr. Mustapha Ferjani, oversaw the signing of a landmark partnership agreement between the Tunisian pharmaceutical company SIPHAT and Al-Qawsan Scientific Bureau, in the presence of Tunisian oncology drug expert Moez Ben Ali. The agreement aims to export Tunisian-made medicines to the Iraqi market, transfer pharmaceutical manufacturing technology, and establish new production lines for drugs destined for Iraq.</p>
             <a href="https://news-tunisia.tunisienumerique.com/tunisia-and-iraq-join-forces-to-expand-pharmaceutical-exports-and-health-sovereignty/" target="_blank" rel="noopener" class="news-article__link">
@@ -154,7 +86,7 @@
           <img loading="lazy" src="assets/images/news/signing-ceremony.jpg" alt="Al-Qawsan Scientific Bureau international agreement signing ceremony" class="news-article__image">
           <div class="news-article__body">
             <div class="news-article__date">February 2026</div>
-            <div class="news-article__source">🔗 LinkedIn — Al-Qawsan Scientific Bureau</div>
+            <div class="news-article__source"><i data-lucide="link-2" class="icon-inline"></i>LinkedIn — Al-Qawsan Scientific Bureau</div>
             <h3>Official Press Release: Signing of an International Partnership Agreement</h3>
             <p>Al-Qawsan Scientific Bureau proudly announces the signing of a major international partnership agreement, marking a significant milestone in expanding pharmaceutical collaboration across borders. This strategic agreement reinforces our commitment to advancing healthcare access and building bridges between global pharmaceutical innovation and the Iraqi market.</p>
             <a href="https://www.linkedin.com/posts/alqawsan-scientific-bureau_official-press-release-signing-of-an-international-activity-7425234038946250752-qepj" target="_blank" rel="noopener" class="news-article__link">
@@ -163,6 +95,31 @@
           </div>
         </article>
 
+      </div>
+    </div>
+  </section>
+
+  <!-- Stay Informed CTA -->
+  <section class="section--alt">
+    <div class="container">
+      <div class="glass-card glass-card--pad-2xl glass-card--centered reveal" style="max-width: 760px; margin: 0 auto;">
+        <div class="icon-badge icon-badge--56 icon-badge--gold mb-md" style="margin-left: auto; margin-right: auto;">
+          <i data-lucide="bell" class="icon-28"></i>
+        </div>
+        <h2 class="mb-sm">Stay Informed</h2>
+        <p class="mb-lg" style="max-width: 520px; margin-left: auto; margin-right: auto; color: var(--text-secondary);">
+          Follow CAS Development and Al-Qawsan on LinkedIn for partnership announcements, regulatory updates, and industry insights from the Middle East pharmaceutical sector.
+        </p>
+        <div style="display: flex; gap: var(--space-md); justify-content: center; flex-wrap: wrap;">
+          <a href="https://www.linkedin.com/company/alqawsan-scientific-bureau" target="_blank" rel="noopener" class="btn btn--primary">
+            <i data-lucide="external-link" class="icon-18"></i>
+            Follow on LinkedIn
+          </a>
+          <a href="contact.html" class="btn btn--outline">
+            <i data-lucide="mail" class="icon-18"></i>
+            Get In Touch
+          </a>
+        </div>
       </div>
     </div>
   </section>
@@ -177,12 +134,12 @@
     <div class="container">
       <div class="footer__grid">
         <div class="footer__brand">
-          <a href="index.html" class="nav__logo" style="margin-bottom: var(--space-md);"><span class="logo-accent">CAS</span>&nbsp;Development</a>
+          <a href="index.html" class="nav__logo" class="mb-md"><span class="logo-accent">CAS</span>&nbsp;Development</a>
           <p>A global pharmaceutical group connecting Swiss quality standards with regional healthcare needs across the Middle East.</p>
         </div>
         <div><div class="footer__title" data-i18n="footer.quicklinks">Quick Links</div><div class="footer__links"><a href="cas-development.html" data-i18n="nav.about">About Us</a><a href="partners.html">Global Partners</a><a href="government.html" data-i18n="nav.gov">Gov. Partnerships</a><a href="news.html" data-i18n="nav.news">News</a><a href="contact.html">Contact Us</a></div></div>
         <div><div class="footer__title" data-i18n="footer.entities">Our Entities</div><div class="footer__links"><a href="alqawsan.html">Al-Qawsan Group</a><a href="cas-development.html">CAS Development SA</a><a href="damo-manufacturing.html" data-i18n="nav.damo">DAMO Manufacturing</a></div></div>
-        <div><div class="footer__title" data-i18n="footer.contact">Contact</div><div class="footer__contact-item"><i data-lucide="map-pin" style="width: 18px; height: 18px;"></i><span>Route de Saint-Georges 55,<br>1213 Petit-Lancy, Switzerland</span></div><div class="footer__contact-item"><i data-lucide="mail" style="width: 18px; height: 18px;"></i><span>contact@casdev.ch</span></div></div>
+        <div><div class="footer__title" data-i18n="footer.contact">Contact</div><div class="footer__contact-item"><i data-lucide="map-pin" class="icon-18"></i><span>Route de Saint-Georges 55,<br>1213 Petit-Lancy, Switzerland</span></div><div class="footer__contact-item"><i data-lucide="mail" class="icon-18"></i><span>contact@casdev.ch</span></div></div>
       </div>
       <div class="footer__bottom"><p>&copy; 2026 CAS Development. All rights reserved.</p></div>
     </div>

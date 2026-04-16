@@ -105,9 +105,23 @@ function initNavigation() {
   });
 }
 
-/* ── Scroll Reveal ── */
+/* ── Scroll Reveal (unified IntersectionObserver with blur→clear) ── */
 function initScrollReveal() {
-  const reveals = document.querySelectorAll('.reveal, .stagger-reveal, .reveal-left, .reveal-right, .reveal-scale');
+  const reveals = document.querySelectorAll(
+    '.reveal, .stagger-reveal, .reveal-left, .reveal-right, .reveal-scale, [data-reveal]'
+  );
+
+  // Honour reduced motion: reveal everything immediately, skip observer.
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    reveals.forEach(el => el.classList.add('revealed'));
+    return;
+  }
+
+  // Fallback for unsupported IntersectionObserver (very old browsers)
+  if (!('IntersectionObserver' in window)) {
+    reveals.forEach(el => el.classList.add('revealed'));
+    return;
+  }
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -117,8 +131,8 @@ function initScrollReveal() {
       }
     });
   }, {
-    threshold: 0.15,
-    rootMargin: '0px 0px -50px 0px'
+    threshold: 0.1,
+    rootMargin: '0px 0px -15% 0px'
   });
 
   reveals.forEach(el => observer.observe(el));

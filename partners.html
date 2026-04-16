@@ -24,151 +24,8 @@
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/animations.css">
 
-  <!-- Leaflet.js CDN -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
   <style>
-    /* ── Leaflet Map ── */
-    .map-section { padding: var(--space-3xl) 0 var(--space-xl); }
-    .map-container {
-      max-width: 1000px;
-      margin: 0 auto;
-      border-radius: var(--radius-lg);
-      overflow: hidden;
-      border: 1px solid var(--border-glass);
-      background: #0d1b2a;
-    }
-    [data-theme="light"] .map-container {
-      background: #e8ecf1;
-    }
-    #partnerMap {
-      width: 100%;
-      height: 480px;
-      background: #0d1b2a;
-    }
-    [data-theme="light"] #partnerMap {
-      background: #e8ecf1;
-    }
-    @media (max-width: 768px) {
-      #partnerMap { height: 320px; }
-    }
-
-    /* Hide Leaflet branding */
-    .leaflet-control-attribution { display: none !important; }
-    .leaflet-control-zoom { display: none !important; }
-
-    /* Custom Leaflet markers — steady glow, no blinking */
-    .map-marker {
-      width: 14px; height: 14px;
-      border-radius: 50%;
-      background: var(--accent-gold);
-      border: 2px solid rgba(212, 168, 83, 0.5);
-      box-shadow: 0 0 10px rgba(212, 168, 83, 0.5), 0 0 24px rgba(212, 168, 83, 0.2);
-      cursor: pointer;
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-    .map-marker:hover {
-      transform: scale(1.5);
-      box-shadow: 0 0 16px rgba(212, 168, 83, 0.9), 0 0 32px rgba(212, 168, 83, 0.4);
-    }
-    .map-marker--hub {
-      width: 16px; height: 16px;
-      background: var(--accent-turquoise);
-      border-color: rgba(0, 180, 216, 0.5);
-      box-shadow: 0 0 12px rgba(0, 180, 216, 0.6), 0 0 28px rgba(0, 180, 216, 0.25);
-    }
-    .map-marker--hub:hover {
-      box-shadow: 0 0 18px rgba(0, 180, 216, 0.9), 0 0 36px rgba(0, 180, 216, 0.4);
-    }
-
-    /* Leaflet popup style override */
-    .leaflet-popup-content-wrapper {
-      background: rgba(17, 29, 51, 0.96) !important;
-      color: var(--text-primary) !important;
-      border: 1px solid var(--border-glass) !important;
-      border-radius: 10px !important;
-      backdrop-filter: blur(12px);
-      box-shadow: 0 8px 32px rgba(0,0,0,0.5) !important;
-    }
-    .leaflet-popup-tip { background: rgba(17, 29, 51, 0.96) !important; }
-    .leaflet-popup-content {
-      margin: 12px 16px !important;
-      font-family: 'Inter', sans-serif !important;
-      font-size: 0.8rem !important;
-      line-height: 1.4 !important;
-      width: auto !important;
-    }
-    .leaflet-popup-content strong {
-      color: var(--accent-gold);
-      font-size: 0.9rem;
-    }
-    .leaflet-popup-close-button {
-      color: var(--text-muted) !important;
-      font-size: 18px !important;
-    }
-    /* Country name labels on map */
-    .country-label {
-      background: rgba(15, 15, 20, 0.85) !important;
-      border: 1px solid rgba(212, 168, 83, 0.3) !important;
-      color: var(--accent-gold) !important;
-      font-size: 0.7rem !important;
-      font-weight: 600 !important;
-      letter-spacing: 0.03em;
-      padding: 3px 8px !important;
-      border-radius: 4px !important;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.3) !important;
-      white-space: nowrap;
-    }
-    [data-theme="light"] .leaflet-popup-content-wrapper {
-      background: rgba(255, 255, 255, 0.96) !important;
-      color: #1A2332 !important;
-      border: 1px solid rgba(30, 136, 229, 0.15) !important;
-      box-shadow: 0 8px 32px rgba(0,0,0,0.12) !important;
-    }
-    [data-theme="light"] .leaflet-popup-tip {
-      background: rgba(255, 255, 255, 0.96) !important;
-    }
-    [data-theme="light"] .leaflet-popup-content strong {
-      color: #1E88E5;
-    }
-    [data-theme="light"] .country-label {
-      background: rgba(255, 255, 255, 0.9) !important;
-      border: 1px solid rgba(30, 136, 229, 0.2) !important;
-      color: #1E88E5 !important;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08) !important;
-    }
-    .country-label::before {
-      border-right-color: rgba(212, 168, 83, 0.3) !important;
-    }
-    /* Popup partner mini-cards */
-    .popup-partners {
-      display: flex;
-      flex-direction: column;
-      gap: 5px;
-      margin-top: 10px;
-    }
-    .popup-partner {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 6px;
-      padding: 6px 10px;
-    }
-    .popup-partner img {
-      width: 28px;
-      height: 22px;
-      object-fit: contain;
-      flex-shrink: 0;
-    }
-    .popup-partner span {
-      font-size: 0.72rem;
-      color: #c5cad3;
-      font-weight: 500;
-    }
-
     /* ── Partner Cards Grid ── */
     .partners-grid {
       display: grid;
@@ -269,22 +126,114 @@
     </div>
   </section>
 
-  <!-- World Map (Leaflet) -->
+  <!-- World Map (custom SVG) -->
   <section class="map-section">
     <div class="container container--wide">
       <div class="section-header reveal">
         <span class="overline">Worldwide Presence</span>
         <h2>Our Global Footprint</h2>
-        <p>Click on the map markers to discover our partners in each country.</p>
+        <p>Connecting Iraq to trusted pharmaceutical partners across 8 countries.</p>
       </div>
-      <div class="map-container reveal">
-        <div id="partnerMap"></div>
+
+      <div class="world-map-wrap reveal">
+        <svg class="world-map-svg" viewBox="0 0 1000 500" role="img"
+             aria-label="World map showing CAS Development's partner network: Iraq hub connected to Canada, USA, Spain, Tunisia, Turkey, Egypt, India, Singapore."
+             xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <pattern id="worldDots" x="0" y="0" width="14" height="14" patternUnits="userSpaceOnUse">
+              <circle cx="7" cy="7" r="0.9" fill="currentColor" opacity="0.28"/>
+            </pattern>
+            <radialGradient id="worldVignette" cx="50%" cy="50%" r="70%">
+              <stop offset="0%" stop-color="white" stop-opacity="1"/>
+              <stop offset="100%" stop-color="white" stop-opacity="0"/>
+            </radialGradient>
+            <mask id="worldVignetteMask">
+              <rect width="1000" height="500" fill="url(#worldVignette)"/>
+            </mask>
+          </defs>
+
+          <!-- Dot grid background with soft vignette -->
+          <g mask="url(#worldVignetteMask)">
+            <rect width="1000" height="500" fill="url(#worldDots)"/>
+          </g>
+
+          <!-- Simplified continent silhouettes (low-poly) -->
+          <g class="world-map__land">
+            <!-- North America -->
+            <path d="M 110 80 Q 150 70 200 80 L 260 100 Q 290 120 300 150 L 290 180 Q 260 200 230 195 L 190 185 Q 160 175 140 160 L 120 140 Q 100 120 105 95 Z"/>
+            <!-- South America -->
+            <path d="M 260 230 Q 285 235 295 270 L 290 320 Q 280 370 260 395 L 245 400 Q 235 380 240 340 L 250 280 Q 255 250 260 230 Z"/>
+            <!-- Europe -->
+            <path d="M 480 110 Q 510 100 540 110 L 560 130 Q 555 145 530 150 L 495 148 Q 475 140 480 120 Z"/>
+            <!-- Africa -->
+            <path d="M 510 175 Q 560 170 590 195 L 605 250 Q 600 310 580 345 L 555 360 Q 530 345 520 310 L 510 250 Q 505 210 510 175 Z"/>
+            <!-- Asia -->
+            <path d="M 600 90 Q 680 80 760 95 Q 830 110 860 140 L 865 180 Q 840 210 780 215 L 700 210 Q 650 200 615 180 L 590 150 Q 585 115 600 90 Z"/>
+            <!-- Oceania (Australia) -->
+            <path d="M 790 285 Q 830 280 860 295 L 865 315 Q 855 330 820 330 L 795 322 Q 782 310 790 295 Z"/>
+          </g>
+
+          <!-- Connection lines from Iraq hub (lat 33.3, lng 44.4 → x=623, y=157) -->
+          <g class="world-map__lines" fill="none">
+            <path class="world-map__line" d="M 623 157 L 205 94"/>  <!-- Canada -->
+            <path class="world-map__line" d="M 623 157 L 226 139"/>  <!-- USA -->
+            <path class="world-map__line" d="M 623 157 L 490 138"/>  <!-- Spain -->
+            <path class="world-map__line" d="M 623 157 L 526 156"/>  <!-- Tunisia -->
+            <path class="world-map__line" d="M 623 157 L 596 148"/>  <!-- Turkey -->
+            <path class="world-map__line" d="M 623 157 L 585 176"/>  <!-- Egypt -->
+            <path class="world-map__line" d="M 623 157 L 719 188"/>  <!-- India -->
+            <path class="world-map__line" d="M 623 157 L 788 246"/>  <!-- Singapore -->
+          </g>
+
+          <!-- Partner country markers -->
+          <g class="world-map__markers">
+            <g class="world-map__marker" tabindex="0">
+              <circle class="dot" cx="205" cy="94" r="4"/>
+              <text class="world-map__label" x="205" y="80" text-anchor="middle">Canada</text>
+            </g>
+            <g class="world-map__marker" tabindex="0">
+              <circle class="dot" cx="226" cy="139" r="4"/>
+              <text class="world-map__label" x="226" y="125" text-anchor="middle">USA</text>
+            </g>
+            <g class="world-map__marker" tabindex="0">
+              <circle class="dot" cx="490" cy="138" r="4"/>
+              <text class="world-map__label" x="490" y="124" text-anchor="middle">Spain</text>
+            </g>
+            <g class="world-map__marker" tabindex="0">
+              <circle class="dot" cx="526" cy="156" r="4"/>
+              <text class="world-map__label" x="526" y="172" text-anchor="middle">Tunisia</text>
+            </g>
+            <g class="world-map__marker" tabindex="0">
+              <circle class="dot" cx="596" cy="148" r="4"/>
+              <text class="world-map__label" x="580" y="130" text-anchor="end">Turkey</text>
+            </g>
+            <g class="world-map__marker" tabindex="0">
+              <circle class="dot" cx="585" cy="176" r="4"/>
+              <text class="world-map__label" x="570" y="192" text-anchor="end">Egypt</text>
+            </g>
+            <g class="world-map__marker" tabindex="0">
+              <circle class="dot" cx="719" cy="188" r="4"/>
+              <text class="world-map__label" x="719" y="204" text-anchor="middle">India</text>
+            </g>
+            <g class="world-map__marker" tabindex="0">
+              <circle class="dot" cx="788" cy="246" r="4"/>
+              <text class="world-map__label" x="788" y="262" text-anchor="middle">Singapore</text>
+            </g>
+
+            <!-- Iraq hub (bigger + pulse + turquoise) -->
+            <g class="world-map__marker world-map__marker--hub" tabindex="0">
+              <circle class="pulse" cx="623" cy="157" r="10"/>
+              <circle class="dot" cx="623" cy="157" r="6"/>
+              <text class="world-map__label" x="645" y="178" text-anchor="start">Iraq — Hub</text>
+            </g>
+          </g>
+        </svg>
       </div>
     </div>
   </section>
 
   <!-- Filter & Partner Grid -->
-  <section style="background: var(--bg-secondary);">
+  <section class="section--alt">
     <div class="container">
 
       <!-- Filter Bar -->
@@ -577,7 +526,7 @@
   <!-- CTA -->
   <section class="cta-banner">
     <div class="container reveal">
-      <span class="overline" style="display: block; margin-bottom: var(--space-sm);">Become a Partner</span>
+      <span class="overline" class="overline--block">Become a Partner</span>
       <h2>Join Our Global Network</h2>
       <p>We're always looking for new pharmaceutical partners. If you're a manufacturer with quality products, let's explore opportunities together.</p>
       <a href="contact.html" class="btn btn--primary">Get In Touch <span class="arrow">→</span></a>
@@ -594,7 +543,7 @@
     <div class="container">
       <div class="footer__grid">
         <div class="footer__brand">
-          <a href="index.html" class="nav__logo" style="margin-bottom: var(--space-md);"><span class="logo-accent">CAS</span>&nbsp;Development</a>
+          <a href="index.html" class="nav__logo" class="mb-md"><span class="logo-accent">CAS</span>&nbsp;Development</a>
           <p>A global pharmaceutical group connecting Swiss quality standards with regional healthcare needs across the Middle East.</p>
         </div>
         <div>
@@ -611,8 +560,8 @@
         </div>
         <div>
           <div class="footer__title" data-i18n="footer.contact">Contact</div>
-          <div class="footer__contact-item"><i data-lucide="map-pin" style="width: 18px; height: 18px;"></i><span>Route de Saint-Georges 55,<br>1213 Petit-Lancy, Switzerland</span></div>
-          <div class="footer__contact-item"><i data-lucide="mail" style="width: 18px; height: 18px;"></i><span>contact@casdev.ch</span></div>
+          <div class="footer__contact-item"><i data-lucide="map-pin" class="icon-18"></i><span>Route de Saint-Georges 55,<br>1213 Petit-Lancy, Switzerland</span></div>
+          <div class="footer__contact-item"><i data-lucide="mail" class="icon-18"></i><span>contact@casdev.ch</span></div>
         </div>
       </div>
       <div class="footer__bottom"><p>&copy; 2026 CAS Development. All rights reserved.</p></div>
@@ -627,74 +576,6 @@
     /* ═══════════════════════════════════════════
        LEAFLET MAP — Real lat/lng coordinates
        ═══════════════════════════════════════════ */
-    (function() {
-      // Static globe — no interaction, visual only
-      const map = L.map('partnerMap', {
-        center: [20, 20],
-        zoom: 2,
-        minZoom: 2,
-        maxZoom: 2,
-        zoomControl: false,
-        scrollWheelZoom: false,
-        dragging: false,
-        doubleClickZoom: false,
-        touchZoom: false,
-        boxZoom: false,
-        keyboard: false
-      });
-
-      // Choose tile layer based on theme
-      const isLight = document.documentElement.getAttribute('data-theme') === 'light';
-      const tileUrl = isLight
-        ? 'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png'
-        : 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png';
-      L.tileLayer(tileUrl, {
-        subdomains: 'abcd',
-        maxZoom: 19
-      }).addTo(map);
-
-      // Line color based on theme
-      const lineColor = isLight ? 'rgba(30, 136, 229, 0.35)' : 'rgba(212, 168, 83, 0.3)';
-
-      // Partner country locations
-      const locations = [
-        { lat: 33.3,  lng: 44.4,  name: 'Iraq (Hub)', hub: true },
-        { lat: 26.8,  lng: 30.8,  name: 'Egypt' },
-        { lat: 22.5,  lng: 78.9,  name: 'India' },
-        { lat: 40.4,  lng: -3.7,  name: 'Spain' },
-        { lat: 39.8,  lng: -98.6, name: 'USA' },
-        { lat: 56.1,  lng: -106.3,name: 'Canada' },
-        { lat: 1.35,  lng: 103.8, name: 'Singapore' },
-        { lat: 34.0,  lng: 9.5,   name: 'Tunisia' },
-        { lat: 36.8,  lng: 34.6,  name: 'Turkey' }
-      ];
-
-      // Draw connection lines from Iraq hub
-      const iraqCoords = [33.3, 44.4];
-      locations.forEach(loc => {
-        if (!loc.hub) {
-          L.polyline([iraqCoords, [loc.lat, loc.lng]], {
-            color: lineColor,
-            weight: 1.5,
-            dashArray: '6 4'
-          }).addTo(map);
-        }
-      });
-
-      // Add markers with permanent country labels (no click)
-      locations.forEach(loc => {
-        const size = loc.hub ? 18 : 12;
-        const markerDiv = L.divIcon({
-          className: '',
-          html: `<div class="map-marker${loc.hub ? ' map-marker--hub' : ''}" style="width:${size}px;height:${size}px;"></div>`,
-          iconSize: [size, size],
-          iconAnchor: [size/2, size/2]
-        });
-
-        const marker = L.marker([loc.lat, loc.lng], { icon: markerDiv, interactive: false }).addTo(map);
-      });
-    })();
-
     /* ═══════════════════════════════════════════
        PARTNER MODAL — Clean implementation
        ═══════════════════════════════════════════ */

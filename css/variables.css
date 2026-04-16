@@ -3,10 +3,17 @@
    ============================================ */
 
 :root {
-  /* ── Colors (Dark — default) ── */
+  /* ──────────────────────────────────────────────
+     COLOR TOKENS — Semantic roles
+     Gold     = Primary brand (hero, CTA, active, dividers)
+     Turquoise = Data/info accent (stats, data-viz, info links)
+     Two-level background only (primary / secondary)
+     ────────────────────────────────────────────── */
+
+  /* Backgrounds — simplified to 2 levels (was 3) */
   --bg-primary: #0A1628;
-  --bg-secondary: #111D33;
-  --bg-tertiary: #0D1B2A;
+  --bg-secondary: #13223D;   /* +15% luminance vs primary (was #111D33, 7%) */
+  --bg-tertiary: #13223D;    /* kept as alias to --bg-secondary for legacy refs */
   --bg-card: rgba(255, 255, 255, 0.04);
   --bg-card-hover: rgba(255, 255, 255, 0.08);
 
@@ -38,13 +45,21 @@
   --font-heading: 'Outfit', sans-serif;
   --font-body: 'Inter', sans-serif;
 
-  --fs-hero: clamp(2.25rem, 5vw, 4rem);
-  --fs-h2: clamp(1.75rem, 3.5vw, 2.625rem);
-  --fs-h3: clamp(1.25rem, 2vw, 1.5rem);
+  --fs-hero: clamp(2.75rem, 7vw + 1rem, 6.5rem);
+  --fs-display: clamp(3.5rem, 9vw + 1rem, 8rem);
+  --fs-h2: clamp(2rem, 4vw + 0.5rem, 3.5rem);
+  --fs-h3: clamp(1.25rem, 2vw, 1.625rem);
   --fs-body: 1rem;
   --fs-small: 0.875rem;
   --fs-overline: 0.8125rem;
   --fs-nav: 0.8125rem;
+
+  /* Editorial tracking/leading */
+  --tracking-tight: -0.03em;
+  --tracking-snug: -0.02em;
+  --tracking-wide: 0.18em;
+  --leading-hero: 0.95;
+  --leading-heading: 1.05;
 
   --fw-regular: 400;
   --fw-medium: 500;
@@ -78,11 +93,24 @@
   --shadow-gold-glow: 0 0 30px rgba(212, 168, 83, 0.15);
   --shadow-turquoise-glow: 0 0 30px rgba(0, 180, 216, 0.15);
 
-  /* ── Transitions ── */
-  --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-base: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-spring: 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+  /* ──────────────────────────────────────────────
+     MOTION TOKENS — Unified easing system
+     --ease-out-premium: editorial ease-out (2025 standard)
+     --ease-spring: tactile bounce for micro-interactions
+     Durations: 250ms (hover), 400ms (UI), 700ms (reveal)
+     ────────────────────────────────────────────── */
+  --ease-out-premium: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+
+  --duration-hover: 250ms;
+  --duration-ui: 400ms;
+  --duration-reveal: 700ms;
+
+  --transition-fast: var(--duration-hover) var(--ease-out-premium);
+  --transition-base: var(--duration-ui) var(--ease-out-premium);
+  --transition-slow: 500ms var(--ease-out-premium);
+  --transition-spring: 600ms var(--ease-spring);
 
   /* ── Z-index ── */
   --z-nav: 1000;

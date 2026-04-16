@@ -436,19 +436,29 @@ function translateTextNodes(lang) {
     if (el.id === 'langToggle') return;
 
     const fullText = el.textContent.trim();
+    // Preserve only icon-like children (svg, .icon-inline, [data-lucide])
+    const iconChildren = Array.from(el.children).filter(c =>
+      c.tagName === 'SVG' || c.classList.contains('icon-inline') || c.hasAttribute('data-lucide')
+    );
+
     if (fullText && mappings[fullText]) {
       if (!el.dataset.origHtml) {
         el.dataset.origHtml = el.innerHTML;
       }
-      const arrow = el.querySelector('.arrow');
 
-      if (arrow) {
+      if (iconChildren.length > 0 && iconChildren.length === el.children.length) {
+        // Only icon children present — replace text nodes, keep icons
+        let replaced = false;
         el.childNodes.forEach(node => {
-          if (node.nodeType === Node.TEXT_NODE && node.textContent.trim()) {
-            node.textContent = mappings[fullText] + ' ';
+          if (node.nodeType === Node.TEXT_NODE && node.textContent.trim() && !replaced) {
+            node.textContent = ' ' + mappings[fullText];
+            replaced = true;
+          } else if (node.nodeType === Node.TEXT_NODE) {
+            node.textContent = '';
           }
         });
       } else {
+        // Default: replace full content (original behavior for headings with <span class="highlight"> etc.)
         el.textContent = mappings[fullText];
       }
       return;
