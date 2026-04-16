@@ -13,7 +13,6 @@
   /* Backgrounds — simplified to 2 levels (was 3) */
   --bg-primary: #0A1628;
   --bg-secondary: #13223D;   /* +15% luminance vs primary (was #111D33, 7%) */
-  --bg-tertiary: #13223D;    /* kept as alias to --bg-secondary for legacy refs */
   --bg-card: rgba(255, 255, 255, 0.04);
   --bg-card-hover: rgba(255, 255, 255, 0.08);
 
@@ -61,10 +60,12 @@
   --leading-hero: 0.95;
   --leading-heading: 1.05;
 
+  --fw-light: 300;
   --fw-regular: 400;
   --fw-medium: 500;
   --fw-semibold: 600;
   --fw-bold: 700;
+  --fw-extrabold: 800;
 
   /* ── Spacing ── */
   --space-xs: 0.5rem;
@@ -124,8 +125,7 @@
    ============================================ */
 [data-theme="light"] {
   --bg-primary: #F5F7FA;
-  --bg-secondary: #EBF0F7;
-  --bg-tertiary: #FFFFFF;
+  --bg-secondary: #FFFFFF;
   --bg-card: rgba(30, 136, 229, 0.04);
   --bg-card-hover: rgba(30, 136, 229, 0.08);
 

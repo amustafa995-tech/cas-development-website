@@ -1,0 +1,4 @@
+# Local dev configuration
+.claude/launch.json
+.DS_Store
+*.log

@@ -620,12 +620,12 @@
 
 .logo-carousel__item {
   flex-shrink: 0;
-  width: 160px;
+  width: clamp(110px, 22vw, 160px);  /* responsive width */
   height: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 var(--space-xl);
+  margin: 0 clamp(var(--space-md), 4vw, var(--space-xl));
   filter: grayscale(100%) brightness(1.5);
   opacity: 0.5;
   transition: all var(--transition-base);
@@ -651,7 +651,7 @@
 .cta-banner {
   padding: var(--space-3xl) 0;
   text-align: center;
-  background: var(--bg-tertiary);
+  background: var(--bg-secondary);
   position: relative;
   overflow: hidden;
 }
@@ -900,7 +900,8 @@
 }
 
 .filter-bar__btn {
-  padding: 8px 20px;
+  padding: 12px 22px;            /* tap target ≥ 44px */
+  min-height: 44px;
   border-radius: 100px;
   font-size: var(--fs-small);
   font-weight: var(--fw-medium);
@@ -956,7 +957,7 @@
 }
 
 .accordion__item.open .accordion__body {
-  max-height: 500px;
+  max-height: 1500px; /* generous limit, JS sets exact via scrollHeight */
 }
 
 .accordion__content {
@@ -1027,7 +1028,7 @@
 
 .news-card__image {
   height: 200px;
-  background: var(--bg-tertiary);
+  background: var(--bg-secondary);
   overflow: hidden;
 }
 
@@ -1579,3 +1580,119 @@
 @media (max-width: 640px) {
   .world-map__label { font-size: 11px; }
 }
+
+/* ============================================
+   Partners Grid + Cards (partners.html)
+   ============================================ */
+.partners-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-md);
+}
+@media (max-width: 1024px) { .partners-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 768px)  { .partners-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 480px)  { .partners-grid { grid-template-columns: 1fr; } }
+
+.p-card {
+  background: var(--bg-card);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg) var(--space-md);
+  text-align: center;
+  cursor: pointer;
+  transition: all var(--transition-base);
+  position: relative;
+}
+.p-card:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--border-gold);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.p-card__flag {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  font-size: 1rem;
+}
+
+.p-card__logo {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-sm);
+  padding: 0 var(--space-xs);
+}
+.p-card__logo img {
+  max-width: 100%;
+  max-height: 55px;
+  object-fit: contain;
+  filter: brightness(1.1);
+  transition: filter 0.3s;
+}
+.p-card:hover .p-card__logo img {
+  filter: brightness(1.3);
+}
+
+.p-card__name {
+  font-family: var(--font-heading);
+  font-weight: var(--fw-semibold);
+  color: var(--text-primary);
+  font-size: 0.8rem;
+  line-height: 1.3;
+  margin-bottom: 3px;
+}
+.p-card__country {
+  color: var(--text-muted);
+  font-size: 0.7rem;
+}
+
+/* Partner modal — link priority */
+.partner-modal__link {
+  display: inline-flex !important;
+  cursor: pointer;
+  z-index: 100;
+  position: relative;
+}
+
+/* ============================================
+   Contact Cards (contact.html)
+   ============================================ */
+.contact-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  box-shadow: var(--shadow-card);
+  border-top: 3px solid var(--accent-gold);
+  transition: all var(--transition-base);
+}
+.contact-card--gold          { border-top-color: var(--accent-gold); }
+.contact-card--turquoise     { border-top-color: var(--accent-turquoise); }
+.contact-card--turquoise-dim { border-top-color: var(--accent-turquoise-dim); }
+
+.contact-card__header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+  padding-bottom: var(--space-md);
+  border-bottom: 1px solid var(--border-glass);
+}
+.contact-card__title {
+  margin-bottom: 2px;
+  font-size: 1.05rem;
+  color: var(--text-primary);
+}
+.contact-card__location {
+  font-size: var(--fs-small);
+  font-weight: var(--fw-semibold);
+}
+.contact-card__location--gold      { color: var(--accent-gold); }
+.contact-card__location--turquoise { color: var(--accent-turquoise); }
+.contact-card__location--dim       { color: var(--accent-turquoise-dim); }
