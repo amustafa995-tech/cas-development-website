@@ -866,6 +866,53 @@ const arabicMappings = {
   "Pharmaceutical companies": "الشركات الدوائية",
   "Since 2009": "منذ 2009",
   "From Europe to Middle East": "من أوروبا إلى الشرق الأوسط",
+
+  // ──── BATCH 4 — Partner card descriptions (shown in modal on click) ────
+  "A shareholding company under Investment Law 159, operating with world-class standards. Annual capacity exceeding 200 million units. Supported by experienced leadership committed to international healthcare needs.": "شركة مساهمة تحت قانون الاستثمار 159، تعمل بمعايير عالمية. طاقة إنتاجية سنوية تتجاوز 200 مليون وحدة. مدعومة بقيادة ذات خبرة ملتزمة باحتياجات الرعاية الصحية الدولية.",
+
+  "Carolina Pharma, founded in 2015 by medical and pharmaceutical experts, is a pharmaceutical company located in the Mersin Free Economic Zone, Turkey. A pioneer in the region, it produces prescription drugs, dietary supplements, and other specialized pharmaceutical products. Its GMP-certified facility is equipped with state-of-the-art technology to ensure high-quality products.": "Carolina Pharma، تأسست عام 2015 على يد خبراء طبيين ودوائيين، شركة دوائية تقع في المنطقة الاقتصادية الحرة بمرسين، تركيا. رائدة في المنطقة، تنتج الأدوية بوصفة طبية والمكملات الغذائية والمنتجات الدوائية المتخصصة. منشأتها المعتمدة GMP مجهزة بأحدث التقنيات لضمان منتجات عالية الجودة.",
+
+  "Established 2004 in Ahmedabad. One of India's fastest-growing pharma companies. Women's healthcare, cardio-diabetology, pain management. 70+ brands.": "تأسست عام 2004 في أحمد آباد. من أسرع الشركات الدوائية نمواً في الهند. الصحة النسائية وأمراض القلب والسكري وإدارة الألم. أكثر من 70 علامة تجارية.",
+
+  "Established in 1960, the first company in the region dedicated to manufacturing active pharmaceutical ingredients (APIs) and raw materials. Produces IV solutions, finished dosage forms, surgical sutures. A key subsidiary of the Holding Company for Pharmaceuticals.": "تأسست عام 1960، وهي أول شركة في المنطقة مُخصصة لتصنيع المكونات الدوائية الفعّالة (APIs) والمواد الخام. تُنتج محاليل وريدية وأشكال صيدلانية نهائية وخيوط جراحية. شركة تابعة رئيسية للشركة القابضة للأدوية.",
+
+  "Established in 1962, renowned for manufacturing high-quality medicines under licenses from several major international pharmaceutical firms. Produces tablets, capsules, and syrups across various medical specialties.": "تأسست عام 1962، معروفة بتصنيع أدوية عالية الجودة بموجب تراخيص من عدة شركات دوائية دولية كبرى. تُنتج الأقراص والكبسولات والشراب في مختلف التخصصات الطبية.",
+
+  "Established in 1962. 185+ human and veterinary products, unique specialty in dental anesthetics. 250,000 packs/day capacity. Exports to 17+ countries. GMP certified.": "تأسست عام 1962. أكثر من 185 منتجاً للاستخدام البشري والبيطري، تخصص فريد في مخدرات الأسنان. طاقة 250,000 عبوة يومياً. تُصدّر إلى أكثر من 17 دولة. معتمدة GMP.",
+
+  "Founded 1940 by pioneer Talaat Harb as the first national pharma company in Egypt and the Middle East. Extracts, finished dosage forms. GMP. Global exports.": "تأسست عام 1940 على يد الرائد طلعت حرب، كأول شركة دوائية وطنية في مصر والشرق الأوسط. مُستخلصات وأشكال صيدلانية نهائية. معتمدة GMP. صادرات عالمية.",
+
+  "Founded 1947, one of Egypt's oldest pharma companies. Pioneer in effervescent tablets and hormonal ampoules. Exports to ~40 countries. Subsidiary of Drug Holding Company.": "تأسست عام 1947، من أقدم الشركات الدوائية في مصر. رائدة في الأقراص الفوارة والأمبولات الهرمونية. تُصدّر إلى حوالي 40 دولة. شركة تابعة للشركة القابضة للأدوية.",
+
+  "Founded 1962, cornerstone of Egypt's pharma sector. Massive Cairo facilities. Wide range under own brand and international licenses. Advanced R&D labs.": "تأسست عام 1962، ركيزة أساسية في قطاع الأدوية المصري. منشآت ضخمة في القاهرة. مجموعة واسعة تحت علامتها الخاصة وتراخيص دولية. مختبرات بحث وتطوير متقدمة.",
+
+  "Founded 2015, headquartered in Singapore. GS1 Continuous Glucose Monitoring (CGM) system. EU MDR CE certified (2023). 14-day calibration-free. AI-driven data analysis.": "تأسست عام 2015، مقرها سنغافورة. نظام GS1 لمراقبة الجلوكوز المستمرة (CGM). معتمدة EU MDR CE (2023). 14 يوماً بدون معايرة. تحليل بيانات مدعوم بالذكاء الاصطناعي.",
+
+  "Founded in 1940, one of the oldest drug manufacturers in Egypt. Cardiology, diabetes, infectious diseases. Modern GMP facilities. Strategic subsidiary of Holding Company.": "تأسست عام 1940، من أقدم مُصنّعي الأدوية في مصر. أمراض القلب والسكري والأمراض المعدية. منشآت GMP حديثة. شركة تابعة استراتيجية للشركة القابضة.",
+
+  "Founded in 2012 in Barcelona, specialized in Consumer Healthcare. Joint care, digestive health, mental well-being. FDA certified. Presence in Europe, Asia, and the Americas.": "تأسست عام 2012 في برشلونة، متخصصة في الرعاية الصحية للمستهلك. العناية بالمفاصل والصحة الهضمية والصحة النفسية. معتمدة من FDA. حضور في أوروبا وآسيا والأمريكتين.",
+
+  "Incorporated 1963 as the 'House of Aerosols'. Pioneer in inhalers and topical aerosols. 130+ products, 40 therapeutic groups. ISO 9001 and ISO 14001 certified.": "تأسست عام 1963 كـ 'بيت الأيروسولات'. رائدة في أجهزة الاستنشاق والأيروسولات الموضعية. أكثر من 130 منتجاً و40 مجموعة علاجية. معتمدة ISO 9001 وISO 14001.",
+
+  "Les Laboratoires UNIMED is one of Tunisia's leading pharmaceutical manufacturers, specializing in the production of generic and branded medicines including injectables, ophthalmic solutions, and solid dosage forms. With over 200 registered products across 16+ countries spanning North Africa, the Middle East, and Sub-Saharan Africa, UNIMED operates to international GMP standards and holds multiple certifications. Their extensive export network and regulatory expertise make them a strategic partner for pharmaceutical distribution across the MENA region.": "Les Laboratoires UNIMED هي إحدى أبرز الشركات الدوائية في تونس، متخصصة في إنتاج الأدوية الجنيسة والمسماة التجارية بما في ذلك الحقن والمحاليل العينية والأشكال الصيدلانية الصلبة. بأكثر من 200 منتج مسجل في أكثر من 16 دولة تشمل شمال إفريقيا والشرق الأوسط وإفريقيا جنوب الصحراء، تعمل UNIMED وفق معايير GMP الدولية وتحمل شهادات متعددة. شبكتها التصديرية الواسعة وخبرتها التنظيمية تجعلها شريكاً استراتيجياً للتوزيع الدوائي في منطقة الشرق الأوسط وشمال إفريقيا.",
+
+  "Premier Canadian contract manufacturer of health supplements. Health Canada-approved, FDA-registered. NSF Gold, GMP, Halal, Kosher certified. Capsules, tablets, powders, gummies.": "أبرز مُصنّع كندي بموجب عقود للمكملات الصحية. معتمد من Health Canada ومسجل لدى FDA. شهادات NSF Gold وGMP وحلال وكوشير. كبسولات وأقراص ومساحيق وحلويات صمغية.",
+
+  "The first and most important pharmaceutical manufacturer in Iraq. Established in 1965, the company began full production in 1970 and has since played a key role in supplying high-quality medicines to the Iraqi market.": "أول وأهم مُصنّع دوائي في العراق. تأسست عام 1965، وبدأت الإنتاج الكامل عام 1970، ومنذ ذلك الحين تلعب دوراً رئيسياً في توريد أدوية عالية الجودة للسوق العراقي.",
+
+  "Tunisian lab specializing in sterile medicines. Liquid injectables and eye drops. Tunisian GMP. 50+ marketing authorizations. Strong African export presence.": "مختبر تونسي متخصص في الأدوية المعقمة. الحقن السائلة وقطرات العين. GMP تونسي. أكثر من 50 ترخيص تسويق. حضور تصديري قوي في إفريقيا.",
+
+  "US-based with 30+ years of healthcare leadership. Joint ventures Dawah–Gypto Pharma and Dawah–Holdi Pharma. 200M+ units annually. Growing presence in MENA.": "مقرها الولايات المتحدة بخبرة قيادية في الرعاية الصحية تزيد عن 30 عاماً. مشاريع مشتركة Dawah–Gypto Pharma وDawah–Holdi Pharma. أكثر من 200 مليون وحدة سنوياً. حضور متنامٍ في منطقة الشرق الأوسط وشمال إفريقيا.",
+
+  // Partner country labels (modal country field)
+  "Canada (Windsor, Ontario)": "كندا (ويندسور، أونتاريو)",
+  "Egypt (Cairo)": "مصر (القاهرة)",
+  "Egypt (Giza)": "مصر (الجيزة)",
+  "India (Ahmedabad)": "الهند (أحمد آباد)",
+  "Spain (Barcelona)": "إسبانيا (برشلونة)",
+  "Tunisia (Sousse)": "تونس (سوسة)",
+  "Tunisia (Tunis)": "تونس (تونس العاصمة)",
+  "Turkey (Mersin)": "تركيا (مرسين)",
 };
 
 /* ── Build reverse maps (FR/AR → EN) for legacy ── */

@@ -894,6 +894,23 @@
       const modalLink = document.getElementById('modalLink');
       const modalLogo = overlay.querySelector('.partner-modal__logo img');
 
+      function translateModalText(text) {
+        // Translate data-driven strings via the global translation system.
+        const lang = localStorage.getItem('cas-lang') || 'en';
+        if (lang === 'en') return text;
+        const map = (lang === 'ar' && typeof arabicMappings !== 'undefined') ? arabicMappings
+                  : (lang === 'fr' && typeof textMappings !== 'undefined') ? textMappings
+                  : null;
+        if (!map) return text;
+        // Raw lookup, then normalized (collapsed whitespace)
+        if (map[text]) return map[text];
+        const norm = text.replace(/\s+/g, ' ').trim();
+        const normMap = (lang === 'ar' && typeof arabicMappingsNorm !== 'undefined') ? arabicMappingsNorm
+                      : (lang === 'fr' && typeof textMappingsNorm !== 'undefined') ? textMappingsNorm
+                      : null;
+        return (normMap && normMap[norm]) || text;
+      }
+
       function openModal(card) {
         const name = card.dataset.name;
         const flag = card.dataset.flag;
@@ -904,9 +921,9 @@
 
         modalLogo.src = logoSrc;
         modalLogo.alt = name;
-        modalTitle.textContent = name;
-        modalCountry.textContent = flag + ' ' + country;
-        modalDesc.textContent = desc;
+        modalTitle.textContent = translateModalText(name);
+        modalCountry.textContent = flag + ' ' + translateModalText(country);
+        modalDesc.textContent = translateModalText(desc);
 
         // Set Visit Website link
         if (url) {
