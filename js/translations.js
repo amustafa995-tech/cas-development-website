@@ -726,6 +726,146 @@ const arabicMappings = {
   "Whether you're a manufacturer seeking distribution or a healthcare organization looking for reliable supply, let's connect and discuss collaboration opportunities.": "سواء كنت مُصنّعاً يبحث عن توزيع أو منظمة رعاية صحية تبحث عن إمداد موثوق، فلنتواصل ونناقش فرص التعاون.",
   "Whether you're a pharmaceutical manufacturer, healthcare institution, or government agency — let's collaborate for better healthcare in the region.": "سواء كنت مُصنّعاً دوائياً أو مؤسسة رعاية صحية أو وكالة حكومية — فلنتعاون من أجل رعاية صحية أفضل في المنطقة.",
   "We're always looking for new pharmaceutical partners. If you're a manufacturer with quality products, let's explore opportunities together.": "نحن دائماً نبحث عن شركاء دوائيين جدد. إذا كنت مُصنّعاً يقدم منتجات عالية الجودة، فلنستكشف الفرص معاً.",
+
+  // ──── BATCH 3 — Footer, a11y, addresses, source labels, DAMO details, fragments ────
+
+  // Footer & a11y
+  "Legal Notice": "إشعار قانوني",
+  "Privacy Policy": "سياسة الخصوصية",
+  "Skip to main content": "تخطَّ إلى المحتوى الرئيسي",
+
+  // Address fragments
+  "Route de Saint-Georges 55": "Route de Saint-Georges 55",
+  "Route de Saint-Georges 55,": "Route de Saint-Georges 55،",
+  "1213 Petit-Lancy, Switzerland": "1213 بوتي-لانسي، سويسرا",
+  "1213 Petit-Lancy, Geneva, Switzerland": "1213 بوتي-لانسي، جنيف، سويسرا",
+  "Al Qadisyia / 612m St. 22, H5": "القادسية / شارع 612م 22، H5",
+  "Iraq — Baghdad": "العراق — بغداد",
+  "Awerij Industrial Area": "منطقة العويرج الصناعية",
+  "Iraq — Baghdad Awerij Industrial Area": "العراق — بغداد منطقة العويرج الصناعية",
+  "Baghdad, Iraq Al Qadisyia / 612m St. 22, H5": "بغداد، العراق القادسية / شارع 612م 22، H5",
+  "Samarra, Iraq": "سامراء، العراق",
+  "USA / Egypt": "الولايات المتحدة / مصر",
+
+  // News source labels (combined with icon)
+  "News Tunisia — Tunisie Numérique": "نيوز تونس — Tunisie Numérique",
+  "LinkedIn — Al-Qawsan Scientific Bureau": "LinkedIn — المكتب العلمي القوسان",
+
+  // DAMO Manufacturing details
+  "200M+": "+200 مليون",
+  "Annual Unit Capacity": "الطاقة الإنتاجية السنوية بالوحدات",
+  "Product Lines": "خطوط الإنتاج",
+  "Certified Facility": "منشأة معتمدة",
+  "Quality Monitoring": "مراقبة الجودة",
+  "Production in Iraq": "الإنتاج في العراق",
+  "DAMO Manufacturing": "دامو للتصنيع الدوائي",
+
+  // Government / SDI / Kimadia
+  "SDI — Samarra": "SDI — سامراء",
+  "State Company for Drug Industries": "الشركة العامة للصناعات الدوائية",
+  "State Company for Drug Industries (SDI)": "الشركة العامة للصناعات الدوائية (SDI)",
+  "Ministry of Industry & Minerals": "وزارة الصناعة والمعادن",
+  "Organisation of": "تنظيم",
+  "Kimadia — Public Pharmaceutical Tenders": "كيمادياء — المناقصات الدوائية العامة",
+  "Comprehensive management of": "إدارة شاملة لـ",
+  "for the supply of essential medicines, medical devices, laboratory equipment, and hospital supplies to government hospitals, health centres, and clinics across all Iraqi governorates.": "لتوريد الأدوية الأساسية والأجهزة الطبية والمعدات المخبرية والمستلزمات الطبية للمستشفيات الحكومية والمراكز الصحية والعيادات في جميع المحافظات العراقية.",
+  "Operating under the Iraqi Ministry of Health, Kimadia manages": "تعمل كيمادياء تحت إشراف وزارة الصحة العراقية وتدير",
+  "for distribution through public sector channels. The company's facilities include production lines for tablets, capsules, syrups, injectable solutions, and ointments.": "للتوزيع عبر قنوات القطاع العام. تشمل مرافق الشركة خطوط إنتاج للأقراص والكبسولات والشراب والمحاليل الحقنية والمراهم.",
+  "SDI operates under the Iraqi Ministry of Industry and Minerals and produces a broad range of": "تعمل SDI تحت إشراف وزارة الصناعة والمعادن العراقية وتنتج مجموعة واسعة من",
+  "Al-Qawsan's collaboration with SDI focuses on": "يركز تعاون القوسان مع SDI على",
+  "in Iraq's public healthcare system, supporting the government's mission of universal health coverage.": "في نظام الرعاية الصحية العام العراقي، دعماً لمهمة الحكومة في تحقيق التغطية الصحية الشاملة.",
+  "Through this collaboration, we contribute directly to ensuring that": "من خلال هذا التعاون، نساهم مباشرة في ضمان أن",
+  "essential medicines remain accessible and affordable": "الأدوية الأساسية تبقى متاحة وبأسعار معقولة",
+  "essential generic medicines, medical supplies, and healthcare products": "الأدوية الجنيسة الأساسية والمستلزمات الطبية ومنتجات الرعاية الصحية",
+  "bridging the gap between public manufacturing and market distribution": "سد الفجوة بين التصنيع العام والتوزيع السوقي",
+  "Active and consistent participation in": "مشاركة نشطة ومستمرة في",
+  "submitting competitive bids": "تقديم عطاءات تنافسية",
+  "large-scale public tenders": "المناقصات العامة الكبرى",
+  "Kimadia's national pharmaceutical tenders": "المناقصات الدوائية الوطنية لكيمادياء",
+  "supplying essential medicines and medical devices to government hospitals and public health facilities across all Iraqi governorates.": "توريد الأدوية الأساسية والأجهزة الطبية للمستشفيات الحكومية ومرافق الصحة العامة في جميع المحافظات العراقية.",
+  "for healthcare professionals in partnership with the Ministry of Health, covering treatment protocols, pharmacological advances, and continuing medical education.": "للمهنيين الصحيين بالشراكة مع وزارة الصحة، تشمل بروتوكولات العلاج والتطورات الدوائية والتعليم الطبي المستمر.",
+
+  // Paragraph fragments produced by <strong> splits
+  "Established in": "تأسس في",
+  "2009 in Baghdad": "عام 2009 في بغداد",
+  ", Al-Qawsan Scientific Bureau has grown into one of Iraq's top five pharmaceutical distributors in the private sector.": "، نما المكتب العلمي القوسان ليصبح أحد أكبر خمسة موزعين دوائيين في القطاع الخاص في العراق.",
+  "With over": "بأكثر من",
+  "1,500 employees": "1,500 موظف",
+  "1,500+ professionals": "+1,500 محترف",
+  "spanning all Iraqi governorates, Al-Qawsan maintains a close collaboration with the": "منتشرين في جميع المحافظات العراقية، يحافظ القوسان على تعاون وثيق مع",
+  "to address public health challenges and improve access to care.": "لمواجهة تحديات الصحة العامة وتحسين الوصول إلى الرعاية.",
+  "and a team of": "وفريق من",
+  ", CAS Development is committed to empowering healthcare excellence at every level.": "، تلتزم CAS Development بتمكين التميز في الرعاية الصحية على جميع المستويات.",
+  "10 countries": "10 دول",
+  "200M+ Annual Unit Capacity": "+200 مليون طاقة إنتاجية سنوية",
+  "200M+ Product Lines": "خطوط إنتاج بطاقة 200 مليون+",
+
+  // CAS Development page fragments
+  "CAS Development SA, based in": "CAS Development SA، ومقرها",
+  ", serves as the": "، تعمل كـ",
+  "Marketing Authorization Holder (MAH)": "حامل ترخيص التسويق (MAH)",
+  "within the CAS Development ecosystem.": "ضمن منظومة CAS Development.",
+  "Switzerland, Iraq, and the Middle East": "سويسرا والعراق والشرق الأوسط",
+  ". Our ecosystem bridges the gap between global pharmaceutical innovation and regional healthcare needs.": ". تربط منظومتنا بين الابتكار الدوائي العالمي واحتياجات الرعاية الصحية الإقليمية.",
+  "CAS Development is an integrated pharmaceutical group operating across": "CAS Development هي مجموعة دوائية متكاملة تعمل في",
+  "Through our three core entities —": "من خلال كياناتنا الأساسية الثلاثة —",
+  "for distribution and regulatory affairs,": "للتوزيع والشؤون التنظيمية،",
+  "for pharmaceutical production, and": "للتصنيع الدوائي، و",
+  "for Swiss-standard quality assurance and market authorization — we ensure that safe, effective medications reach the healthcare professionals and patients who need them most.": "لضمان الجودة بالمعايير السويسرية والترخيص — نضمن وصول أدوية آمنة وفعّالة إلى المهنيين الصحيين والمرضى الذين يحتاجونها.",
+  "With partnerships spanning over": "بشراكات تمتد إلى أكثر من",
+  "highest Swiss quality standards": "أعلى معايير الجودة السويسرية",
+  "Our primary mission is to ensure that every pharmaceutical product distributed through our network meets the": "مهمتنا الأساسية هي ضمان أن كل منتج دوائي يُوزع عبر شبكتنا يلتزم بـ",
+  ". We are responsible for the acquisition, management, and exploitation of Market Authorizations (AMM) for the commercial trading, distribution, and import/export of pharmaceutical products.": ". نحن مسؤولون عن اقتناء وإدارة واستثمار تراخيص التسويق (AMM) للتجارة والتوزيع والاستيراد/التصدير الدوائي.",
+
+  // Government page fragments
+  "Al-Qawsan Scientific Bureau maintains a long-standing and strategic relationship with Iraq's": "يحافظ المكتب العلمي القوسان على علاقة استراتيجية طويلة الأمد مع",
+  ", the national authority responsible for pharmaceutical regulation, public health policy, and the oversight of all healthcare activities across the country.": "، السلطة الوطنية المسؤولة عن التنظيم الدوائي وسياسة الصحة العامة والإشراف على جميع الأنشطة الصحية في البلاد.",
+  "Our collaboration with the Ministry encompasses several critical areas. We work closely with the regulatory division on the": "يشمل تعاوننا مع الوزارة عدة مجالات حرجة. نعمل عن كثب مع القسم التنظيمي بشأن",
+  "registration and accreditation of pharmaceutical factories and products": "تسجيل واعتماد المصانع والمنتجات الدوائية",
+  ", ensuring that all medications entering the Iraqi market meet the required safety and efficacy standards. This includes the preparation and submission of technical dossiers, facility inspection coordination, and ongoing compliance monitoring.": "، لضمان أن جميع الأدوية التي تدخل السوق العراقي تلبي معايير السلامة والفعالية المطلوبة. ويشمل ذلك إعداد وتقديم الملفات التقنية وتنسيق فحص المرافق ومراقبة الامتثال المستمرة.",
+  "Beyond regulatory affairs, Al-Qawsan has played a central role in national health initiatives — most notably as the": "بالإضافة إلى الشؤون التنظيمية، لعب القوسان دوراً محورياً في المبادرات الصحية الوطنية — وأبرزها كـ",
+  "exclusive distributor of the Sinopharm COVID-19 vaccine": "الموزع الحصري للقاح سينوفارم لكوفيد-19",
+  "exclusive distributor of Sinopharm's vaccine": "الموزع الحصري للقاح سينوفارم",
+  "during the pandemic, supporting the Ministry's nationwide vaccination campaign across all 18 governorates.": "خلال الجائحة، دعماً لحملة التطعيم الوطنية لوزارة الصحة في جميع المحافظات الـ 18.",
+  ", we facilitated the safe and timely delivery of doses across the country in coordination with the Ministry of Health.": "، يسّرنا التسليم الآمن والمناسب التوقيت للجرعات في جميع أنحاء البلاد بالتنسيق مع وزارة الصحة.",
+  "We also contribute to": "نساهم أيضاً في",
+  "healthcare professional training programmes": "برامج تدريب المهنيين الصحيين",
+  "organised in partnership with the Ministry, providing workshops and seminars on the latest treatment protocols, pharmacological advances, and product knowledge.": "تُنظَّم بالشراكة مع الوزارة، توفر ورش عمل وندوات حول أحدث بروتوكولات العلاج والتطورات الدوائية والمعرفة بالمنتجات.",
+  "specialised workshops and seminars": "ورش عمل وندوات متخصصة",
+  "with the Ministry of Health, including technical dossier preparation, inspection coordination, and ongoing compliance management.": "مع وزارة الصحة، بما في ذلك إعداد الملفات التقنية وتنسيق التفتيش وإدارة الامتثال المستمرة.",
+  "pharmaceutical factory and product registration": "تسجيل المصانع والمنتجات الدوائية",
+
+  // DAMO page fragments
+  "Once operational, DAMO will produce": "عند تشغيله، سينتج دامو",
+  "safe, effective, and affordable": "آمنة وفعّالة وبأسعار معقولة",
+  "medicines under CAS Development's Swiss quality standards — reducing Iraq's dependence on pharmaceutical imports and strengthening the country's domestic production capacity.": "أدوية وفقاً لمعايير الجودة السويسرية لـ CAS Development — مما يقلل من اعتماد العراق على الواردات الدوائية ويعزز قدرة البلاد على الإنتاج المحلي.",
+  "Engineered with cutting-edge technology and built to comply with": "مهندس بأحدث التقنيات ومُصمَّم للامتثال لـ",
+  "Good Manufacturing Practice (GMP)": "ممارسات التصنيع الجيدة (GMP)",
+  "DAMO Manufacturing is CAS Development's future local pharmaceutical manufacturer and a landmark investment in Iraq's healthcare infrastructure. Currently": "دامو للتصنيع الدوائي هو المُصنّع الدوائي المحلي المستقبلي لـ CAS Development واستثمار بارز في البنية التحتية للرعاية الصحية في العراق. حالياً",
+  "in the heart of Baghdad, the facility is designed to meet the highest international standards of pharmaceutical production.": "في قلب بغداد، صُممت المنشأة لتلبية أعلى المعايير الدولية للإنتاج الدوائي.",
+  "under construction": "قيد الإنشاء",
+  "Baghdad, Iraq — Under Construction": "بغداد، العراق — قيد الإنشاء",
+  "A comprehensive range of pharmaceutical products manufactured to the highest quality standards.": "مجموعة شاملة من المنتجات الدوائية المُصنَّعة وفقاً لأعلى معايير الجودة.",
+  "Your browser does not support the video tag.": "متصفحك لا يدعم وسم الفيديو.",
+
+  // News page button labels
+  "News FR": "أخبار FR",
+
+  // Tunisia/Iraq pharma news fragments
+  "Tunisia's Minister of Health, Dr. Mustapha Ferjani, oversaw the signing of a landmark partnership agreement between the Tunisian pharmaceutical company SIPHAT and Al-Qawsan Scientific Bureau, in the presence of Tunisian oncology drug expert Moez Ben Ali. The agreement aims to export Tunisian-made medicines to the Iraqi market, transfer pharmaceutical manufacturing technology, and establish new production lines for drugs destined for Iraq.": "أشرف وزير الصحة التونسي، د. مصطفى الفرجاني، على توقيع اتفاقية شراكة تاريخية بين الشركة الدوائية التونسية SIPHAT والمكتب العلمي القوسان، بحضور الخبير التونسي في أدوية الأورام معز بن علي. تهدف الاتفاقية إلى تصدير الأدوية المصنوعة في تونس إلى السوق العراقي، ونقل تكنولوجيا التصنيع الدوائي، وإنشاء خطوط إنتاج جديدة للأدوية المخصصة للعراق.",
+
+  // Misc UI
+  "The": "الـ",
+  "Development": "التطوير",
+  "Healthcare Bridging Continents": "الرعاية الصحية تربط القارات",
+  "for Swiss-standard quality assurance and market authorization": "لضمان الجودة بالمعايير السويسرية والترخيص",
+
+  // Final batch — fix remaining visible English fragments in AR mode
+  "CAS Development SA": "CAS Development SA",  // brand kept Latin
+  "Across 3 entities": "عبر 3 كيانات",
+  "Pharmaceutical companies": "الشركات الدوائية",
+  "Since 2009": "منذ 2009",
+  "From Europe to Middle East": "من أوروبا إلى الشرق الأوسط",
 };
 
 /* ── Build reverse maps (FR/AR → EN) for legacy ── */
@@ -733,6 +873,15 @@ const reverseTextMappings = {};
 for (const [en, fr] of Object.entries(textMappings)) {
   reverseTextMappings[fr] = en;
 }
+
+/* ── Pre-build normalized lookup tables (collapse whitespace, ignore boundary punct) ── */
+function normalizeText(s) {
+  return s.replace(/\s+/g, ' ').trim();
+}
+const textMappingsNorm  = {};
+const arabicMappingsNorm = {};
+for (const [en, fr] of Object.entries(textMappings))   textMappingsNorm[normalizeText(en)]  = fr;
+for (const [en, ar] of Object.entries(arabicMappings)) arabicMappingsNorm[normalizeText(en)] = ar;
 
 /* ── Language System (EN / FR / AR) ── */
 const LANG_CYCLE = ['en', 'fr', 'ar'];
@@ -791,9 +940,9 @@ function setLanguage(lang) {
 
 /* ── Scan and translate text nodes ── */
 function translateTextNodes(lang) {
-  let mappings;
-  if (lang === 'fr') mappings = textMappings;
-  else if (lang === 'ar') mappings = arabicMappings;
+  let mappings, mappingsNorm;
+  if (lang === 'fr') { mappings = textMappings; mappingsNorm = textMappingsNorm; }
+  else if (lang === 'ar') { mappings = arabicMappings; mappingsNorm = arabicMappingsNorm; }
   else return; // EN = original text, no translation needed
 
   // Wide selector list covering ALL translatable elements across all pages
@@ -808,17 +957,31 @@ function translateTextNodes(lang) {
     '.service-card h3', '.service-card p',
     '.stat__label',
     '.cta-banner h2', '.cta-banner p', '.cta-banner .overline',
-    '.footer__title', '.footer__brand p', '.footer__links a', '.footer__bottom p',
+    '.footer__title', '.footer__brand p', '.footer__links a',
+    '.footer__bottom p', '.footer__bottom a',
+    '.footer__contact-item span',
     '.glass-card strong', '.glass-card span',
     '.glass-card p',
-    '.btn',
+    '.btn', '.btn span',
     '.news-article__date', '.news-article h3', '.news-article p',
     '.news-article__link', '.news-article__source',
     '.p-card__name', '.p-card__country',
     '.filter-bar__btn',
     '.mfg-intro__text h2', '.mfg-intro__text p', '.mfg-intro__text .overline',
     '.timeline__text',
-    'section p', 'section h2', 'section h3',
+    'section p', 'section h2', 'section h3', 'section span', 'section strong',
+    '.skip-to-content',
+    '.cookie-notice__text',
+    '.contact-card__title', '.contact-card__location',
+    '.feature-row strong', '.feature-row span', '.feature-row a',
+    '.feature-row--md strong', '.feature-row--md span',
+    '.feature-row--inline',
+    '.legal-page h1', '.legal-page h2', '.legal-page h3', '.legal-page p', '.legal-page li',
+    '.caption-xs', '.caption-muted', '.caption-gold', '.caption-mt-4',
+    '.text-secondary-sm', '.text-muted-sm-mb-md', '.heading-gold-mb-xs',
+    '.strong-label', '.strong-label--tight',
+    '.cta-card__lead',
+    '.world-map__label',  // SVG map country labels
     '[data-i18n]'
   ];
 
@@ -832,13 +995,20 @@ function translateTextNodes(lang) {
     if (el.closest('.nav__links') && el.hasAttribute('data-i18n')) return;
     if (el.id === 'langToggle') return;
 
-    const fullText = el.textContent.trim();
+    const fullTextRaw = el.textContent.trim();
+    const fullTextNorm = normalizeText(fullTextRaw);
+    // Translation lookup: try raw match, then normalized (collapsed whitespace)
+    const translated = mappings[fullTextRaw] || mappingsNorm[fullTextNorm];
+
     // Preserve only icon-like children (svg, .icon-inline, [data-lucide])
     const iconChildren = Array.from(el.children).filter(c =>
       c.tagName === 'SVG' || c.classList.contains('icon-inline') || c.hasAttribute('data-lucide')
     );
 
-    if (fullText && mappings[fullText]) {
+    if (translated) {
+      const fullText = fullTextRaw; // legacy variable name used below
+      // Use translated value instead of looking up mappings[fullText] again
+      const lookupValue = translated;
       if (!el.dataset.origHtml) {
         el.dataset.origHtml = el.innerHTML;
       }
@@ -848,7 +1018,7 @@ function translateTextNodes(lang) {
         let replaced = false;
         el.childNodes.forEach(node => {
           if (node.nodeType === Node.TEXT_NODE && node.textContent.trim() && !replaced) {
-            node.textContent = ' ' + mappings[fullText];
+            node.textContent = ' ' + lookupValue;
             replaced = true;
           } else if (node.nodeType === Node.TEXT_NODE) {
             node.textContent = '';
@@ -856,7 +1026,7 @@ function translateTextNodes(lang) {
         });
       } else {
         // Default: replace full content (original behavior for headings with <span class="highlight"> etc.)
-        el.textContent = mappings[fullText];
+        el.textContent = lookupValue;
       }
       return;
     }
@@ -864,8 +1034,10 @@ function translateTextNodes(lang) {
     el.childNodes.forEach(node => {
       if (node.nodeType === Node.TEXT_NODE) {
         const nodeText = node.textContent.trim();
-        if (nodeText && mappings[nodeText]) {
-          node.textContent = node.textContent.replace(nodeText, mappings[nodeText]);
+        const nodeNorm = normalizeText(nodeText);
+        const nodeTrans = mappings[nodeText] || mappingsNorm[nodeNorm];
+        if (nodeText && nodeTrans) {
+          node.textContent = node.textContent.replace(nodeText, nodeTrans);
         }
       }
     });
