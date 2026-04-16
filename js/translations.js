@@ -1,21 +1,22 @@
 /* ============================================
-   CAS Development — Translations (EN / FR)
-   Complete text-matching translation system
+   CAS Development — Translations (EN / FR / AR)
+   Trilingual text-matching translation system
+   AR translations require native review before production
    ============================================ */
 
 const translations = {
   // ── Navigation ──
-  "nav.about": { en: "About Us", fr: "À Propos" },
-  "nav.alqawsan": { en: "Al-Qawsan", fr: "Al-Qawsan" },
-  "nav.damo": { en: "DAMO", fr: "DAMO" },
-  "nav.partners": { en: "Partners", fr: "Partenaires" },
-  "nav.gov": { en: "Gov. Partnerships", fr: "Partenariats Gov." },
-  "nav.contact": { en: "Contact", fr: "Contact" },
-  "nav.news": { en: "News", fr: "Actualités" },
+  "nav.about":     { en: "About Us",          fr: "À Propos",          ar: "من نحن" },
+  "nav.alqawsan":  { en: "Al-Qawsan",         fr: "Al-Qawsan",         ar: "القوسان" },
+  "nav.damo":      { en: "DAMO",              fr: "DAMO",              ar: "دامو" },
+  "nav.partners":  { en: "Partners",          fr: "Partenaires",       ar: "الشركاء" },
+  "nav.gov":       { en: "Gov. Partnerships", fr: "Partenariats Gov.", ar: "الشراكات الحكومية" },
+  "nav.contact":   { en: "Contact",           fr: "Contact",           ar: "اتصل بنا" },
+  "nav.news":      { en: "News",              fr: "Actualités",        ar: "الأخبار" },
   // ── Footer ──
-  "footer.quicklinks": { en: "Quick Links", fr: "Liens Rapides" },
-  "footer.entities": { en: "Our Entities", fr: "Nos Entités" },
-  "footer.contact": { en: "Contact", fr: "Contact" },
+  "footer.quicklinks": { en: "Quick Links",  fr: "Liens Rapides", ar: "روابط سريعة" },
+  "footer.entities":   { en: "Our Entities", fr: "Nos Entités",   ar: "كياناتنا" },
+  "footer.contact":    { en: "Contact",      fr: "Contact",       ar: "تواصل" },
 };
 
 /* ── Body text mappings (English → French) ── */
@@ -353,13 +354,183 @@ const textMappings = {
   "Al-Qawsan Scientific Bureau proudly announces the signing of a major international partnership agreement, marking a significant milestone in expanding pharmaceutical collaboration across borders. This strategic agreement reinforces our commitment to advancing healthcare access and building bridges between global pharmaceutical innovation and the Iraqi market.": "Le Bureau Scientifique Al-Qawsan annonce fièrement la signature d'un important accord de partenariat international, marquant une étape significative dans l'expansion de la collaboration pharmaceutique au-delà des frontières.",
 };
 
-/* ── Build reverse map (FR → EN) ── */
+/* ──────────────────────────────────────────────
+   Arabic mappings (English → Arabic, MSA)
+   ⚠ Translations require native Arabic speaker review before production.
+   Pharma-specific terms follow Iraqi/Gulf conventions.
+   ────────────────────────────────────────────── */
+const arabicMappings = {
+  // ──── Homepage ────
+  "CAS Development": "CAS Development",
+  "Empowering": "تمكين",
+  "Healthcare": "الرعاية الصحية",
+  "Bridging Continents": "ربط القارات",
+  "A global pharmaceutical group connecting Swiss quality standards with regional healthcare needs — through distribution, manufacturing, and regulatory excellence.": "مجموعة دوائية عالمية تربط معايير الجودة السويسرية باحتياجات الرعاية الصحية الإقليمية — من خلال التوزيع والتصنيع والتميز التنظيمي.",
+  "Discover Our Group": "اكتشف مجموعتنا",
+  "Who We Are": "من نحن",
+  "About CAS Development": "حول CAS Development",
+  "Uniting expertise across continents to deliver world-class healthcare solutions.": "توحيد الخبرات عبر القارات لتقديم حلول رعاية صحية عالمية المستوى.",
+  "Swiss Quality Standards": "معايير الجودة السويسرية",
+  "Rigorous AMM verification and compliance": "تدقيق صارم لتراخيص التسويق والامتثال",
+  "Global Network": "شبكة عالمية",
+  "Partners across 10+ countries worldwide": "شركاء في أكثر من 10 دول حول العالم",
+  "Patient-First Mission": "مهمة المريض أولاً",
+  "Improving healthcare access across the Middle East": "تحسين الوصول إلى الرعاية الصحية في الشرق الأوسط",
+  "Our Entities": "كياناتنا",
+  "Three Pillars of Excellence": "ثلاثة أركان للتميز",
+  "Each entity plays a vital role in our integrated pharmaceutical ecosystem.": "كل كيان يلعب دوراً حيوياً في منظومتنا الدوائية المتكاملة.",
+  "Al-Qawsan Group": "مجموعة القوسان",
+  "DAMO Manufacturing": "دامو للتصنيع الدوائي",
+  "CAS Development SA": "CAS Development SA",
+  "Learn More": "اعرف المزيد",
+  "By the Numbers": "بالأرقام",
+  "Our Impact in Figures": "تأثيرنا بالأرقام",
+  "Years of Experience": "سنة من الخبرة",
+  "Employees": "موظفاً",
+  "Global Partners": "شريك عالمي",
+  "Countries Served": "دول مخدومة",
+  "Our Services": "خدماتنا",
+  "What We Cover": "ما نغطيه",
+  "End-to-end pharmaceutical solutions across the Middle East.": "حلول دوائية متكاملة عبر منطقة الشرق الأوسط.",
+  "Quick Links": "روابط سريعة",
+  "Contact": "تواصل",
+
+  // ──── Page Heroes ────
+  "Get In Touch": "ابقَ على تواصل",
+  "Contact Us": "تواصل معنا",
+  "Us": "معنا",
+  "We'd love to hear from you. Whether you're a potential partner, client, or collaborator — let's start a conversation.": "يسعدنا أن نسمع منك. سواء كنت شريكاً محتملاً أو عميلاً أو متعاوناً — لنبدأ حواراً.",
+  "Stay Updated": "ابقَ على اطلاع",
+  "Latest": "آخر",
+  "News": "الأخبار",
+  "Industry developments, group milestones, and partnership announcements from CAS Development.": "تطورات القطاع، إنجازات المجموعة، وإعلانات الشراكة من CAS Development.",
+  "Our Network": "شبكتنا",
+  "Global": "عالميون",
+  "Partners": "الشركاء",
+  "Connecting Iraq to the world through trusted pharmaceutical partnerships across 8 countries.": "ربط العراق بالعالم من خلال شراكات دوائية موثوقة في 8 دول.",
+  "Public Sector Collaboration": "التعاون مع القطاع العام",
+  "Government": "الحكومية",
+  "Partnerships": "الشراكات",
+  "Strengthening healthcare through strategic collaboration with government institutions.": "تعزيز الرعاية الصحية من خلال التعاون الاستراتيجي مع المؤسسات الحكومية.",
+  "CAS Development — Quality & Regulatory": "CAS Development — الجودة والتنظيم",
+  "SA": "SA",
+  "Swiss Quality, Global Impact — Marketing Authorization Holder ensuring the highest pharmaceutical standards.": "جودة سويسرية، تأثير عالمي — حامل ترخيص التسويق الذي يضمن أعلى معايير الجودة الدوائية.",
+  "CAS Development — Distribution": "CAS Development — التوزيع",
+  "Iraq's leading pharmaceutical distributor — delivering world-class healthcare solutions since 2009.": "أكبر موزع دوائي في العراق — يقدم حلول رعاية صحية عالمية المستوى منذ 2009.",
+  "CAS Development Entity — Under Construction": "كيان CAS Development — قيد الإنشاء",
+  "Manufacturing": "للتصنيع",
+  "CAS Development's future local pharmaceutical manufacturer — a state-of-the-art production facility currently under construction in Baghdad, Iraq.": "المُصنّع الدوائي المحلي المستقبلي لـ CAS Development — منشأة إنتاج متطورة قيد الإنشاء في بغداد، العراق.",
+
+  // ──── Al-Qawsan page ────
+  "About": "نبذة",
+  "Iraq's Top 5 Pharmaceutical Distributor": "من بين أفضل 5 موزعين دوائيين في العراق",
+  "Top 5": "ضمن الأفضل 5",
+  "Private Distributor": "موزع خاص",
+  "Founded": "تأسس",
+  "Governorates": "محافظة",
+  "Pharmaceutical Products": "منتج دوائي",
+  "What We Do": "ما نقوم به",
+  "Comprehensive pharmaceutical solutions built on over 15 years of expertise in the Iraqi market.": "حلول دوائية شاملة مبنية على أكثر من 15 عاماً من الخبرة في السوق العراقي.",
+  "Drug & Factory Registration": "تسجيل الأدوية والمصانع",
+  "Distribution & Logistics": "التوزيع واللوجستيات",
+  "Reliable supply chain ensuring essential medicines reach pharmacies and healthcare facilities across Iraq.": "سلسلة إمداد موثوقة تضمن وصول الأدوية الأساسية إلى الصيدليات والمرافق الصحية في جميع أنحاء العراق.",
+
+  // ──── Government page ────
+  "Strategic Partner": "شريك استراتيجي",
+  "Ministry of Health — Republic of Iraq": "وزارة الصحة — جمهورية العراق",
+  "Iraqi Ministry of Health": "وزارة الصحة العراقية",
+  "National healthcare authority": "السلطة الوطنية للرعاية الصحية",
+  "Drug & factory registration": "تسجيل الأدوية والمصانع",
+  "Regulatory compliance": "الامتثال التنظيمي",
+  "COVID-19 vaccination program": "برنامج التطعيم ضد كوفيد-19",
+  "Training & capacity building": "التدريب وبناء القدرات",
+  "Public Sector Tenders": "مناقصات القطاع العام",
+  "Drug Registration": "تسجيل الأدوية",
+  "Factory & product accreditation": "اعتماد المصانع والمنتجات",
+  "Compliance": "الامتثال",
+  "Regulatory monitoring & dossiers": "الرقابة التنظيمية والملفات",
+  "Vaccination": "التطعيم",
+  "National campaign logistics": "لوجستيات الحملات الوطنية",
+  "Training": "التدريب",
+  "Healthcare professional education": "تعليم المهنيين الصحيين",
+
+  // ──── DAMO page ────
+  "Pioneering Pharmaceutical": "ريادة دوائية",
+  "Production": "الإنتاج",
+  "in Iraq": "في العراق",
+
+  // ──── Contact page ────
+  "Geneva, Switzerland": "جنيف، سويسرا",
+  "Baghdad, Iraq": "بغداد، العراق",
+  "Email": "البريد الإلكتروني",
+  "Address": "العنوان",
+  "Why Us": "لماذا نحن",
+  "A Trusted Gateway to the Iraqi Pharmaceutical Market": "بوابة موثوقة إلى السوق الدوائي العراقي",
+  "Combining Swiss-grade compliance, 15+ years of local distribution expertise, and privileged institutional relationships.": "نجمع بين الامتثال السويسري وأكثر من 15 عاماً من خبرة التوزيع المحلي والعلاقات المؤسسية المميزة.",
+  "Every product we distribute passes rigorous AMM verification and regulatory compliance — Switzerland-anchored governance, region-wide accountability.": "كل منتج نوزعه يخضع لتدقيق صارم لترخيص التسويق والامتثال التنظيمي — حوكمة سويسرية ومسؤولية إقليمية شاملة.",
+  "15+ Years in Iraq": "أكثر من 15 عاماً في العراق",
+  "Through Al-Qawsan, we serve all 18 Iraqi governorates with 1,500+ professionals and working partnerships with Kimadia, SDI and the Ministry of Health.": "من خلال القوسان، نخدم جميع المحافظات العراقية الـ 18 بأكثر من 1,500 محترف وشراكات عمل مع كيمادياء وSDI ووزارة الصحة.",
+  "16 vetted partners across Europe, North America, North Africa, the Middle East and Asia — one entry point to a full pharmaceutical supply chain.": "16 شريكاً موثوقاً عبر أوروبا وأمريكا الشمالية وشمال إفريقيا والشرق الأوسط وآسيا — نقطة دخول واحدة لسلسلة إمداد دوائية كاملة.",
+  "What Happens Next": "الخطوات التالية",
+  "A response within 2 business days": "رد خلال يومي عمل",
+  "Our team reviews every inquiry personally. After your first message, expect a scoping call to understand your product, your target market, and the regulatory pathway. We guide you through the AMM process, local distribution, and hospital/pharmacy rollout.": "يراجع فريقنا كل استفسار شخصياً. بعد رسالتك الأولى، توقّع مكالمة تقييم لفهم منتجك وسوقك المستهدف والمسار التنظيمي. نرشدك خلال عملية الترخيص والتوزيع المحلي والإطلاق في المستشفيات والصيدليات.",
+  "Based in Geneva (CET/CEST) and Baghdad (AST), we typically respond within one business day — never later than two.": "متمركزون في جنيف (CET/CEST) وبغداد (AST)، نرد عادةً خلال يوم عمل واحد — وفي جميع الأحوال خلال يومين.",
+  "1. Initial Contact": "1. التواصل الأولي",
+  "Share your product portfolio and target territory.": "شارك محفظة منتجاتك والمنطقة المستهدفة.",
+  "2. Scoping Call": "2. مكالمة التقييم",
+  "30-minute discovery to align on regulatory and commercial fit.": "30 دقيقة من الاستكشاف للتوافق على الجدوى التنظيمية والتجارية.",
+  "3. Proposal & NDA": "3. العرض واتفاقية السرية",
+  "Tailored plan covering AMM, distribution logistics, and partnership terms.": "خطة مصمّمة خصيصاً تغطي الترخيص واللوجستيات وشروط الشراكة.",
+  "4. Go-to-Market": "4. الإطلاق التجاري",
+  "Coordinated rollout across our Iraqi distribution network.": "إطلاق منسّق عبر شبكة التوزيع العراقية.",
+
+  // ──── News page ────
+  "Stay Informed": "ابقَ على اطلاع",
+  "Follow CAS Development and Al-Qawsan on LinkedIn for partnership announcements, regulatory updates, and industry insights from the Middle East pharmaceutical sector.": "تابع CAS Development والقوسان على LinkedIn لإعلانات الشراكة والتحديثات التنظيمية ورؤى قطاع الأدوية في الشرق الأوسط.",
+  "Follow on LinkedIn": "تابعنا على LinkedIn",
+  "Get In Touch": "تواصل معنا",
+  "Read Full Article": "اقرأ المقال كاملاً",
+  "View on LinkedIn": "عرض على LinkedIn",
+  "Tunisia and Iraq Join Forces to Expand Pharmaceutical Exports and Health Sovereignty": "تونس والعراق توحدان جهودهما لتوسيع الصادرات الدوائية والسيادة الصحية",
+  "Official Press Release: Signing of an International Partnership Agreement": "بيان صحفي رسمي: توقيع اتفاقية شراكة دولية",
+
+  // ──── Partners page ────
+  "Worldwide Presence": "حضور عالمي",
+  "Our Global Footprint": "بصمتنا العالمية",
+  "Connecting Iraq to trusted pharmaceutical partners across 8 countries.": "ربط العراق بشركاء دوائيين موثوقين في 8 دول.",
+  "All Partners": "جميع الشركاء",
+  "Iraq": "العراق",
+  "Egypt": "مصر",
+  "USA": "الولايات المتحدة",
+  "India": "الهند",
+  "Spain": "إسبانيا",
+  "Canada": "كندا",
+  "Singapore": "سنغافورة",
+  "Tunisia": "تونس",
+  "Turkey": "تركيا",
+
+  // ──── Common UI ────
+  "Visit Website": "زر الموقع",
+  "Close": "إغلاق",
+  "Toggle theme": "تبديل المظهر",
+  "Toggle language": "تبديل اللغة",
+  "Toggle menu": "تبديل القائمة",
+  "Page Not Found": "الصفحة غير موجودة",
+  "The page you are looking for could not be found.": "الصفحة التي تبحث عنها غير موجودة.",
+  "Back to Home": "العودة إلى الصفحة الرئيسية",
+};
+
+/* ── Build reverse maps (FR/AR → EN) for legacy ── */
 const reverseTextMappings = {};
 for (const [en, fr] of Object.entries(textMappings)) {
   reverseTextMappings[fr] = en;
 }
 
-/* ── Language System ── */
+/* ── Language System (EN / FR / AR) ── */
+const LANG_CYCLE = ['en', 'fr', 'ar'];
+const LANG_LABEL = { en: 'EN', fr: 'FR', ar: 'AR' };
+const NEXT_LANG_LABEL = { en: 'FR', fr: 'AR', ar: 'EN' };
+
 function initLanguage() {
   const saved = localStorage.getItem('cas-lang') || 'en';
   setLanguage(saved);
@@ -367,42 +538,60 @@ function initLanguage() {
 
 function toggleLanguage() {
   const current = localStorage.getItem('cas-lang') || 'en';
-  const newLang = current === 'en' ? 'fr' : 'en';
-  setLanguage(newLang);
+  const idx = LANG_CYCLE.indexOf(current);
+  const next = LANG_CYCLE[(idx + 1) % LANG_CYCLE.length];
+  setLanguage(next);
 }
 
 function setLanguage(lang) {
+  if (!LANG_CYCLE.includes(lang)) lang = 'en';
   localStorage.setItem('cas-lang', lang);
 
   const html = document.documentElement;
-  html.setAttribute('dir', 'ltr');
   html.setAttribute('lang', lang);
+  html.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+
+  // Restore originals first (cached on first translation in dataset.origText)
+  document.querySelectorAll('[data-orig-text]').forEach(el => {
+    const orig = el.dataset.origText;
+    if (orig != null) el.textContent = orig;
+  });
+  document.querySelectorAll('[data-orig-html]').forEach(el => {
+    const orig = el.dataset.origHtml;
+    if (orig != null) el.innerHTML = orig;
+  });
 
   // 1. Translate data-i18n elements
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
     if (translations[key] && translations[key][lang]) {
+      if (!el.dataset.origText) el.dataset.origText = el.textContent;
       el.textContent = translations[key][lang];
     }
   });
 
-  // 2. Translate body text nodes
-  translateTextNodes(lang);
+  // 2. Translate body text nodes (only for non-EN)
+  if (lang !== 'en') translateTextNodes(lang);
 
-  // 3. Update toggle button
+  // 3. Update toggle button (shows the NEXT language)
   const langBtn = document.getElementById('langToggle');
   if (langBtn) {
-    langBtn.textContent = lang === 'en' ? 'FR' : 'EN';
+    langBtn.textContent = NEXT_LANG_LABEL[lang];
+    langBtn.setAttribute('aria-label', `Switch to ${NEXT_LANG_LABEL[lang]} language`);
   }
 }
 
 /* ── Scan and translate text nodes ── */
 function translateTextNodes(lang) {
-  const mappings = lang === 'fr' ? textMappings : reverseTextMappings;
+  let mappings;
+  if (lang === 'fr') mappings = textMappings;
+  else if (lang === 'ar') mappings = arabicMappings;
+  else return; // EN = original text, no translation needed
 
   // Wide selector list covering ALL translatable elements across all pages
   const selectors = [
     'h1', 'h2', 'h3', 'h4',
+    '.highlight',  // gradient-text spans inside h1/h2 hero titles
     '.overline',
     '.hero__content p', '.page-hero__content p',
     '.section-header p',

@@ -533,6 +533,73 @@ section {
 .reveal-delay-3 { transition-delay: 180ms; }
 .reveal-delay-4 { transition-delay: 240ms; }
 
+/* ============================================
+   RTL Support — Arabic layout (lang="ar")
+   ============================================ */
+[dir="rtl"] {
+  font-family: 'Noto Sans Arabic', 'Inter', sans-serif;
+}
+[dir="rtl"] h1,
+[dir="rtl"] h2,
+[dir="rtl"] h3,
+[dir="rtl"] h4,
+[dir="rtl"] h5,
+[dir="rtl"] h6 {
+  font-family: 'Noto Sans Arabic', 'Outfit', sans-serif;
+  letter-spacing: 0;          /* Arabic doesn't use latin letter-spacing */
+}
+
+/* Flip directional icons (arrows pointing right become left) */
+[dir="rtl"] .arrow,
+[dir="rtl"] [data-flip-rtl] {
+  display: inline-block;
+  transform: scaleX(-1);
+}
+
+/* Restore icon-inline margin (icon-inline uses margin-right, switch to margin-inline-end) */
+.icon-inline {
+  margin-inline-end: 0.4em;
+  margin-right: 0;            /* override the legacy margin-right */
+}
+
+/* Hero text alignment — keep centered, but ensure RTL flow */
+[dir="rtl"] .page-hero__content,
+[dir="rtl"] .hero__content {
+  direction: rtl;
+}
+
+/* Stack-sm-left → keep alignment in source language direction */
+[dir="rtl"] .stack-sm-left {
+  text-align: right;
+}
+
+/* Editorial grid stays the same in RTL — visual on the LEFT now (natural flip) */
+[dir="rtl"] .editorial-grid__visual {
+  /* CSS Grid auto-flips with dir=rtl */
+}
+
+/* Footer grid alignment in RTL */
+[dir="rtl"] .footer__contact-item {
+  flex-direction: row-reverse;
+}
+
+/* Language toggle button — keep label LTR */
+[dir="rtl"] #langToggle {
+  direction: ltr;
+}
+
+/* Cookie notice in RTL */
+[dir="rtl"] .cookie-notice {
+  flex-direction: row-reverse;
+}
+
+/* Skip link in RTL appears top-right */
+[dir="rtl"] .skip-to-content {
+  left: auto;
+  right: 0;
+  border-radius: 0 0 0 var(--radius-sm);
+}
+
 /* ── Skip-to-content link (WCAG keyboard navigation) ── */
 .skip-to-content {
   position: absolute;
