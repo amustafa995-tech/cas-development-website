@@ -124,6 +124,75 @@
 .card-v2__icon svg { stroke: currentColor; color: var(--cv-color); }
 .card-v2--compact .card-v2__icon { width: 48px; height: 48px; border-radius: 12px; }
 
+/* Leading image (for news/article cards — full-bleed top) */
+.card-v2__image {
+  position: relative;
+  margin: calc(-1 * var(--space-xl)) calc(-1 * var(--space-lg)) var(--space-md);
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  border-top-left-radius: var(--radius-lg);
+  border-top-right-radius: var(--radius-lg);
+}
+.card-v2__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s var(--ease-out-premium);
+}
+.card-v2:hover .card-v2__image img { transform: scale(1.04); }
+
+/* Fields list (for contact cards — email / address rows) */
+.card-v2__fields {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  margin: var(--space-sm) 0 var(--space-md);
+  flex: 1;
+}
+.card-v2__field {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-sm);
+  font-size: 0.875rem;
+  line-height: 1.55;
+}
+.card-v2__field > i {
+  color: var(--cv-color);
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+.card-v2__field > div { flex: 1; min-width: 0; }
+.card-v2__field a {
+  display: block;
+  color: var(--text-secondary);
+  text-decoration: none;
+  word-break: break-word;
+  transition: color var(--duration-hover) var(--ease-out-premium);
+}
+.card-v2__field a:hover { color: var(--cv-color); }
+.card-v2__field-label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+
+/* Date (news/article cards — small muted uppercase above title) */
+.card-v2__date {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: var(--space-xs);
+  font-variant-numeric: tabular-nums;
+}
+
 /* Logo wrapper (for entity cards — displays brand logo instead of tinted icon) */
 .card-v2__logo {
   display: flex;
