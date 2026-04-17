@@ -34,7 +34,7 @@
       position: relative;
       z-index: 3;
       text-align: center;
-      max-width: 600px;
+      max-width: 760px;
       padding: var(--space-2xl);
     }
     .error-page__code {
@@ -62,6 +62,55 @@
       gap: var(--space-md);
       justify-content: center;
       flex-wrap: wrap;
+    }
+    .error-page__suggestions {
+      margin-top: var(--space-3xl);
+      padding-top: var(--space-2xl);
+      border-top: 1px solid var(--border-glass);
+    }
+    .error-page__suggestions-title {
+      font-size: var(--fs-overline);
+      font-weight: var(--fw-semibold);
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--text-muted);
+      margin-bottom: var(--space-lg);
+    }
+    .error-page__suggestions-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-sm);
+    }
+    @media (max-width: 640px) {
+      .error-page__suggestions-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    .error-page__suggestion {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      padding: var(--space-md) var(--space-sm);
+      background: var(--bg-card);
+      border: 1px solid var(--border-glass);
+      border-radius: var(--radius-md);
+      text-decoration: none;
+      color: var(--text-secondary);
+      transition: all 300ms var(--ease-out-premium);
+    }
+    .error-page__suggestion:hover {
+      background: var(--bg-card-hover);
+      border-color: var(--border-gold);
+      transform: translateY(-3px);
+      color: var(--text-primary);
+    }
+    .error-page__suggestion-label {
+      font-weight: var(--fw-semibold);
+      font-size: var(--fs-small);
+      color: var(--text-primary);
+    }
+    .error-page__suggestion-desc {
+      font-size: 0.7rem;
+      color: var(--text-muted);
     }
   </style>
 </head>
@@ -99,6 +148,7 @@
       <div class="error-page__code">404</div>
       <h2>Page Not Found</h2>
       <p>The page you are looking for doesn't exist or has been moved. Let us help you find your way back.</p>
+
       <div class="error-page__links">
         <a href="index.html" class="btn btn--primary">
           <i data-lucide="home" class="icon-18"></i>
@@ -108,6 +158,43 @@
           <i data-lucide="mail" class="icon-18"></i>
           Contact Us
         </a>
+      </div>
+
+      <!-- Popular destinations -->
+      <div class="error-page__suggestions">
+        <h3 class="error-page__suggestions-title">Or explore our site</h3>
+        <div class="error-page__suggestions-grid">
+          <a href="cas-development.html" class="error-page__suggestion">
+            <i data-lucide="building-2" class="icon-24 icon--gold"></i>
+            <span class="error-page__suggestion-label">About CAS</span>
+            <span class="error-page__suggestion-desc">Swiss MAH</span>
+          </a>
+          <a href="alqawsan.html" class="error-page__suggestion">
+            <i data-lucide="truck" class="icon-24 icon--gold"></i>
+            <span class="error-page__suggestion-label">Al-Qawsan</span>
+            <span class="error-page__suggestion-desc">Distribution</span>
+          </a>
+          <a href="damo-manufacturing.html" class="error-page__suggestion">
+            <i data-lucide="factory" class="icon-24 icon--gold"></i>
+            <span class="error-page__suggestion-label">DAMO</span>
+            <span class="error-page__suggestion-desc">Manufacturing</span>
+          </a>
+          <a href="partners.html" class="error-page__suggestion">
+            <i data-lucide="globe-2" class="icon-24 icon--gold"></i>
+            <span class="error-page__suggestion-label">Partners</span>
+            <span class="error-page__suggestion-desc">Global network</span>
+          </a>
+          <a href="government.html" class="error-page__suggestion">
+            <i data-lucide="landmark" class="icon-24 icon--gold"></i>
+            <span class="error-page__suggestion-label">Government</span>
+            <span class="error-page__suggestion-desc">Partnerships</span>
+          </a>
+          <a href="news.html" class="error-page__suggestion">
+            <i data-lucide="newspaper" class="icon-24 icon--gold"></i>
+            <span class="error-page__suggestion-label">News</span>
+            <span class="error-page__suggestion-desc">Latest updates</span>
+          </a>
+        </div>
       </div>
     </div>
   </section>

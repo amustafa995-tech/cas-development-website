@@ -1910,7 +1910,9 @@
 }
 .editorial-grid__visual {
   grid-column: 8 / -1;        /* 5 cols wide — enough breathing room for content */
-  align-self: center;
+  align-self: start;
+  position: sticky;
+  top: calc(var(--space-3xl) + 40px);  /* clear fixed nav */
   min-width: 0;               /* prevents grid overflow */
 }
 .editorial-grid__visual--overlap {
@@ -2103,4 +2105,60 @@ body.scrolled .scroll-indicator { opacity: 0; }
 /* ── Scroll-top rotate on hover ── */
 .scroll-top:hover {
   transform: translateY(-3px) rotate(-8deg);
+}
+
+/* ============================================
+   Breadcrumbs (inner pages navigation)
+   ============================================ */
+.breadcrumbs {
+  position: relative;
+  z-index: 4;
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: calc(var(--space-xl) + 60px) var(--space-lg) var(--space-sm);  /* clear fixed nav */
+  font-size: 0.8125rem;
+}
+/* When breadcrumbs sit above hero, it sets page top spacing; hide hero top padding */
+.breadcrumbs + .page-hero {
+  min-height: auto;
+}
+.breadcrumbs + .page-hero .page-hero__content {
+  padding-top: var(--space-2xl);
+}
+.breadcrumbs__list {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  flex-wrap: wrap;
+}
+.breadcrumbs__item {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  color: var(--text-muted);
+}
+.breadcrumbs__item a {
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+.breadcrumbs__item a:hover {
+  color: var(--accent-gold);
+}
+.breadcrumbs__separator {
+  display: inline-block;
+  color: var(--text-muted);
+  opacity: 0.5;
+  user-select: none;
+}
+[dir="rtl"] .breadcrumbs__separator {
+  transform: scaleX(-1);
+}
+.breadcrumbs__item--current {
+  color: var(--text-secondary);
+  font-weight: var(--fw-medium);
+}
+
+@media (max-width: 640px) {
+  .breadcrumbs { padding: var(--space-sm) var(--space-md) 0; font-size: 0.75rem; }
 }
