@@ -317,6 +317,26 @@
   grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
   gap: var(--space-xl);
 }
+/* Force exactly 3 columns on desktop (stacks to 2 then 1 on smaller viewports) */
+.card-v2-grid--3col {
+  grid-template-columns: repeat(3, 1fr);
+}
+@media (max-width: 960px) {
+  .card-v2-grid--3col { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+  .card-v2-grid--3col { grid-template-columns: 1fr; }
+}
+/* Force exactly 4 columns on desktop (for 4-up stat rows) */
+.card-v2-grid--4col {
+  grid-template-columns: repeat(4, 1fr);
+}
+@media (max-width: 1024px) {
+  .card-v2-grid--4col { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+  .card-v2-grid--4col { grid-template-columns: 1fr; }
+}
 
 /* Responsive */
 @media (max-width: 768px) {
