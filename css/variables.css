@@ -10,28 +10,77 @@
      Two-level background only (primary / secondary)
      ────────────────────────────────────────────── */
 
-  /* Backgrounds — simplified to 2 levels (was 3) */
-  --bg-primary: #0A1628;
-  --bg-secondary: #13223D;   /* +15% luminance vs primary (was #111D33, 7%) */
+  /* ──────────────────────────────────────────────
+     COLOR SCALES — 50 (lightest) → 900 (darkest)
+     Gold scale: brand primary (warm amber)
+     Turquoise scale: data/info accent (cool cyan)
+     Neutral scale: backgrounds + text
+     ────────────────────────────────────────────── */
+
+  /* Gold scale */
+  --gold-50:  #FBF6EC;
+  --gold-100: #F5E8C8;
+  --gold-200: #EBD09A;
+  --gold-300: #E0B86C;
+  --gold-400: #D4A853;  /* primary brand (= legacy --accent-gold) */
+  --gold-500: #B8892E;  /* darker brand (= legacy --accent-gold-dark) */
+  --gold-600: #946D1E;
+  --gold-700: #6F5414;
+  --gold-800: #4B3A0E;
+  --gold-900: #2A2108;
+
+  /* Turquoise scale */
+  --turquoise-50:  #E5F8FC;
+  --turquoise-100: #BFECF5;
+  --turquoise-200: #86DCEC;
+  --turquoise-300: #4AC9E2;
+  --turquoise-400: #00B4D8;  /* primary data accent (= legacy --accent-turquoise) */
+  --turquoise-500: #0096B4;
+  --turquoise-600: #0077B6;  /* legacy --accent-turquoise-dim */
+  --turquoise-700: #005D8D;
+  --turquoise-800: #074364;
+  --turquoise-900: #062E45;
+
+  /* Neutral scale (cool blue-gray) */
+  --neutral-50:  #F8FAFC;
+  --neutral-100: #EBF0F7;
+  --neutral-200: #CED7E3;
+  --neutral-300: #B8C4D4;
+  --neutral-400: #8A94A6;
+  --neutral-500: #6B7A8D;
+  --neutral-600: #4A5568;
+  --neutral-700: #2C3647;
+  --neutral-800: #13223D;
+  --neutral-900: #0A1628;
+
+  /* Backgrounds (map to neutral scale) */
+  --bg-primary: var(--neutral-900);
+  --bg-secondary: var(--neutral-800);
   --bg-card: rgba(255, 255, 255, 0.04);
   --bg-card-hover: rgba(255, 255, 255, 0.08);
 
-  --accent-gold: #D4A853;
-  --accent-gold-light: #E8C97A;
-  --accent-gold-dark: #B8892E;
-  --accent-turquoise: #00B4D8;
-  --accent-turquoise-dim: #0077B6;
+  /* Semantic aliases (keep legacy names for backward compat) */
+  --accent-gold:          var(--gold-400);
+  --accent-gold-light:    var(--gold-300);
+  --accent-gold-dark:     var(--gold-500);
+  --accent-turquoise:     var(--turquoise-400);
+  --accent-turquoise-dim: var(--turquoise-600);
   --accent-turquoise-glow: rgba(0, 180, 216, 0.3);
 
-  --text-primary: #FFFFFF;
-  --text-secondary: #B8C4D4;
-  --text-muted: #6B7A8D;
+  /* Text */
+  --text-primary:   #FFFFFF;
+  --text-secondary: var(--neutral-300);
+  --text-muted:     var(--neutral-500);
 
+  /* Borders */
   --border-glass: rgba(255, 255, 255, 0.08);
-  --border-gold: rgba(212, 168, 83, 0.3);
+  --border-gold:  rgba(212, 168, 83, 0.3);
 
+  /* Status */
   --success: #2ECC71;
-  --error: #E74C3C;
+  --error:   #E74C3C;
+  --warning: #F39C12;
+  --info:    var(--turquoise-400);
 
   /* ── Gradients ── */
   --gradient-hero: linear-gradient(135deg, #0A1628 0%, #112240 50%, #0D1B2A 100%);
@@ -47,6 +96,8 @@
   --fs-hero: clamp(2.75rem, 7vw + 1rem, 6.5rem);
   --fs-display: clamp(3.5rem, 9vw + 1rem, 8rem);
   --fs-h2: clamp(2rem, 4vw + 0.5rem, 3.5rem);
+  --fs-h2-hero: clamp(2.25rem, 5vw + 0.5rem, 4rem);    /* large section headers */
+  --fs-h2-compact: clamp(1.5rem, 2.5vw + 0.5rem, 2.25rem); /* inner sub-sections */
   --fs-h3: clamp(1.25rem, 2vw, 1.625rem);
   --fs-body: 1rem;
   --fs-small: 0.875rem;

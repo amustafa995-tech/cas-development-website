@@ -76,6 +76,10 @@ h2 {
 }
 h3 { font-size: var(--fs-h3); font-weight: var(--fw-semibold); }
 
+/* H2 variants — use on specific sections to establish hierarchy */
+.h2--hero    { font-size: var(--fs-h2-hero); font-weight: var(--fw-bold); }
+.h2--compact { font-size: var(--fs-h2-compact); font-weight: var(--fw-semibold); letter-spacing: -0.01em; }
+
 p {
   margin-bottom: var(--space-sm);
 }

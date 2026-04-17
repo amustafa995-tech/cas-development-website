@@ -58,8 +58,10 @@ function initNavigation() {
   window.addEventListener('scroll', () => {
     if (window.scrollY > 80) {
       nav.classList.add('scrolled');
+      document.body.classList.add('scrolled');
     } else {
       nav.classList.remove('scrolled');
+      if (window.scrollY < 20) document.body.classList.remove('scrolled');
     }
   });
 
@@ -173,15 +175,22 @@ function initCounters() {
         function update(now) {
           const elapsed = now - start;
           const progress = Math.min(elapsed / duration, 1);
-          // Ease out cubic
-          const eased = 1 - Math.pow(1 - progress, 3);
-          const current = Math.floor(eased * target);
+          // Ease out with subtle overshoot spring (back-out)
+          const t = progress;
+          const s = 1.3;  // overshoot factor
+          const eased = 1 + (--t) * t * ((s + 1) * t + s);
+          const current = Math.max(0, Math.min(target, Math.floor(eased * target)));
           el.textContent = prefix + current.toLocaleString() + suffix;
 
           if (progress < 1) {
             requestAnimationFrame(update);
           } else {
             el.textContent = prefix + target.toLocaleString() + suffix;
+            // Subtle "beat" at the end — tiny scale pulse
+            el.animate(
+              [{ transform: 'scale(1)' }, { transform: 'scale(1.06)' }, { transform: 'scale(1)' }],
+              { duration: 380, easing: 'cubic-bezier(0.22, 1, 0.36, 1)' }
+            );
           }
         }
 
