@@ -2,6 +2,290 @@
    DAMO Group — Component Styles
    ============================================ */
 
+/* ──────────────────────────────────────────────
+   CARD-V2 — Unified card system (5 variants)
+   Default variant = gold. Override with
+   .card-v2--{turquoise|emerald|violet|amber}.
+   Variant tokens: var(--cv-<v>-*) in variables.css.
+   ────────────────────────────────────────────── */
+.card-v2 {
+  --cv-color:  var(--cv-gold-color);
+  --cv-tint:   var(--cv-gold-tint);
+  --cv-border: var(--cv-gold-border);
+  --cv-shadow: var(--cv-gold-shadow);
+  --cv-ring:   var(--cv-gold-ring);
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-card);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl) var(--space-lg) var(--space-lg);
+  overflow: hidden;
+  isolation: isolate;
+  will-change: transform;
+  transition:
+    transform var(--duration-hover) var(--ease-out-premium),
+    border-color var(--duration-hover) var(--ease-out-premium),
+    box-shadow var(--duration-hover) var(--ease-out-premium),
+    background-color 0.4s ease;
+}
+.card-v2--turquoise { --cv-color: var(--cv-turquoise-color); --cv-tint: var(--cv-turquoise-tint); --cv-border: var(--cv-turquoise-border); --cv-shadow: var(--cv-turquoise-shadow); --cv-ring: var(--cv-turquoise-ring); }
+.card-v2--emerald   { --cv-color: var(--cv-emerald-color);   --cv-tint: var(--cv-emerald-tint);   --cv-border: var(--cv-emerald-border);   --cv-shadow: var(--cv-emerald-shadow);   --cv-ring: var(--cv-emerald-ring); }
+.card-v2--violet    { --cv-color: var(--cv-violet-color);    --cv-tint: var(--cv-violet-tint);    --cv-border: var(--cv-violet-border);    --cv-shadow: var(--cv-violet-shadow);    --cv-ring: var(--cv-violet-ring); }
+.card-v2--amber     { --cv-color: var(--cv-amber-color);     --cv-tint: var(--cv-amber-tint);     --cv-border: var(--cv-amber-border);     --cv-shadow: var(--cv-amber-shadow);     --cv-ring: var(--cv-amber-ring); }
+
+/* Top accent gradient border (A5 — draws L→R on hover) */
+.card-v2::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--cv-color), transparent 85%);
+  opacity: 0.45;
+  transform-origin: left center;
+  transform: scaleX(0.6);
+  transition:
+    opacity var(--duration-hover) var(--ease-out-premium),
+    transform var(--duration-ui) var(--ease-out-premium);
+}
+[dir="rtl"] .card-v2::before {
+  transform-origin: right center;
+  background: linear-gradient(270deg, var(--cv-color), transparent 85%);
+}
+
+/* Hover — A3 lift, A4 icon rotate+scale, A5 border draw */
+.card-v2:hover {
+  transform: translateY(-6px);
+  border-color: var(--cv-border);
+  box-shadow: 0 18px 40px -18px var(--cv-shadow);
+}
+.card-v2:hover::before {
+  opacity: 1;
+  transform: scaleX(1);
+}
+.card-v2:hover .card-v2__icon {
+  transform: rotate(6deg) scale(1.08);
+}
+.card-v2:hover .card-v2__index {
+  opacity: 0.9;
+  transform: translateX(2px);
+}
+[dir="rtl"] .card-v2:hover .card-v2__index {
+  transform: translateX(-2px);
+}
+
+/* Focus-visible (A7) */
+.card-v2:focus-visible,
+.card-v2 a:focus-visible {
+  outline: 2px solid var(--cv-ring);
+  outline-offset: 3px;
+}
+
+/* Active (A8 — subtle press) */
+.card-v2:active { transform: translateY(-3px) scale(0.997); }
+
+/* Index (numbered — government only via .card-v2--indexed) */
+.card-v2__index {
+  position: absolute;
+  top: var(--space-md);
+  right: var(--space-md);
+  font-family: var(--font-heading);
+  font-size: 1.125rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  opacity: 0.5;
+  font-variant-numeric: tabular-nums;
+  transition: opacity var(--duration-hover) var(--ease-out-premium),
+              transform var(--duration-hover) var(--ease-out-premium);
+}
+[dir="rtl"] .card-v2__index { right: auto; left: var(--space-md); }
+
+/* Icon badge — tinted circle (A4) */
+.card-v2__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  background: var(--cv-tint);
+  border: 1px solid var(--cv-border);
+  color: var(--cv-color);
+  margin-bottom: var(--space-md);
+  transition: transform var(--duration-ui) var(--ease-spring),
+              background-color var(--duration-hover) var(--ease-out-premium);
+}
+.card-v2__icon i,
+.card-v2__icon svg { stroke: currentColor; color: var(--cv-color); }
+.card-v2--compact .card-v2__icon { width: 48px; height: 48px; border-radius: 12px; }
+
+/* Logo wrapper (for entity cards — displays brand logo instead of tinted icon) */
+.card-v2__logo {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 72px;
+  margin-bottom: var(--space-md);
+}
+.card-v2__logo img {
+  max-height: 72px;
+  max-width: 160px;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 12px var(--cv-shadow));
+  transition: transform var(--duration-ui) var(--ease-spring);
+}
+.card-v2:hover .card-v2__logo img {
+  transform: scale(1.06);
+}
+
+/* Subtitle (small muted line under title) */
+.card-v2__subtitle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35em;
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  letter-spacing: 0.02em;
+  margin: 0 0 var(--space-sm);
+}
+.card-v2__subtitle i { color: var(--cv-color); }
+
+/* Title */
+.card-v2__title {
+  font-family: var(--font-heading);
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 var(--space-xs);
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+}
+.card-v2--wide .card-v2__title { font-size: 1.375rem; }
+
+/* Description */
+.card-v2__desc {
+  color: var(--text-secondary);
+  font-size: 0.9375rem;
+  line-height: 1.65;
+  margin: 0 0 var(--space-md);
+  flex: 1;
+}
+
+/* Meta pill (lower-left accent) */
+.card-v2__meta {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: var(--cv-tint);
+  border: 1px solid var(--cv-border);
+  color: var(--cv-color);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Inline CTA link (A6) */
+.card-v2__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  color: var(--cv-color);
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-top: var(--space-md);
+  text-decoration: none;
+  transition: gap var(--duration-hover) var(--ease-out-premium);
+}
+.card-v2__link::after {
+  content: "→";
+  display: inline-block;
+  transition: transform var(--duration-hover) var(--ease-out-premium);
+}
+[dir="rtl"] .card-v2__link::after { content: "←"; }
+.card-v2:hover .card-v2__link { gap: 0.7em; }
+.card-v2:hover .card-v2__link::after { transform: translateX(2px); }
+[dir="rtl"] .card-v2:hover .card-v2__link::after { transform: translateX(-2px); }
+
+/* Shape variants */
+.card-v2--horizontal {
+  flex-direction: row;
+  align-items: flex-start;
+  gap: var(--space-md);
+  padding: var(--space-lg);
+}
+.card-v2--horizontal .card-v2__icon { margin-bottom: 0; flex-shrink: 0; }
+.card-v2--horizontal > div { flex: 1; min-width: 0; }
+
+.card-v2--compact {
+  padding: var(--space-lg) var(--space-md);
+  text-align: center;
+  align-items: center;
+}
+.card-v2--compact .card-v2__icon { margin: 0 auto var(--space-sm); }
+.card-v2--compact .card-v2__meta { align-self: center; }
+
+/* Grid container (can be reused) */
+.card-v2-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--space-lg);
+}
+.card-v2-grid--compact {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-md);
+}
+.card-v2-grid--wide {
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  gap: var(--space-xl);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .card-v2 { padding: var(--space-lg); }
+  .card-v2__index { font-size: 1rem; }
+  .card-v2--horizontal { flex-direction: column; }
+  .card-v2--horizontal .card-v2__icon { margin-bottom: var(--space-sm); }
+}
+
+/* Reduced motion — disable expressive animations */
+@media (prefers-reduced-motion: reduce) {
+  .card-v2,
+  .card-v2::before,
+  .card-v2__icon,
+  .card-v2__index,
+  .card-v2__link,
+  .card-v2__link::after {
+    transition: none !important;
+  }
+  .card-v2:hover { transform: none; }
+  .card-v2:hover .card-v2__icon { transform: none; }
+  .card-v2::before { transform: scaleX(1); opacity: 1; }
+}
+
+/* Backward-compat: government page uses .capability-card — alias to card-v2 */
+.capability-card {
+  --cv-color:  var(--cv-gold-color);
+  --cv-tint:   var(--cv-gold-tint);
+  --cv-border: var(--cv-gold-border);
+  --cv-shadow: var(--cv-gold-shadow);
+}
+.capability-card--turquoise {
+  --cv-color:  var(--cv-turquoise-color);
+  --cv-tint:   var(--cv-turquoise-tint);
+  --cv-border: var(--cv-turquoise-border);
+  --cv-shadow: var(--cv-turquoise-shadow);
+}
+
 /* ── Capability Card (Government partnerships rich cards) ── */
 .capability-grid {
   display: grid;

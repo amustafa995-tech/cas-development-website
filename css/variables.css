@@ -169,6 +169,45 @@
   --z-modal: 2000;
   --z-overlay: 500;
   --z-particles: 1;
+
+  /* ──────────────────────────────────────────────
+     CARD VARIANT TOKENS (dark theme)
+     Each variant exposes: --cv-<v>-{color,tint,border,shadow,ring}
+     color  = solid (icon, accent)
+     tint   = icon badge background
+     border = card border at rest + hover intensifier
+     shadow = hover lift glow
+     ring   = focus-visible outline
+     ────────────────────────────────────────────── */
+  --cv-gold-color:   #D4A853;
+  --cv-gold-tint:    rgba(212, 168, 83, 0.12);
+  --cv-gold-border:  rgba(212, 168, 83, 0.28);
+  --cv-gold-shadow:  rgba(212, 168, 83, 0.35);
+  --cv-gold-ring:    rgba(212, 168, 83, 0.5);
+
+  --cv-turquoise-color:  #00B4D8;
+  --cv-turquoise-tint:   rgba(0, 180, 216, 0.12);
+  --cv-turquoise-border: rgba(0, 180, 216, 0.28);
+  --cv-turquoise-shadow: rgba(0, 180, 216, 0.35);
+  --cv-turquoise-ring:   rgba(0, 180, 216, 0.5);
+
+  --cv-emerald-color:  #10B981;
+  --cv-emerald-tint:   rgba(16, 185, 129, 0.14);
+  --cv-emerald-border: rgba(16, 185, 129, 0.28);
+  --cv-emerald-shadow: rgba(16, 185, 129, 0.35);
+  --cv-emerald-ring:   rgba(16, 185, 129, 0.5);
+
+  --cv-violet-color:  #8B5CF6;
+  --cv-violet-tint:   rgba(139, 92, 246, 0.14);
+  --cv-violet-border: rgba(139, 92, 246, 0.30);
+  --cv-violet-shadow: rgba(139, 92, 246, 0.38);
+  --cv-violet-ring:   rgba(139, 92, 246, 0.55);
+
+  --cv-amber-color:  #F59E0B;
+  --cv-amber-tint:   rgba(245, 158, 11, 0.13);
+  --cv-amber-border: rgba(245, 158, 11, 0.28);
+  --cv-amber-shadow: rgba(245, 158, 11, 0.35);
+  --cv-amber-ring:   rgba(245, 158, 11, 0.5);
 }
 
 /* ============================================
@@ -203,6 +242,37 @@
   --shadow-card-hover: 0 8px 40px rgba(30, 136, 229, 0.14);
   --shadow-gold-glow: 0 0 30px rgba(30, 136, 229, 0.10);
   --shadow-turquoise-glow: 0 0 30px rgba(0, 119, 182, 0.10);
+
+  /* Card variant tokens (light theme — tints denser, colors slightly darker) */
+  --cv-gold-color:   #B8892E;
+  --cv-gold-tint:    rgba(184, 137, 46, 0.10);
+  --cv-gold-border:  rgba(184, 137, 46, 0.35);
+  --cv-gold-shadow:  rgba(184, 137, 46, 0.22);
+  --cv-gold-ring:    rgba(184, 137, 46, 0.5);
+
+  --cv-turquoise-color:  #0077B6;
+  --cv-turquoise-tint:   rgba(0, 119, 182, 0.09);
+  --cv-turquoise-border: rgba(0, 119, 182, 0.32);
+  --cv-turquoise-shadow: rgba(0, 119, 182, 0.20);
+  --cv-turquoise-ring:   rgba(0, 119, 182, 0.5);
+
+  --cv-emerald-color:  #0B8E63;
+  --cv-emerald-tint:   rgba(11, 142, 99, 0.10);
+  --cv-emerald-border: rgba(11, 142, 99, 0.32);
+  --cv-emerald-shadow: rgba(11, 142, 99, 0.22);
+  --cv-emerald-ring:   rgba(11, 142, 99, 0.5);
+
+  --cv-violet-color:  #6D3FD1;
+  --cv-violet-tint:   rgba(109, 63, 209, 0.10);
+  --cv-violet-border: rgba(109, 63, 209, 0.32);
+  --cv-violet-shadow: rgba(109, 63, 209, 0.22);
+  --cv-violet-ring:   rgba(109, 63, 209, 0.5);
+
+  --cv-amber-color:  #C97E0A;
+  --cv-amber-tint:   rgba(201, 126, 10, 0.10);
+  --cv-amber-border: rgba(201, 126, 10, 0.32);
+  --cv-amber-shadow: rgba(201, 126, 10, 0.22);
+  --cv-amber-ring:   rgba(201, 126, 10, 0.5);
 }
 
 /* Light-mode specific overrides for elements with hardcoded colors */
