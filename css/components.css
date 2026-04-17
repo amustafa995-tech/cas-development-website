@@ -1874,15 +1874,30 @@
   grid-column: 1 / span 7;
 }
 .editorial-grid__visual {
-  grid-column: 9 / -1;
+  grid-column: 8 / -1;        /* 5 cols wide — enough breathing room for content */
   align-self: center;
+  min-width: 0;               /* prevents grid overflow */
 }
 .editorial-grid__visual--overlap {
-  grid-column: 9 / -1;
+  grid-column: 8 / -1;
   margin-top: calc(-1 * var(--space-2xl));
 }
 .editorial-grid__text--narrow {
   grid-column: 2 / span 6;
+}
+
+/* Medium screens: collapse to 1 col earlier for better reading comfort */
+@media (max-width: 1024px) {
+  .editorial-grid__text,
+  .editorial-grid__visual,
+  .editorial-grid__visual--overlap,
+  .editorial-grid__text--narrow {
+    grid-column: 1 / -1;
+    margin-top: 0;
+  }
+  .editorial-grid {
+    gap: var(--space-2xl);
+  }
 }
 
 /* Asymmetric reveal: image overshoots section padding */
