@@ -176,9 +176,9 @@ function initCounters() {
           const elapsed = now - start;
           const progress = Math.min(elapsed / duration, 1);
           // Ease out with subtle overshoot spring (back-out)
-          const t = progress;
           const s = 1.3;  // overshoot factor
-          const eased = 1 + (--t) * t * ((s + 1) * t + s);
+          const t = progress - 1;
+          const eased = 1 + t * t * ((s + 1) * t + s);
           const current = Math.max(0, Math.min(target, Math.floor(eased * target)));
           el.textContent = prefix + current.toLocaleString() + suffix;
 
